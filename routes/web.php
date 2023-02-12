@@ -15,12 +15,28 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    if (auth()->user()) {
+        if (auth()->user()->isStudent()) {
+            return redirect()->route('course');
+        }
+        return redirect()->route('dashboard');
+    }
     return view('welcome');
 })->name('home');
 
 Route::get('/dashboard', function () {
+    if (auth()->user()->isStudent()) {
+        return redirect()->route('course');
+    }
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/course', function () {
+    if (auth()->user()->isAdmin()) {
+        return redirect()->route('dashboard');
+    }
+    return view('course');
+})->middleware(['auth'])->name('course');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

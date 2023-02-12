@@ -2,9 +2,6 @@
 
 namespace App\Http\Livewire\Student;
 
-use App\Models\User;
-use App\Models\Cstate;
-use Illuminate\Support\Facades\Hash;
 use LivewireUI\Modal\ModalComponent;
 
 class LoginModal extends ModalComponent
@@ -25,7 +22,6 @@ class LoginModal extends ModalComponent
 
     public function mount()
     {
-
     }
 
     public function rules()
@@ -36,18 +32,13 @@ class LoginModal extends ModalComponent
         ];
     }
 
-    public function updated($propertyName)
-    {
-        $this->validateOnly($propertyName);
-    }
-
     public function login()
     {
         $this->validate();
 
         if (auth()->attempt(['email' => $this->email, 'password' => $this->password])) {
-            $this->emit('loginSuccess');
-            $this->closeModal();
+            // Redirect to the dashboard
+            return redirect()->route('course');
         } else {
             $this->addError('email', 'Invalid email or password');
         }

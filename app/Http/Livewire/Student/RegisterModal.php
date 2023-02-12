@@ -42,11 +42,6 @@ class RegisterModal extends ModalComponent
         ];
     }
 
-    public function updated($propertyName)
-    {
-        $this->validateOnly($propertyName);
-    }
-
     public function register()
     {
         $this->validate();
@@ -60,9 +55,17 @@ class RegisterModal extends ModalComponent
             'role_id' => 2,
         ]);
 
-        $this->emit('userRegistered');
+        // Authenticate the user
+        auth()->attempt([
+            'email' => $this->email,
+            'password' => $this->password,
+        ]);
 
-        $this->closeModal();
+        // Send email verification
+        auth()->user()->sendEmailVerificationNotification();
+
+        // Redirect to the dashboard
+        return redirect()->route('course');
     }
 
     public function render()
