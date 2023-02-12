@@ -21,6 +21,9 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'dob',
+        'cstate_id',
+        'role_id',
     ];
 
     /**
@@ -40,10 +43,26 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'dob' => 'date',
     ];
 
     public function role()
     {
         return $this->belongsTo(Role::class);
+    }
+
+    public function cstate()
+    {
+        return $this->belongsTo(Cstate::class);
+    }
+
+    public function isStudent()
+    {
+        return $this->role->name === 'student';
+    }
+
+    public function isAdmin()
+    {
+        return $this->role->name === 'admin';
     }
 }

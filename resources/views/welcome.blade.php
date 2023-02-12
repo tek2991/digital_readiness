@@ -9,6 +9,7 @@
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @livewireStyles
 </head>
 
 <body class="font-intelregular">
@@ -17,6 +18,9 @@
     @include('layouts.modules')
     @include('layouts.workforce')
     @include('layouts.public-footer')
+
+    @livewireScripts
+    @livewire('livewire-ui-modal')
 </body>
 
 </html>

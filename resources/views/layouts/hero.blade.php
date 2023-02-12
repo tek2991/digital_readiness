@@ -19,7 +19,7 @@
                         <div
                             class="text-base h-11 w-44 py-2 bg-white text-intelblue text-center border rounded-full border-white">
                             <a href="#"
-                                class="hover:underline hover:text-secondary hover:font-intelmedium transition duration-300">
+                                class="hover:underline hover:text-secondary font-intelmedium transition duration-300">
                                 Get Started
                             </a>
                         </div>

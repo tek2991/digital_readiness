@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
         
         $this->call([
             RoleSeeder::class,
+            CstateSeeder::class,
         ]);
 
         \App\Models\User::factory(1)->create([

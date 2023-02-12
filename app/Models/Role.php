@@ -14,7 +14,7 @@ class Role extends Model
     {
         return [
             'admin',
-            'user'
+            'student'
         ];
     }
 

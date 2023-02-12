@@ -21,7 +21,8 @@
                     <a href="{{ route('home') }}" class="block py-2 pl-3 pr-4 text-intelblue hover:underline"
                         aria-current="page">Home</a>
                 </li>
-                <li class="flex md:w-36 items-center justify-center">
+                <li class="flex md:w-36 items-center justify-center"
+                    onclick="Livewire.emit('openModal', 'student.login-modal')">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                         class="w-5 h-5 text-intelblue">
                         <path fill-rule="evenodd"
@@ -31,9 +32,9 @@
                     <a href="#"
                         class="block py-2 pl-1 pr-4 text-intelblue md:text-center md:hover:underline">Login</a>
                 </li>
-                <li>
+                <li onclick="Livewire.emit('openModal', 'student.register-modal')">
                     <a href="#"
-                        class="block py-2 pl-3 pr-4 text-intelblue md:bg-intelblue md:text-white md:w-36 md:text-center md:border md:rounded-full md:border-intelblue hover:underline hover:text-secondary">Register</a>
+                        class="block py-2 pl-3 pr-4 text-intelblue font-intelmedium md:bg-intelblue md:text-white md:w-36 md:text-center md:border md:rounded-full md:border-intelblue hover:underline hover:text-secondary">Register</a>
                 </li>
             </ul>
         </div>
