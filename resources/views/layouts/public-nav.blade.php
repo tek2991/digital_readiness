@@ -1,7 +1,7 @@
 <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded">
     <div class="container flex flex-wrap items-center justify-between mx-auto">
         <a href="{{ route('home') }}" class="flex items-center">
-            <img src="{{ asset('images/logo.png') }}" class="h-6 mr-3 sm:h-9" alt="Logo" />
+            <img src="{{ asset('images/logo.png') }}" class="h-6 mr-3 sm:h-12" alt="Logo" />
         </a>
         <button data-collapse-toggle="navbar-default" type="button"
             class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-intelblue2 focus:outline-none focus:ring-2 focus:ring-intelblue2"
@@ -16,18 +16,10 @@
         </button>
         <div class="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul
-                class="flex flex-col items-center p-4 mt-4 border border-gray-200 rounded-lg bg-intelblue2 md:flex-row md:space-x-8 md:mt-0 text-base md:border-0 md:bg-white">
+                class="flex flex-col items-center p-4 pr-0 mt-4 border border-gray-200 rounded-lg bg-intelblue2 md:flex-row md:space-x-8 md:mt-0 text-base md:border-0 md:bg-white">
                 <li>
                     <a href="{{ route('home') }}" class="block py-2 pl-3 pr-4 text-intelblue hover:underline"
                         aria-current="page">Home</a>
-                </li>
-                <li>
-                    <a href="#" class="block py-2 pl-3 pr-4 text-intelblue hover:underline"
-                        aria-current="page">Internship Projects</a>
-                </li>
-                <li>
-                    <a href="#" class="block py-2 pl-3 pr-4 text-intelblue hover:underline"
-                        aria-current="page">Industry Partners</a>
                 </li>
                 <li class="flex md:w-36 items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"

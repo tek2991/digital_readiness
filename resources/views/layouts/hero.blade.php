@@ -13,7 +13,7 @@
                         your career.
                     </p>
                     <div class="block sm:hidden max-w-2xl">
-                        <img src="./images/group.png" alt="" />
+                        <img src="./images/group2.png" alt="" />
                     </div>
                     <div class="flex justify-between md:justify-start py-4">
                         <div
@@ -45,7 +45,7 @@
                 </div>
             </div>
             <div class="hidden sm:block max-w-2xl">
-                <img src="./images/group.png" alt="" />
+                <img src="./images/group2.png" alt="" />
             </div>
         </div>
     </div>

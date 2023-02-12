@@ -14,6 +14,9 @@
 <body class="font-intelregular">
     @include('layouts.public-nav')
     @include('layouts.hero')
+    @include('layouts.modules')
+    @include('layouts.workforce')
+    @include('layouts.public-footer')
 </body>
 
 </html>

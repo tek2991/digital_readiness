@@ -21,3 +21,18 @@
     font-family: "INTEL_MEDIUM";
     src: url("../fonts/intelone-display-medium.otf");
 }
+
+@layer components {
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+    }
+
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
