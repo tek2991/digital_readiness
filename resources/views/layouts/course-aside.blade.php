@@ -1,5 +1,5 @@
 <aside id="sidebar-multi-level-sidebar"
-    class="fixed sm:sticky top-0 sm:mt-24 sm:aside-height left-0 z-40 w-80 h-screen transition-transform sm:transition-none -translate-x-full sm:translate-x-0"
+    class="fixed sm:sticky top-0 sm:mt-24 left-0 z-40 w-80 h-screen sm:aside-height transition-transform sm:transition-none -translate-x-full sm:translate-x-0"
     aria-label="Sidebar">
     <div class="h-full px-3 sm:pl-0 py-4 overflow-y-auto bg-white border-r dark:bg-gray-800">
         <ul class="space-y-2">
@@ -9,7 +9,7 @@
                             background: linear-gradient(0deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.4)), url('{{ asset('images/ai.jpg') }}');
                             background-size: cover; background-position: center; background-repeat: no-repeat;">
                     <h1>
-                        AI Readiness
+                        Digital Readiness
                     </h1>
                     <div class="w-9/12 bg-gray-400 rounded-full h-1 my-2">
                         <div class="bg-white h-1 rounded-full" style="width: {{ 45 }}%"></div>

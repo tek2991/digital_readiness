@@ -12,19 +12,19 @@
     @livewireStyles
 </head>
 
-<body class="font-intelregular antialiased">
+<body class="">
     @include('layouts.course-nav')
     <div class="container relative mx-auto sm:flex">
         @include('layouts.course-aside')
 
-        <div class="h-screen w-full overflow-y-scroll hide-scroll">
-            <div class="h-screen w-full ">
+        <div class="h-screen w-full overflow-y-scroll hide-scroll pt-24">
+            <div class="h-screen bg-red-500 w-full ">
     
             </div>
-            <div class="h-screen w-full ">
+            <div class="h-screen bg-blue-500 w-full ">
     
             </div>
-            <div class="h-screen w-full ">
+            <div class="h-screen bg-red-500 w-full ">
     
             </div>
         </div>

@@ -1,4 +1,4 @@
-<nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 fixed w-full z-50">
+<nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 fixed w-full z-30 sm:z-50">
     <div class="container flex flex-wrap items-center justify-between mx-auto">
         <a href="{{ route('course') }}" class="flex items-center">
             <img src="{{ asset('images/logo.png') }}" class="h-8 mr-3 sm:h-12" alt="Logo" />
@@ -38,7 +38,7 @@
             </ul>
         </div>
     </div>
-    <div class="container flex flex-wrap items-center justify-between mx-auto border-t mt-2">
+    <div class="container flex flex-wrap items-center justify-between mx-auto">
         <button data-drawer-target="sidebar-multi-level-sidebar" data-drawer-toggle="sidebar-multi-level-sidebar"
             aria-controls="sidebar-multi-level-sidebar" type="button"
             class="inline-flex items-center p-2 mt-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
@@ -51,4 +51,5 @@
             </svg>
         </button>
     </div>
+    <hr class="mt-2">
 </nav>
