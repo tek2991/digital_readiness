@@ -12,11 +12,23 @@
     @livewireStyles
 </head>
 
-<body class="font-intelregular">
+<body class="font-intelregular antialiased">
     @include('layouts.course-nav')
-    @include('layouts.course-aside')
+    <div class="container relative mx-auto sm:flex">
+        @include('layouts.course-aside')
 
-
+        <div class="h-screen w-full overflow-y-scroll hide-scroll">
+            <div class="h-screen w-full ">
+    
+            </div>
+            <div class="h-screen w-full ">
+    
+            </div>
+            <div class="h-screen w-full ">
+    
+            </div>
+        </div>
+    </div>
     @livewireScripts
     @livewire('livewire-ui-modal')
 </body>

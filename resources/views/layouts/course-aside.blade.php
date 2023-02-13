@@ -1,13 +1,13 @@
 <aside id="sidebar-multi-level-sidebar"
-    class="fixed top-0 md:top-24 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+    class="fixed sm:sticky top-0 sm:mt-24 sm:aside-height left-0 z-40 w-80 h-screen transition-transform sm:transition-none -translate-x-full sm:translate-x-0"
     aria-label="Sidebar">
-    <div class="h-full px-3 py-4 overflow-y-auto bg-white border-r dark:bg-gray-800">
+    <div class="h-full px-3 sm:pl-0 py-4 overflow-y-auto bg-white border-r dark:bg-gray-800">
         <ul class="space-y-2">
             <li>
                 <div class="w-full h-28 rounded flex flex-col items-center justify-between text-white text-2xl font-intelmedium py-3"
                     style="
-                        background: linear-gradient(0deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.4)), url('{{ asset('images/ai.jpg') }}');
-                        background-size: cover; background-position: center; background-repeat: no-repeat;">
+                            background: linear-gradient(0deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.4)), url('{{ asset('images/ai.jpg') }}');
+                            background-size: cover; background-position: center; background-repeat: no-repeat;">
                     <h1>
                         AI Readiness
                     </h1>
@@ -20,38 +20,92 @@
                 </div>
             </li>
             <li>
-                <button type="button"
-                    class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-                    aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                    <svg aria-hidden="true"
-                        class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
-                        fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                            d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z"
-                            clip-rule="evenodd"></path>
-                    </svg>
-                    <span class="flex-1 ml-3 text-left whitespace-nowrap" sidebar-toggle-item>E-commerce</span>
-                    <svg sidebar-toggle-item class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                            clip-rule="evenodd"></path>
-                    </svg>
-                </button>
-                <ul id="dropdown-example" class="hidden py-2 space-y-2">
-                    <li>
-                        <a href="#"
-                            class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Products</a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Billing</a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Invoice</a>
-                    </li>
-                </ul>
+                <div id="accordion-flush" data-accordion="collapse"
+                    data-active-classes="bg-white text-intelblue font-intelmedium text-lg"
+                    data-inactive-classes="font-intelregular">
+
+                    <h2 id="accordion-flush-heading-1">
+                        <button type="button"
+                            class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200"
+                            data-accordion-target="#accordion-flush-body-1" aria-expanded="true"
+                            aria-controls="accordion-flush-body-1">
+                            <span>Introduction to AI</span>
+                            <svg data-accordion-icon class="w-6 h-6 rotate-180 shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-flush-body-1" class="hidden" aria-labelledby="accordion-flush-heading-1">
+                        <div class="py-3 font-light border-b border-gray-200 dark:border-gray-700">
+                            <ul class="pl-3 text-sm">
+                                <li class="flex items-center justify-between my-2">
+                                    <span class="pr-2 text-intelblue font-intelmedium">
+                                        What is Artificial Intelligence?
+                                    </span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-green-700">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M4.5 12.75l6 6 9-13.5" />
+                                    </svg>
+                                </li>
+                                <li class="flex items-center justify-between my-2">
+                                    <span class="pr-2 text-gray-600">
+                                        Can a machine also do these things?
+                                    </span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="w-4 h-4 hidden">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M4.5 12.75l6 6 9-13.5" />
+                                    </svg>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h2 id="accordion-flush-heading-2">
+                        <button type="button"
+                            class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200"
+                            data-accordion-target="#accordion-flush-body-2" aria-expanded="false"
+                            aria-controls="accordion-flush-body-2">
+                            <span>Understanding AI</span>
+                            <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
+                        <div class="py-5 font-light border-b border-gray-200">
+                            <ul class="pl-3 text-sm">
+                                <li class="flex items-center justify-between my-2">
+                                    <span class="pr-2 text-gray-600">
+                                        Can a machine also do these things?
+                                    </span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="w-4 h-4 hidden">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M4.5 12.75l6 6 9-13.5" />
+                                    </svg>
+                                </li>
+                                <li class="flex items-center justify-between my-2">
+                                    <span class="pr-2 text-gray-600">
+                                        Can a machine also do these things?
+                                    </span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="w-4 h-4 hidden">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M4.5 12.75l6 6 9-13.5" />
+                                    </svg>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </li>
         </ul>
     </div>
