@@ -13,7 +13,8 @@
 </head>
 
 <body class="font-intelregular">
-    @include('layouts.public-nav')
+    @include('layouts.course-nav')
+    @include('layouts.course-aside')
 
 
     @livewireScripts
