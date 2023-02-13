@@ -17,8 +17,8 @@ class ModuleSeeder extends Seeder
     {
         $modules = Module::defaultModules();
         
-        foreach ($modules as $module) {
-            Module::updateOrCreate(['name' => $module]);
+        foreach ($modules as $order => $module) {
+            Module::updateOrCreate(['name' => $module, 'order' => $order]);
         }
 
         $this->command->info('Modules seeded!');

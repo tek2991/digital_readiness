@@ -18,10 +18,11 @@ class LessonSeeder extends Seeder
         $lessons = Lesson::defaultLessons();
 
         foreach ($lessons as $module_id => $lessons) {
-            foreach ($lessons as $lesson) {
+            foreach ($lessons as $order =>  $lesson) {
                 Lesson::updateOrCreate([
                     'name' => $lesson,
                     'module_id' => $module_id,
+                    'order' => $order
                 ]);
             }
         }

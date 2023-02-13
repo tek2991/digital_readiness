@@ -23,6 +23,7 @@ class Module extends Model
      */
     protected $fillable = [
         'name',
+        'order'
     ];
 
     public function chapters()

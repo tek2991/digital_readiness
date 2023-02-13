@@ -11,12 +11,12 @@ class Lesson extends Model
     public static function defaultLessons(){
         return [
             1 => [
-                'What is Artificial Intelligence?',
-                'Can a machine also do these things?',
-                'Artificial Intelligence, Machine Learning, and Deep Learning',
-                'Influence of AI on the present',
-                'AI in Todays World',
-                'What are AI capabilities?',
+                1 => 'What is Artificial Intelligence?',
+                2 => 'Can a machine also do these things?',
+                3 => 'Artificial Intelligence, Machine Learning, and Deep Learning',
+                4 => 'Influence of AI on the present',
+                5 => 'AI in Todays World',
+                6 => 'What are AI capabilities?',
             ],
             2=> [
 
@@ -35,10 +35,16 @@ class Lesson extends Model
     protected $fillable = [
         'name',
         'module_id',
+        'order'
     ];
 
     public function module()
     {
         return $this->belongsTo(Module::class);
+    }
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class);
     }
 }
