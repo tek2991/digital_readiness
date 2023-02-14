@@ -1,9 +1,8 @@
-<div id="m1l1s1">
-    <h3 class="font-intelmedium text-gray-500 text-lg pb-4">Lesson 1 of 6</h3>
+<div id="m1l1s2" class="pt-36">
     <div class="border-b-2 border-secondary w-fit">
-        <h1 class="font-intelbold text-intelblue text-3xl pb-2">Introduction</h1>
+        <h1 class="font-intelbold text-intelblue text-3xl pb-2">Overview</h1>
     </div>
-    <div class="text-gray-700 mt-8">
+    <div class="text-gray-700 mt-8 min-h-screen">
         <div>
             <p class="text-justify text-lg leading-tight">
                 This is a self-paced course in which learners will be introduced to AI, and different technologies

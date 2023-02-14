@@ -1,8 +1,8 @@
 <div class="p-4  sm:mx-6 sm:pt-0">
-    @for ($i = 1; $i <= $latest_slide_id; $i++)
-        @php
-            $slide = 'lesson.slides.m1l1s' . $i;
-        @endphp
-        @livewire($slide, ['latest_slide_id' => $latest_slide_id])
-    @endfor
+    @if ($latest_slide_id >= 1)
+        @livewire('lesson.slides.m1l1s1', ['latest_slide_id' => $latest_slide_id])
+    @endif
+    @if ($latest_slide_id >= 2)
+        @livewire('lesson.slides.m1l1s2', ['latest_slide_id' => $latest_slide_id])
+    @endif
 </div>

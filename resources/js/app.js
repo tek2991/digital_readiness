@@ -11,3 +11,28 @@ Alpine.plugin(focus)
 window.Alpine = Alpine;
 
 Alpine.start();
+
+window.addEventListener('mls:scroll-to', (ev) => {
+    ev.stopPropagation();
+
+    console.log('testetstetstet');
+  
+    const selector = ev?.detail?.query;
+  
+    if (!selector) {
+      return;
+    }
+  
+    const el = window.document.querySelector(selector);
+  
+    if (!el) {
+      return;
+    }
+  
+    try {
+      el.scrollIntoView({
+        behavior: 'smooth',
+      });
+    } catch {}
+  
+  }, false);

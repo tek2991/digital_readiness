@@ -11,7 +11,7 @@ class M1l1 extends Component
     public $module;
     public $lesson;
     public $latest_slide_id;
-    
+
 
     public function mount()
     {
@@ -40,8 +40,17 @@ class M1l1 extends Component
         $user->lessons()->updateExistingPivot($this->lesson->id, [
             'latest_slide_id' => $slide_id,
         ]);
-
         $this->latest_slide_id = $slide_id;
+
+        $this->scroll($slide_id);
+    }
+
+    public function scroll($slide_id)
+    {
+        $query = "#m1l1s{$slide_id}";
+        $this->dispatchBrowserEvent('mls:scroll-to', [
+            'query' => $query,
+        ]);
     }
 
     public function render()
