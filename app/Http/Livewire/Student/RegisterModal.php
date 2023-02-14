@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Student;
 
 use App\Models\User;
 use App\Models\Cstate;
+use App\Models\Lesson;
 use Illuminate\Support\Facades\Hash;
 use LivewireUI\Modal\ModalComponent;
 
@@ -46,13 +47,14 @@ class RegisterModal extends ModalComponent
     {
         $this->validate();
 
-        User::create([
+        $user = User::create([
             'name' => $this->name,
             'email' => $this->email,
             'dob' => $this->dob,
             'cstate_id' => $this->cstate_id,
             'password' => Hash::make($this->password),
             'role_id' => 2,
+            'email_verified_at' => now(), // TODO: Remove this line
         ]);
 
         // Authenticate the user
@@ -61,8 +63,13 @@ class RegisterModal extends ModalComponent
             'password' => $this->password,
         ]);
 
+        $all_lessons = Lesson::all();
+        $user_lessons = $user->lessons;
+        $diff_lessons = $all_lessons->diff($user_lessons);
+        $user->lessons()->attach($diff_lessons);
+
         // Send email verification
-        auth()->user()->sendEmailVerificationNotification();
+        // auth()->user()->sendEmailVerificationNotification(); // TODO: Uncomment this line
 
         // Redirect to the dashboard
         return redirect()->route('course');

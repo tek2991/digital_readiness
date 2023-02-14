@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Lesson;
 
+use App\Models\Lesson;
 use App\Models\Module;
 use Livewire\Component;
 

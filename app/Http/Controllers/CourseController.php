@@ -16,9 +16,7 @@ class CourseController extends Controller
         $user = auth()->user();
         $all_lessons = Lesson::all();
         $user_lessons = auth()->user()->lessons;
-
         $diff_lessons = $all_lessons->diff($user_lessons);
-
         $user->lessons()->attach($diff_lessons);
 
         return view('course');
