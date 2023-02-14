@@ -20,6 +20,11 @@ class CourseAside extends Component
         $this->modules = Module::with('lessons')->orderBy('order')->get();
         $this->syncCompletedLessons();
         $this->current_lesson = Lesson::find(1);
+
+        $last_completed_lesson = auth()->user()->lessons->where('pivot.completed', 1)->last();
+        if($last_completed_lesson) {
+            $this->current_lesson = $last_completed_lesson;
+        } 
     }
 
     public function syncCompletedLessons()
@@ -36,6 +41,11 @@ class CourseAside extends Component
         $this->progress = round($completed_lessons / $total_lessons * 100);
     }
 
+    public function showLesson($lesson_id)
+    {
+        $this->emit('showLesson', $lesson_id);
+    }
+
     // listeners
     protected $listeners = [
         'lessonCompleted' => 'syncCompletedLessons',
@@ -45,6 +55,7 @@ class CourseAside extends Component
     {
         $this->current_lesson = Lesson::find($lesson_id);
         $this->syncCompletedLessons();
+        $this->showLesson($lesson_id);
     }
 
     public function render()

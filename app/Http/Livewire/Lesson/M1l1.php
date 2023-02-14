@@ -10,7 +10,6 @@ class M1l1 extends Component
 {
     public $module;
     public $lesson;
-
     public $lesson_complete;
 
     public function mount()

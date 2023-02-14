@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -12,22 +12,12 @@
     @livewireStyles
 </head>
 
-<body class="">
+<body>
     @include('layouts.course-nav')
     <div class="container relative mx-auto sm:flex">
-        {{-- @include('layouts.course-aside') --}}
-        <livewire:course-aside />
-
-        <div class="h-screen w-full overflow-y-scroll hide-scroll pt-24">
-            <div class="h-screen bg-red-500 w-full ">
-    
-            </div>
-            <div class="h-screen bg-blue-500 w-full ">
-    
-            </div>
-            <div class="h-screen bg-red-500 w-full ">
-    
-            </div>
+        @livewire('course-aside')
+        <div class="h-screen w-full overflow-y-scroll hide-scroll pt-28">
+            @livewire('lesson.wrapper')
         </div>
     </div>
     @livewireScripts
