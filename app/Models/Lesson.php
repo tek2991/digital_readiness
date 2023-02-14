@@ -43,6 +43,11 @@ class Lesson extends Model
         return $this->belongsTo(Module::class);
     }
 
+    public function slides()
+    {
+        return $this->hasMany(Slide::class);
+    }
+
     public function users()
     {
         return $this->belongsToMany(User::class);

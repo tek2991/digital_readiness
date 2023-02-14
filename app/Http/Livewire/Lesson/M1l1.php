@@ -10,14 +10,38 @@ class M1l1 extends Component
 {
     public $module;
     public $lesson;
-    public $lesson_complete;
+    public $latest_slide_id;
+    
 
     public function mount()
     {
         $user = auth()->user();
         $this->module = Module::find(1);
         $this->lesson = $this->module->lessons()->find(1);
-        $this->lesson_complete = $user->lessons->where('id', $this->lesson->id)->first()->pivot->complete;
+        $this->latest_slide_id = $user->lessons->where('id', $this->lesson->id)->first()->pivot->latest_slide_id;
+
+        if ($this->latest_slide_id == null || $this->latest_slide_id == 0) {
+            $this->latest_slide_id = $this->lesson->slides()->orderBy('order')->first()->id;
+
+            $user->lessons()->updateExistingPivot($this->lesson->id, [
+                'latest_slide_id' => $this->latest_slide_id,
+            ]);
+        }
+    }
+
+    // listeners
+    protected $listeners = [
+        'nextSlide' => 'nextSlide',
+    ];
+
+    public function nextSlide($slide_id)
+    {
+        $user = auth()->user();
+        $user->lessons()->updateExistingPivot($this->lesson->id, [
+            'latest_slide_id' => $slide_id,
+        ]);
+
+        $this->latest_slide_id = $slide_id;
     }
 
     public function render()

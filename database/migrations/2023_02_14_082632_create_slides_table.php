@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('lesson_user', function (Blueprint $table) {
+        Schema::create('slides', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
             $table->foreignId('lesson_id')->constrained();
-            $table->foreignId('user_id')->constrained();
-            $table->boolean('completed')->default(false);
+            $table->integer('order');
         });
     }
 
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('lesson_user');
+        Schema::dropIfExists('slides');
     }
 };

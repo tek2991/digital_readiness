@@ -11,7 +11,7 @@ class Wrapper extends Component
     public function mount()
     {
         $user = auth()->user();
-        $this->lesson_id = $user->lessons->where('pivot.completed', 1)->last()->id;
+        $this->lesson_id = $user->lessons->where('pivot.completed', 1)->last() ? $user->lessons->where('pivot.completed', 1)->last()->id : 1;
     }
 
     // listeners

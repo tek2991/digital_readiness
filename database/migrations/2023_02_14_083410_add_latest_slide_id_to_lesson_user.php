@@ -13,11 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('lesson_user', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('lesson_id')->constrained();
-            $table->foreignId('user_id')->constrained();
-            $table->boolean('completed')->default(false);
+        Schema::table('lesson_user', function (Blueprint $table) {
+            $table->foreignId('latest_slide_id')->nullable()->constrained('slides');
         });
     }
 
@@ -28,6 +25,9 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('lesson_user');
+        Schema::table('lesson_user', function (Blueprint $table) {
+            $table->dropForeign(['latest_slide_id']);
+            $table->dropColumn('latest_slide_id');
+        });
     }
 };

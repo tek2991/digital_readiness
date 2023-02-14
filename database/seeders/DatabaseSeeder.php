@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
             CstateSeeder::class,
             ModuleSeeder::class,
             LessonSeeder::class,
+            SlideSeeder::class,
         ]);
 
         \App\Models\User::factory(1)->create([
