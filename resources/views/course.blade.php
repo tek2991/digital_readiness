@@ -10,6 +10,7 @@
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
+    <script>document.documentElement.classList.add('js')</script>
 </head>
 
 <body>
@@ -22,6 +23,7 @@
     </div>
     @livewireScripts
     @livewire('livewire-ui-modal')
+    <script src="{{ asset('scripts/taos.js') }}"></script>
 </body>
 
 </html>
