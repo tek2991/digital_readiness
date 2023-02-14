@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CourseController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,12 +32,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/course', function () {
-    if (auth()->user()->isAdmin()) {
-        return redirect()->route('dashboard');
-    }
-    return view('course');
-})->middleware(['auth'])->name('course');
+Route::get('/course', [CourseController::class, 'index'])->middleware(['auth'])->name('course');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

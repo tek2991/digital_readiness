@@ -15,7 +15,8 @@
 <body class="">
     @include('layouts.course-nav')
     <div class="container relative mx-auto sm:flex">
-        @include('layouts.course-aside')
+        {{-- @include('layouts.course-aside') --}}
+        <livewire:course-aside />
 
         <div class="h-screen w-full overflow-y-scroll hide-scroll pt-24">
             <div class="h-screen bg-red-500 w-full ">

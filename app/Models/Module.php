@@ -26,7 +26,7 @@ class Module extends Model
         'order'
     ];
 
-    public function chapters()
+    public function lessons()
     {
         return $this->hasMany(Lesson::class);
     }
