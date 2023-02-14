@@ -17,6 +17,7 @@ class Slide extends Model
                     // Slides
                     1 => 'Introduction',
                     2 => 'Overview',
+                    3 => 'Module 1'
                 ],
             ],
         ];
