@@ -10,7 +10,7 @@
                         <div class="flip-card-front w-full h-full absolute rounded-lg shadow-lg">
                             <div class="w-full h-full rounded flex items-center justify-center text-white text-2xl font-intelmedium py-3"
                                 style="
-                                            background: linear-gradient(0deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.4)), url('http://localhost:8000/images/ai.jpg');
+                                            background: linear-gradient(0deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.4)), url({{ url('/images/ai.jpg') }});
                                             background-size: cover; background-position: center; background-repeat: no-repeat;">
                                 <h1 class="animate-opacity-fast">
                                     Introduction to AI
@@ -30,7 +30,7 @@
                         <div class="flip-card-front w-full h-full absolute rounded-lg shadow-lg">
                             <div class="w-full h-full rounded flex items-center justify-center text-white text-2xl font-intelmedium py-3"
                                 style="
-                                            background: linear-gradient(0deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.4)), url('http://localhost:8000/images/ai.jpg');
+                                            background: linear-gradient(0deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.4)), url({{ url('/images/ai.jpg') }});
                                             background-size: cover; background-position: center; background-repeat: no-repeat;">
                                 <h1 class="animate-opacity-fast">
                                     Understanding AI
@@ -52,7 +52,7 @@
                         <div class="flip-card-front w-full h-full absolute rounded-lg shadow-lg">
                             <div class="w-full h-full rounded flex items-center justify-center text-white text-2xl font-intelmedium py-3"
                                 style="
-                                            background: linear-gradient(0deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.4)), url('http://localhost:8000/images/ai.jpg');
+                                            background: linear-gradient(0deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.4)), url({{ url('/images/ai.jpg') }});
                                             background-size: cover; background-position: center; background-repeat: no-repeat;">
                                 <h1 class="animate-opacity-fast">
                                     Plan AI
