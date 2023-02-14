@@ -10,27 +10,36 @@ class M1l1s1 extends Component
     public $allow_next = false;
     public $show_next = true;
     public $complete = false;
+    public $current_slide = false;
+
+    public $slide_id = 1;
 
     public function mount($latest_slide_id)
     {
         $this->latest_slide_id = $latest_slide_id;
 
-        if($this->latest_slide_id >= 1) {
+        if ($this->latest_slide_id >= $this->slide_id) {
             $this->allow_next = true;
         }
 
         $this->complete = true;
 
-        if($this->latest_slide_id > 1) {
+        if ($this->latest_slide_id > $this->slide_id) {
             $this->show_next = false;
+        }
+
+
+        if ($this->latest_slide_id == $this->slide_id) {
+            $this->current_slide = true;
         }
     }
 
     public function nextSlide()
     {
-        $this->latest_slide_id = 2;
+        $this->latest_slide_id = $this->slide_id + 1;
         $this->show_next = false;
-        $this->emitTo('lesson.m1l1', 'nextSlide', 2);
+        $this->current_slide = false;
+        $this->emitTo('lesson.m1l1', 'nextSlide', $this->slide_id + 1);
     }
 
     public function render()

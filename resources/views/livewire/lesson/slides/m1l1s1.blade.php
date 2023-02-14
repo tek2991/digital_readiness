@@ -1,4 +1,4 @@
-<div id="m1l1s1">
+<div id="m1l1s1" class="{{ $current_slide ? 'min-h-screen' : '' }}">
     <h3 class="font-intelmedium text-gray-500 text-lg pb-4">Lesson 1 of 6</h3>
     <div class="border-b-2 border-secondary w-fit">
         <h1 class="font-intelbold text-intelblue text-3xl pb-2">Introduction</h1>
