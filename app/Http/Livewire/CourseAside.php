@@ -29,14 +29,10 @@ class CourseAside extends Component
         foreach ($this->modules as $module) {
             foreach ($module->lessons as $lesson) {
                 $lesson->completed = $user_lessons->where('id', $lesson->id)->first()->pivot->completed;
-                // if($lesson->completed){
-                //     $this->current_lesson = $lesson;
-                //     $this->current_module = $module;
-                // }
             }
         }
         $total_lessons = $user_lessons->count();
-        $completed_lessons = $user_lessons->where('pivot.complete', true)->count();
+        $completed_lessons = $user_lessons->where('pivot.completed', 1)->count();
         $this->progress = round($completed_lessons / $total_lessons * 100);
     }
 
