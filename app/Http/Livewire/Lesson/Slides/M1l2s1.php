@@ -12,7 +12,7 @@ class M1l2s1 extends Component
     public $complete = false;
     public $current_slide = false;
 
-    public $slide_id = 5;
+    public $slide_id = 1;
 
     public $flipCards = [
         1 => false,
@@ -52,7 +52,7 @@ class M1l2s1 extends Component
         $this->latest_slide_order = $this->slide_id + 1;
         $this->show_next = false;
         $this->current_slide = false;
-        $this->emitTo('lesson.m1l1', 'nextSlide', $this->slide_id + 1);
+        $this->emitTo('lesson.m1l2', 'nextSlide', $this->slide_id + 1);
     }
 
     public function render()

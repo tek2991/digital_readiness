@@ -12,7 +12,7 @@ class M1l2s2 extends Component
     public $complete = false;
     public $current_slide = false;
 
-    public $slide_id = 6;
+    public $slide_id = 2;
 
 
     public function mount($latest_slide_order)

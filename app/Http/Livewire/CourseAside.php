@@ -41,9 +41,9 @@ class CourseAside extends Component
         $this->progress = round($completed_lessons / $total_lessons * 100);
     }
 
-    public function showLesson($lesson_id)
+    public function loadLesson($lesson_id)
     {
-        $this->emit('showLesson', $lesson_id);
+        $this->emitTo('lesson.wrapper', 'loadLesson', $lesson_id);
     }
 
     // listeners
@@ -56,7 +56,7 @@ class CourseAside extends Component
     {
         $this->current_lesson = Lesson::find($lesson_id);
         $this->syncCompletedLessons();
-        $this->showLesson($lesson_id);
+        $this->loadLesson($lesson_id);
     }
 
     public function render()

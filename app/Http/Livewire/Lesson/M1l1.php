@@ -14,6 +14,8 @@ class M1l1 extends Component
     public $module_id = 1;
     public $lesson_id = 1;
 
+    public $next_lesson_id;
+
 
     public function mount()
     {
@@ -28,6 +30,21 @@ class M1l1 extends Component
             $user->lessons()->updateExistingPivot($this->lesson->id, [
                 'latest_slide_order' => $this->latest_slide_order,
             ]);
+        }
+
+        $this->getNextLessonId();
+    }
+
+    public function getNextLessonId()
+    {
+        $lesson_order = $this->lesson->order;
+
+        $next_lesson_exists = $this->module->lessons()->where('order', $lesson_order + 1)->exists();
+
+        if ($next_lesson_exists) {
+            $this->next_lesson_id = $this->module->lessons()->where('order', $lesson_order + 1)->first()->id;
+        } else {
+            $this->next_lesson_id = null;
         }
     }
 
@@ -54,7 +71,9 @@ class M1l1 extends Component
         $user->lessons()->updateExistingPivot($this->lesson->id, [
             'completed' => true,
         ]);
-        $this->emitTo('lesson.wrapper', 'showLesson', $this->lesson_id + 1);
+        if ($this->next_lesson_id != null) {
+            $this->emitTo('lesson.wrapper', 'showLesson', $this->next_lesson_id);
+        }
     }
 
     public function scroll($slide_id)

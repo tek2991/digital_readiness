@@ -14,6 +14,8 @@ class M1l2 extends Component
     public $module_id = 1;
     public $lesson_id = 2;
 
+    public $next_lesson_id;
+
 
     public function mount()
     {
@@ -29,11 +31,27 @@ class M1l2 extends Component
                 'latest_slide_order' => $this->latest_slide_order,
             ]);
         }
+
+        $this->nextLessonId();
+    }
+
+    public function nextLessonId()
+    {
+        $lesson_order = $this->lesson->order;
+
+        $next_lesson_exists = $this->module->lessons()->where('order', $lesson_order + 1)->exists();
+
+        if ($next_lesson_exists) {
+            $this->next_lesson_id = $this->module->lessons()->where('order', $lesson_order + 1)->first()->id;
+        } else {
+            $this->next_lesson_id = null;
+        }
     }
 
     // listeners
     protected $listeners = [
         'nextSlide' => 'nextSlide',
+        'nextLesson' => 'nextLesson',
     ];
 
     public function nextSlide($slide_id)
@@ -43,13 +61,24 @@ class M1l2 extends Component
             'latest_slide_order' => $slide_id,
         ]);
         $this->latest_slide_order = $slide_id;
-
         $this->scroll($slide_id);
+    }
+
+    public function nextLesson()
+    {
+        // Mark lesson as completed
+        $user = auth()->user();
+        $user->lessons()->updateExistingPivot($this->lesson->id, [
+            'completed' => true,
+        ]);
+        if ($this->next_lesson_id != null) {
+            $this->emitTo('lesson.wrapper', 'showLesson', $this->next_lesson_id);
+        }
     }
 
     public function scroll($slide_id)
     {
-        $query = "#m1l1s{$slide_id}";
+        $query = "#m1l2s{$slide_id}";
         $this->dispatchBrowserEvent('mls:scroll-to', [
             'query' => $query,
         ]);

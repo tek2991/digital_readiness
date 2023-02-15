@@ -17,7 +17,7 @@ class Wrapper extends Component
     // listeners
     protected $listeners = [
         'showLesson' => 'showLesson',
-
+        'loadLesson' => 'loadLesson',
     ];
 
     public function showLesson($lesson_id)
@@ -29,14 +29,22 @@ class Wrapper extends Component
         $this->emitTo('course-aside', 'changeLesson', $lesson_id);
     }
 
+    public function loadLesson($lesson_id)
+    {
+        $this->lesson_id = $lesson_id;
+    }
+
     public function previousLessonCompleted($lesson_id)
     {
         $user = auth()->user();
-        $lesson = $user->lessons->where('id', $lesson_id - 1)->first();
-        if ($lesson) {
-            return $lesson->pivot->completed;
+        $lesson = $user->lessons->where('id', $lesson_id)->first();
+        $previous_lesson_exists = $user->lessons->where('order', $lesson->order - 1)->first();
+        if ($previous_lesson_exists) {
+            $previous_lesson = $user->lessons->where('order', $lesson->order - 1)->first();
+            return $previous_lesson->pivot->completed;
+        } else {
+            return true;
         }
-        return false;
     }
 
     public function render()
