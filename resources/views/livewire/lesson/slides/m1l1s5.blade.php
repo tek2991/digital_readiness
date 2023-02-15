@@ -136,17 +136,4 @@
         @else
         @endif
     </div>
-
-    <script>
-        function adjustHeight() {
-            var elements = document.querySelectorAll('.dymanic-height');
-            elements.forEach(function(element) {
-                var width = element.offsetWidth;
-                element.style.height = width + "px";
-            });
-        }
-
-        document.addEventListener("DOMContentLoaded", adjustHeight);
-        window.addEventListener("resize", adjustHeight);
-    </script>
 </div>

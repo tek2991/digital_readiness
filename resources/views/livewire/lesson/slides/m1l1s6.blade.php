@@ -6,44 +6,54 @@
     </div>
     <div class="text-gray-700 mt-8">
         <div>
-            <section class="">
-                <div>
-                    <button data-modal-target="defaultModal" data-modal-toggle="defaultModal" class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
-                        Toggle modal
-                      </button>
-                      
-                      <!-- Main modal -->
-                      <div id="defaultModal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
-                          <div class="relative w-full h-full max-w-2xl md:h-auto">
-                              <!-- Modal content -->
-                              <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                                  <!-- Modal header -->
-                                  <div class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
-                                      <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                                          Terms of Service
-                                      </h3>
-                                      <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="defaultModal">
-                                          <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                                          <span class="sr-only">Close modal</span>
-                                      </button>
-                                  </div>
-                                  <!-- Modal body -->
-                                  <div class="p-6 space-y-6">
-                                      <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                                          With less than a month to go before the European Union enacts new consumer privacy laws for its citizens, companies around the world are updating their terms of service agreements to comply.
-                                      </p>
-                                      <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                                          The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant to ensure a common set of data rights in the European Union. It requires organizations to notify users as soon as possible of high-risk data breaches that could personally affect them.
-                                      </p>
-                                  </div>
-                                  <!-- Modal footer -->
-                                  <div class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
-                                      <button data-modal-hide="defaultModal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">I accept</button>
-                                      <button data-modal-hide="defaultModal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Decline</button>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
+            <section class="grid grid-cols-2 gap-4 md:gap-12">
+                <div class="w-full max-w-xs mx-auto dynamic-height-m1l1s6">
+                    <div class="w-full h-full bg-gray-700 rounded-2xl px-4 py-2.5 cursor-pointer" 
+                    wire:click='$emit("openModal", "course.text-modal", {{ json_encode(["title" => "AI produces generalizations", "body" => "AI makes generalization in learning. If it encounters a new scenario, it will try to relate it back to past experiences in order to decide. For example, the autonomous car has driven before in Sydney. It has not driven before in Melbourne. However, it can still relate to its driving in Sydney in order to make decisions for the situation in Melbourne. Another example is face detection. Every face is different, and yet it can understand that there is a face in the image."]) }})'>
+                        <div class="h-full w-full bg-slate-600 rounded-2xl flex flex-col items-center justify-center">
+                            <img src="{{ asset('images/course/generalization.png') }}" alt="" class="w-4/5">
+                            <h2 class="text-white font-intelmedium text-xl xl:text-2xl pt-2">
+                                Generalizations
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full max-w-xs mx-auto dynamic-height-m1l1s6">
+                    <div class="w-full h-full bg-gray-700 rounded-2xl px-4 py-2.5 cursor-pointer"
+                    wire:click='$emit("openModal", "course.text-modal", {{ json_encode(["title" => "AI can do reasoning", "body" => "AI can perform reasoning. It draws conclusions that are relevant and appropriate to the situations. It is much more than just a simple If-Else application. If red, stop. If green, go. It is not as simple as that. It would also analyze the behavior of pedestrians and predict if they would cross the street. It would also predict how long the pedestrian will take to reach in front of the car. Hence, AI is much more than just a simple If-Else."]) }})'>
+                        <div class="h-full w-full bg-slate-600 rounded-2xl flex flex-col items-center justify-center">
+                            <img src="{{ asset('images/course/reasoning.png') }}" alt="" class="w-4/5">
+                            <h2 class="text-white font-intelmedium text-xl xl:text-2xl pt-2">
+                                Reasoning
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full max-w-xs mx-auto dynamic-height-m1l1s6">
+                    <div class="w-full h-full bg-gray-700 rounded-2xl px-4 py-2.5 cursor-pointer"
+                    wire:click='$emit("openModal", "course.text-modal", {{ json_encode(["title" => "AI can do Problem-Solving", "body" => "The capacity to respond to change dynamically and apply prior knowledge to solve new and unsolved issues is known as adaptive problem-solving. The AI chooses the optimum course of action in response to a constantly shifting circumstance."]) }})'>
+
+                        <div class="h-full w-full bg-slate-600 rounded-2xl flex flex-col items-center justify-center">
+                            <img src="{{ asset('images/course/problem.png') }}" alt="" class="w-4/5">
+                            <h2 class="text-white font-intelmedium text-xl xl:text-2xl pt-2">
+                                Problem-Solving
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full max-w-xs mx-auto dynamic-height-m1l1s6">
+                    <div class="w-full h-full bg-gray-700 rounded-2xl px-4 py-2.5 cursor-pointer"
+                    wire:click='$emit("openModal", "course.text-modal", {{ json_encode(["title" => "AI can understand language", "body" => "AI can understand languages. It follows the syntax and rules of the languages, just like how we humans understand our languages.
+                    And the examples of AI application include machine learning, computer vision, natural language processing, pattern recognition and knowledge management. 
+                    Take some time to read through this information."]) }})'>
+
+                        <div class="h-full w-full bg-slate-600 rounded-2xl flex flex-col items-center justify-center">
+                            <img src="{{ asset('images/course/language.png') }}" alt="" class="w-4/5">
+                            <h2 class="text-white font-intelmedium text-xl xl:text-2xl pt-2">
+                                Understanding Language
+                            </h2>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
@@ -60,14 +70,17 @@
 
     <script>
         function adjustHeight() {
-            var elements = document.querySelectorAll('.dymanic-height');
+            var elements = document.querySelectorAll(".dynamic-height-m1l1s6");
             elements.forEach(function(element) {
                 var width = element.offsetWidth;
                 element.style.height = width + "px";
+                console.log('width:' + width)
             });
         }
 
         document.addEventListener("DOMContentLoaded", adjustHeight);
         window.addEventListener("resize", adjustHeight);
+        // call adjustHeight
+        setTimeout(adjustHeight, 100);
     </script>
 </div>
