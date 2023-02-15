@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('lesson_user', function (Blueprint $table) {
-            $table->foreignId('latest_slide_id')->nullable()->constrained('slides');
+            $table->integer('latest_slide_order')->nullable(); 
         });
     }
 
@@ -26,8 +26,7 @@ return new class extends Migration
     public function down()
     {
         Schema::table('lesson_user', function (Blueprint $table) {
-            $table->dropForeign(['latest_slide_id']);
-            $table->dropColumn('latest_slide_id');
+            $table->dropColumn('latest_slide_order');
         });
     }
 };

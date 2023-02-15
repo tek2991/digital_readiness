@@ -68,6 +68,6 @@ class User extends Authenticatable
 
     public function lessons()
     {
-        return $this->belongsToMany(Lesson::class)->withPivot('completed', 'latest_slide_id');
+        return $this->belongsToMany(Lesson::class)->withPivot('completed', 'latest_slide_order');
     }
 }

@@ -4,9 +4,9 @@ namespace App\Http\Livewire\Lesson\Slides;
 
 use Livewire\Component;
 
-class M1l1s5 extends Component
+class M1l2s1 extends Component
 {
-    public $latest_slide_id;
+    public $latest_slide_order;
     public $allow_next = false;
     public $show_next = true;
     public $complete = false;
@@ -23,21 +23,21 @@ class M1l1s5 extends Component
         6 => false,
     ];
 
-    public function mount($latest_slide_id)
+    public function mount($latest_slide_order)
     {
-        $this->latest_slide_id = $latest_slide_id;
+        $this->latest_slide_order = $latest_slide_order;
 
-        if($this->latest_slide_id >= $this->slide_id) {
+        if($this->latest_slide_order >= $this->slide_id) {
             $this->allow_next = true;
         }
 
         $this->complete = true;
 
-        if($this->latest_slide_id > $this->slide_id) {
+        if($this->latest_slide_order > $this->slide_id) {
             $this->show_next = false;
         }
 
-        if($this->latest_slide_id == $this->slide_id) {
+        if($this->latest_slide_order == $this->slide_id) {
             $this->current_slide = true;
         }
     }
@@ -49,7 +49,7 @@ class M1l1s5 extends Component
 
     public function nextSlide()
     {
-        $this->latest_slide_id = $this->slide_id + 1;
+        $this->latest_slide_order = $this->slide_id + 1;
         $this->show_next = false;
         $this->current_slide = false;
         $this->emitTo('lesson.m1l1', 'nextSlide', $this->slide_id + 1);
@@ -57,6 +57,6 @@ class M1l1s5 extends Component
 
     public function render()
     {
-        return view('livewire.lesson.slides.m1l1s5');
+        return view('livewire.lesson.slides.m1l2s1');
     }
 }

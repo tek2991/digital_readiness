@@ -49,6 +49,7 @@ class CourseAside extends Component
     // listeners
     protected $listeners = [
         'lessonCompleted' => 'syncCompletedLessons',
+        'changeLesson' => 'changeLesson',
     ];
 
     public function changeLesson($lesson_id)

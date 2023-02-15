@@ -15,21 +15,26 @@ class Slide extends Model
                 // Lesson 1
                 1 => [
                     // Slides
-                    1 => 'Introduction',
-                    2 => 'Overview',
-                    3 => 'Module 1',
-                    4 => 'More about AI',
-                    5 => 'AI examples',
-                    6 => 'AI capabilities',
+                    1 => "Introduction",
+                    2 => "Overview",
+                    3 => "What is Artificial Inteligence",
+                    4 => "Artificial Intelligence, Machine Learning & Deep Learning",
+                ],
+
+                // Lesson 2
+                2 => [
+                    // Slides
+                    1 => "Influence of AI on the present",
+                    2 => "What are AI's capabilities?",
                 ],
             ],
         ];
     }
 
     protected $fillable = [
-        'name',
-        'lesson_id',
-        'order'
+        "name",
+        "lesson_id",
+        "order"
     ];
 
     public function lesson()

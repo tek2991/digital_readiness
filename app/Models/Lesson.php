@@ -12,11 +12,7 @@ class Lesson extends Model
         return [
             1 => [
                 1 => 'What is Artificial Intelligence?',
-                2 => 'Can a machine also do these things?',
-                3 => 'Artificial Intelligence, Machine Learning, and Deep Learning',
-                4 => 'Influence of AI on the present',
-                5 => 'AI in Todays World',
-                6 => 'What are AI capabilities?',
+                2 => 'AI in Todays World',
             ],
             2=> [
 

@@ -6,13 +6,13 @@ use App\Models\Lesson;
 use App\Models\Module;
 use Livewire\Component;
 
-class M1l1 extends Component
+class M1l2 extends Component
 {
     public $module;
     public $lesson;
     public $latest_slide_order;
     public $module_id = 1;
-    public $lesson_id = 1;
+    public $lesson_id = 2;
 
 
     public function mount()
@@ -34,7 +34,6 @@ class M1l1 extends Component
     // listeners
     protected $listeners = [
         'nextSlide' => 'nextSlide',
-        'nextLesson' => 'nextLesson',
     ];
 
     public function nextSlide($slide_id)
@@ -44,17 +43,8 @@ class M1l1 extends Component
             'latest_slide_order' => $slide_id,
         ]);
         $this->latest_slide_order = $slide_id;
-        $this->scroll($slide_id);
-    }
 
-    public function nextLesson()
-    {
-        // Mark lesson as completed
-        $user = auth()->user();
-        $user->lessons()->updateExistingPivot($this->lesson->id, [
-            'completed' => true,
-        ]);
-        $this->emitTo('lesson.wrapper', 'showLesson', $this->lesson_id + 1);
+        $this->scroll($slide_id);
     }
 
     public function scroll($slide_id)
@@ -67,6 +57,6 @@ class M1l1 extends Component
 
     public function render()
     {
-        return view('livewire.lesson.m1l1');
+        return view('livewire.lesson.m1l2');
     }
 }
