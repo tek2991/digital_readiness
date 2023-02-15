@@ -43,11 +43,11 @@
                             <div class="py-1 font-light border-b border-gray-200 dark:border-gray-700" wire:ignore.self>
                                 <ul class="pl-3 text-sm" wire:ignore.self>
                                     @foreach ($module->lessons as $lesson)
-                                        <button class="cursor-pointer text-left" wire:click="changeLesson({{ $lesson->id }})">
+                                        <button class="cursor-pointer text-left w-full" wire:click="changeLesson({{ $lesson->id }})">
                                             <li
-                                                class="flex items-center justify-between hover:bg-gray-100 {{ $current_lesson->id == $lesson->id ? 'bg-gray-100' : '' }} hover:rounded-md p-2">
+                                                class="flex items-center justify-between w-full hover:bg-intelblue2 {{ $current_lesson->id == $lesson->id ? 'bg-intelblue2' : '' }} rounded-md p-2 my-1">
                                                 <span
-                                                    class="{{ $lesson->completed ? 'text-intelblue font-intelmedium' : 'text-gray-600' }}">
+                                                    class="w-full {{ $lesson->completed || $current_lesson->id == $lesson->id ? 'text-intelblue font-intelmedium' : 'text-gray-600' }}">
                                                     {{ $lesson->name }}
                                                 </span>
                                                 @if ($lesson->completed)

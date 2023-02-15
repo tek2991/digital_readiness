@@ -74,7 +74,6 @@
             elements.forEach(function(element) {
                 var width = element.offsetWidth;
                 element.style.height = width + "px";
-                console.log('width:' + width)
             });
         }
 

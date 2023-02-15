@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Lesson;
 
+use App\Models\Lesson;
 use Livewire\Component;
 
 class Wrapper extends Component
@@ -27,6 +28,11 @@ class Wrapper extends Component
             $this->lesson_id = $lesson_id;
         }
         $this->emitTo('course-aside', 'changeLesson', $lesson_id);
+
+        $module_id = Lesson::find($lesson_id)->module->id;
+        $this->dispatchBrowserEvent('mls:scroll-to', [
+            'query' => '#m' . $module_id . 'l' . $lesson_id . 's1',
+        ]);
     }
 
     public function loadLesson($lesson_id)
