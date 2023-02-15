@@ -11,7 +11,6 @@ class M1l1s3 extends Component
     public $show_next = true;
     public $complete = false;
     public $current_slide = false;
-    public $loaded = false;
 
     public $slide_id = 3;
 

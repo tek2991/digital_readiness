@@ -19,6 +19,8 @@ class Slide extends Model
                     2 => 'Overview',
                     3 => 'Module 1',
                     4 => 'More about AI',
+                    5 => 'AI examples',
+                    6 => 'AI capabilities',
                 ],
             ],
         ];

@@ -11,4 +11,10 @@
     @if ($latest_slide_id >= 4)
         @livewire('lesson.slides.m1l1s4', ['latest_slide_id' => $latest_slide_id])
     @endif
+    @if ($latest_slide_id >= 5)
+        @livewire('lesson.slides.m1l1s5', ['latest_slide_id' => $latest_slide_id])
+    @endif
+    @if ($latest_slide_id >= 6)
+        @livewire('lesson.slides.m1l1s6', ['latest_slide_id' => $latest_slide_id])
+    @endif
 </div>

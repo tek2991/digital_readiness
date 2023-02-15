@@ -4,7 +4,7 @@ namespace App\Http\Livewire\Lesson\Slides;
 
 use Livewire\Component;
 
-class M1l1s4 extends Component
+class M1l1s5 extends Component
 {
     public $latest_slide_id;
     public $allow_next = false;
@@ -12,7 +12,16 @@ class M1l1s4 extends Component
     public $complete = false;
     public $current_slide = false;
 
-    public $slide_id = 4;
+    public $slide_id = 5;
+
+    public $flipCards = [
+        1 => false,
+        2 => false,
+        3 => false,
+        4 => false,
+        5 => false,
+        6 => false,
+    ];
 
     public function mount($latest_slide_id)
     {
@@ -33,6 +42,11 @@ class M1l1s4 extends Component
         }
     }
 
+    public function flipCard($card)
+    {
+        $this->flipCards[$card] = !$this->flipCards[$card];
+    }
+
     public function nextSlide()
     {
         $this->latest_slide_id = $this->slide_id + 1;
@@ -43,6 +57,6 @@ class M1l1s4 extends Component
 
     public function render()
     {
-        return view('livewire.lesson.slides.m1l1s4');
+        return view('livewire.lesson.slides.m1l1s5');
     }
 }
