@@ -1,6 +1,6 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-c9e2e335.css",
+    "file": "assets/app-3dd97dc2.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
@@ -21,7 +21,7 @@
     "src": "resources/fonts/intelone-display-regular.otf"
   },
   "resources/js/app.js": {
-    "file": "assets/app-7983e513.js",
+    "file": "assets/app-11062f7b.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }
