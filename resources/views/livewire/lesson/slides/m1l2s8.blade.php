@@ -1,4 +1,4 @@
-<div id="m1l2s8" class="mt-36 {{ $current_slide ? 'min-h-screen' : '' }}">
+<div id="m1l2s8" class="pt-36 {{ $current_slide ? 'min-h-screen' : '' }}">
     <div class="border-b-2 border-secondary w-fit">
         <h1 class="font-intelbold text-intelblue text-3xl pb-2">
             AI is everywhere

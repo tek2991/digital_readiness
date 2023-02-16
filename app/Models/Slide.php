@@ -35,6 +35,12 @@ class Slide extends Model
                     9 => "Automation",
                     10 => "Automation vs Artificial Intelligence",
                 ],
+
+                // Lesson 3
+                3 => [
+                    // Slides
+                    1 => "Question 1",
+                ],
             ],
         ];
     }
