@@ -30,6 +30,8 @@ class Slide extends Model
                     4 => "AI is everywhere",
                     5 => "AI is everywhere 2",
                     6 => "AI is everywhere 3",
+                    7 => "AI is everywhere 4",
+                    8 => "AI is everywhere 5",
                 ],
             ],
         ];

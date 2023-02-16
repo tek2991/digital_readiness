@@ -17,4 +17,10 @@
     @if ($latest_slide_order >= 6)
         @livewire('lesson.slides.m1l2s6', ['latest_slide_order' => $latest_slide_order])
     @endif
+    @if ($latest_slide_order >= 7)
+        @livewire('lesson.slides.m1l2s7', ['latest_slide_order' => $latest_slide_order])
+    @endif
+    @if ($latest_slide_order >= 8)
+        @livewire('lesson.slides.m1l2s8', ['latest_slide_order' => $latest_slide_order])
+    @endif
 </div>
