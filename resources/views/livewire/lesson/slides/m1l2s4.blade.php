@@ -1,23 +1,31 @@
 <div id="m1l2s4" class="pt-36 {{ $current_slide ? 'min-h-80vh' : '' }}">
     <div class="border-b-2 border-secondary w-fit">
         <h1 class="font-intelbold text-intelblue text-3xl pb-2">
-            AI can understand natural language
+            AI is everywhere
         </h1>
     </div>
     <div class="text-gray-700 mt-8">
-        <div>
-            <p class="text-center font-intelregular text-lg">
-                Google Assistant is a virtual assistant software application developed by Google that is primarily available on mobile and home automation devices. Based on artificial intelligence, Google Assistant can engage in two-way conversations
-            </p>
-        </div>
-        <div class="grid grid-cols-3 gap-3 mt-6">
-            <div>
-                <img src="{{ asset('images/course/phone.jpg') }}" alt="" class="object-cover animate-left">
+        <div class="grid grid-cols-3 gap-3">
+            <div class="relative animate-top-fast">
+                <img src="{{ asset('images/course/agriculture.jpg') }}" alt="" class="w-full h-full max-h-72 object-cover">
+                <div
+                    class="absolute bottom-0 w-full h-1/2 bg-gradient-to-b from-transparent to-slate-400 flex items-end justify-center">
+                    <p class="text-white font-intelmedium text-lg pb-2">Agriculture</p>
+                </div>
             </div>
-            <div>
-                <img src="{{ asset('images/course/phone2.jpg') }}" alt="" class="object-cover h-full animate-top">
+            <div class="relative animate-top">
+                <img src="{{ asset('images/course/energy.jpg') }}" alt="" class="w-full h-full max-h-72 object-cover">
+                <div
+                    class="absolute bottom-0 w-full h-1/2 bg-gradient-to-b from-transparent to-slate-400 flex items-end justify-center">
+                    <p class="text-white font-intelmedium text-lg pb-2">Energy</p>
+                </div>
             </div>
-                <img src="{{ asset('images/course/speaker.jpg') }}" alt="" class="object-cover animate-right">
+            <div class="relative animate-top-slow">
+                <img src="{{ asset('images/course/education.jpg') }}" alt="" class="w-full h-full max-h-72 object-cover">
+                <div
+                    class="absolute bottom-0 w-full h-1/2 bg-gradient-to-b from-transparent to-slate-400 flex items-end justify-center">
+                    <p class="text-white font-intelmedium text-lg pb-2">Education</p>
+                </div>
             </div>
         </div>
     </div>
@@ -31,4 +39,19 @@
         @else
         @endif
     </div>
+
+    <script>
+        function adjustHeight() {
+            var elements = document.querySelectorAll(".dynamic-height-m1l1s6");
+            elements.forEach(function(element) {
+                var width = element.offsetWidth;
+                element.style.height = width + "px";
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", adjustHeight);
+        window.addEventListener("resize", adjustHeight);
+        // call adjustHeight
+        setTimeout(adjustHeight, 100);
+    </script>
 </div>
