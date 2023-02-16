@@ -1,51 +1,46 @@
-<div id="m1l2s4" class="pt-36 {{ $current_slide ? 'min-h-screen' : '' }}">
-    <div class="border-b-2 border-secondary w-fit">
-        <h1 class="font-intelbold text-intelblue text-3xl pb-2">
-            AI is everywhere
-        </h1>
-    </div>
+<div id="m1l2s6" class="{{ $current_slide ? 'min-h-screen' : '' }}">
     <div class="text-gray-700 mt-8">
         <div class="grid grid-cols-3 gap-3">
             <div class="relative animate-top-fast">
-                <img src="{{ asset('images/course/agriculture.jpg') }}" alt="" class="w-full h-full max-h-72 object-cover">
+                <img src="{{ asset('images/course/industry.jpg') }}" alt="" class="w-full h-full max-h-72 object-cover">
                 <div
                     class="absolute bottom-0 w-full h-1/2 bg-gradient-to-b from-transparent to-slate-400 flex items-end justify-center">
-                    <p class="text-white font-intelmedium text-lg pb-2">Agriculture</p>
+                    <p class="text-white font-intelmedium text-lg pb-2">Industrial</p>
                 </div>
             </div>
             <div class="relative animate-top">
-                <img src="{{ asset('images/course/energy.jpg') }}" alt="" class="w-full h-full max-h-72 object-cover">
+                <img src="{{ asset('images/course/media.jpg') }}" alt="" class="w-full h-full max-h-72 object-cover">
                 <div
                     class="absolute bottom-0 w-full h-1/2 bg-gradient-to-b from-transparent to-slate-400 flex items-end justify-center">
-                    <p class="text-white font-intelmedium text-lg pb-2">Energy</p>
+                    <p class="text-white font-intelmedium text-lg pb-2">Media</p>
                 </div>
             </div>
             <div class="relative animate-top-slow">
-                <img src="{{ asset('images/course/education.jpg') }}" alt="" class="w-full h-full max-h-72 object-cover">
+                <img src="{{ asset('images/course/retail.jpg') }}" alt="" class="w-full h-full max-h-72 object-cover">
                 <div
                     class="absolute bottom-0 w-full h-1/2 bg-gradient-to-b from-transparent to-slate-400 flex items-end justify-center">
-                    <p class="text-white font-intelmedium text-lg pb-2">Education</p>
+                    <p class="text-white font-intelmedium text-lg pb-2">Retail</p>
                 </div>
             </div>
             <div class="relative animate-top-fast">
-                <img src="{{ asset('images/course/government.jpg') }}" alt="" class="w-full h-full max-h-72 object-cover">
+                <img src="{{ asset('images/course/smart_home.jpg') }}" alt="" class="w-full h-full max-h-72 object-cover">
                 <div
                     class="absolute bottom-0 w-full h-1/2 bg-gradient-to-b from-transparent to-slate-400 flex items-end justify-center">
-                    <p class="text-white font-intelmedium text-lg pb-2">Government</p>
+                    <p class="text-white font-intelmedium text-lg pb-2">Smart Home</p>
                 </div>
             </div>
             <div class="relative animate-top">
-                <img src="{{ asset('images/course/finance.jpg') }}" alt="" class="w-full h-full max-h-72 object-cover">
+                <img src="{{ asset('images/course/telecom.jpg') }}" alt="" class="w-full h-full max-h-72 object-cover">
                 <div
                     class="absolute bottom-0 w-full h-1/2 bg-gradient-to-b from-transparent to-slate-400 flex items-end justify-center">
-                    <p class="text-white font-intelmedium text-lg pb-2">Finance</p>
+                    <p class="text-white font-intelmedium text-lg pb-2">Telecom</p>
                 </div>
             </div>
             <div class="relative animate-top-slow">
-                <img src="{{ asset('images/course/health.jpg') }}" alt="" class="w-full h-full max-h-72 object-cover">
+                <img src="{{ asset('images/course/transport.jpg') }}" alt="" class="w-full h-full max-h-72 object-cover">
                 <div
                     class="absolute bottom-0 w-full h-1/2 bg-gradient-to-b from-transparent to-slate-400 flex items-end justify-center">
-                    <p class="text-white font-intelmedium text-lg pb-2">Health</p>
+                    <p class="text-white font-intelmedium text-lg pb-2">Transport</p>
                 </div>
             </div>
         </div>

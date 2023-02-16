@@ -61,7 +61,16 @@ class M1l2 extends Component
             'latest_slide_order' => $slide_id,
         ]);
         $this->latest_slide_order = $slide_id;
-        $this->scroll($slide_id);
+
+        $scroll_exceptions = [
+            5 => 4,
+        ];
+
+        if (array_key_exists($slide_id, $scroll_exceptions)) {
+            $this->scroll($scroll_exceptions[$slide_id]);
+        } else {
+            $this->scroll($slide_id);
+        }
     }
 
     public function nextLesson()

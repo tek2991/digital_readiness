@@ -28,6 +28,8 @@ class Slide extends Model
                     2 => "What are AI's capabilities?",
                     3 => "AI can understand language",
                     4 => "AI is everywhere",
+                    5 => "AI is everywhere 2",
+                    6 => "AI is everywhere 3",
                 ],
             ],
         ];
