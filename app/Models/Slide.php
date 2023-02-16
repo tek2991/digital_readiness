@@ -26,6 +26,8 @@ class Slide extends Model
                     // Slides
                     1 => "Influence of AI on the present",
                     2 => "What are AI's capabilities?",
+                    3 => "AI can understand language",
+                    4 => "AI is everywhere",
                 ],
             ],
         ];

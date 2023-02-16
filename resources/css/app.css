@@ -109,6 +109,16 @@
     .animate-zoom-fast {animation:animatezoom-fast 0.4s}@keyframes animatezoom-fast{from{transform:scale(0)} to{transform:scale(1)}}
     .animate-input-fast{transition:width 0.2s ease-in-out}.animate-input-fast:focus{width:100%!important}
 
+    /* Delay */
+    .animate-delay-250ms{animation-delay: 0.25s}
+    .animate-delay-500ms{animation-delay: 0.5s}
+    .animate-delay-750ms{animation-delay: 0.75s}
+
+    /* min heights vh */
+    .min-h-100vh { min-height: 100vh; }
+    .min-h-90vh { min-height: 90vh; }
+    .min-h-80vh { min-height: 80vh; }
+    .min-h-70vh { min-height: 70vh; }
 }
 
 @layer components {

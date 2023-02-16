@@ -62,7 +62,7 @@
         @if ($allow_next && $show_next)
             <button wire:click="nextSlide"
                 class="animate-bounce bg-intelblue text-white font-intelmedium text-xl p-4 rounded-lg lg:mt-6 w-full">
-                Lets find out what AIs are capable of
+                Lets look at an example...
             </button>
         @else
         @endif
