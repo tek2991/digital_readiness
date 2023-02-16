@@ -33,6 +33,7 @@ class Slide extends Model
                     7 => "AI is everywhere 4",
                     8 => "AI is everywhere 5",
                     9 => "Automation",
+                    10 => "Automation vs Artificial Intelligence",
                 ],
             ],
         ];
