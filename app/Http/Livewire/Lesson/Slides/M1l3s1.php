@@ -38,7 +38,7 @@ class M1l3s1 extends Component
         $this->latest_slide_order = $this->slide_id + 1;
         $this->show_next = false;
         $this->current_slide = false;
-        $this->emitTo('lesson.m1l3', 'nextSlide', $this->slide_id + 1);
+        // $this->emitTo('lesson.m1l3', 'nextSlide', $this->slide_id + 1);
     }
 
     public function render()
