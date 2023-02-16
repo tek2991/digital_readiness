@@ -34,10 +34,6 @@ class M1l2s3 extends Component
         }
     }
 
-    protected $listeners = [
-        'noIdeaWhyThisIsNeeded' => 'nextSlide',
-    ];
-
     public function nextSlide()
     {
         $this->latest_slide_order = $this->slide_id + 1;
