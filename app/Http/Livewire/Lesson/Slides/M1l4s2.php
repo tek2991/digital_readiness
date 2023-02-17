@@ -4,7 +4,7 @@ namespace App\Http\Livewire\Lesson\Slides;
 
 use Livewire\Component;
 
-class M1l4s1 extends Component
+class M1l4s2 extends Component
 {
     public $latest_slide_order;
     public $allow_next = false;
@@ -12,7 +12,7 @@ class M1l4s1 extends Component
     public $complete = false;
     public $current_slide = false;
 
-    public $slide_id = 1;
+    public $slide_id = 2;
 
     public function mount($latest_slide_order)
     {
@@ -51,6 +51,6 @@ class M1l4s1 extends Component
 
     public function render()
     {
-        return view('livewire.lesson.slides.m1l4s1');
+        return view('livewire.lesson.slides.m1l4s2');
     }
 }

@@ -2,4 +2,10 @@
     @if ($latest_slide_order >= 1)
         @livewire('lesson.slides.m1l4s1', ['latest_slide_order' => $latest_slide_order])
     @endif
+    @if ($latest_slide_order >= 2)
+        @livewire('lesson.slides.m1l4s2', ['latest_slide_order' => $latest_slide_order])
+    @endif
+    @if ($latest_slide_order >= 3)
+        @livewire('lesson.slides.m1l4s3', ['latest_slide_order' => $latest_slide_order])
+    @endif
 </div>

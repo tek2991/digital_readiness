@@ -54,6 +54,8 @@ class Slide extends Model
                 4 => [
                     // Slides
                     1 => "Video",
+                    2 => "Road Safety Facts",
+                    3 => "Road Safety Facts 2",
                 ],
             ],
         ];
