@@ -14,6 +14,7 @@ class Lesson extends Model
                 1 => 'What is Artificial Intelligence?',
                 2 => 'AI in Todays World',
                 3 => 'Quiz',
+                4 => 'Case Study',
             ],
             2=> [
 

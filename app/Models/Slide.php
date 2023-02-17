@@ -39,7 +39,21 @@ class Slide extends Model
                 // Lesson 3
                 3 => [
                     // Slides
-                    1 => "Question 1",
+                    1 => "Start",
+                    2 => "Question 1",
+                    3 => "Question 2",
+                    4 => "Question 3",
+                    5 => "Question 4",
+                    6 => "Question 5",
+                    7 => "Question 6",
+                    8 => "Question 7",
+                    9 => "Question 8",
+                ],
+
+                // Lesson 4
+                4 => [
+                    // Slides
+                    1 => "Video",
                 ],
             ],
         ];
