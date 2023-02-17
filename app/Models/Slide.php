@@ -58,6 +58,15 @@ class Slide extends Model
                     3 => "Road Safety Facts 2",
                 ],
             ],
+
+            // Module 2
+            2=>[
+                // Lesson 5
+                5 => [
+                    // Slides
+                    1 => "How AI Works",
+                ],
+            ],
         ];
     }
 

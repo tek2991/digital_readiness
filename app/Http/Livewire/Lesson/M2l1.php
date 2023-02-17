@@ -6,13 +6,13 @@ use App\Models\Lesson;
 use App\Models\Module;
 use Livewire\Component;
 
-class M1l4 extends Component
+class M2l1 extends Component
 {
     public $module;
     public $lesson;
     public $latest_slide_order;
-    public $module_id = 1;
-    public $lesson_id = 4;
+    public $module_id = 2;
+    public $lesson_id = 5;
 
     public $next_lesson_id;
 
@@ -46,7 +46,12 @@ class M1l4 extends Component
         } else {
             $next_module_exists = Module::where('order', $this->module->order + 1)->exists();
             if ($next_module_exists) {
-                $this->next_lesson_id = Module::where('order', $this->module->order + 1)->first()->lessons()->orderBy('order')->first()->id;
+                $next_module_has_lesson = Module::where('order', $this->module->order + 1)->first()->lessons()->exists();
+                if($next_module_has_lesson){
+                    $this->next_lesson_id = Module::where('order', $this->module->order + 1)->first()->lessons()->orderBy('order')->first()->id;
+                }else{
+                    $this->next_lesson_id = null;
+                }
             } else {
                 $this->next_lesson_id = null;
             }
@@ -98,6 +103,6 @@ class M1l4 extends Component
 
     public function render()
     {
-        return view('livewire.lesson.m1l4');
+        return view('livewire.lesson.m2l1');
     }
 }

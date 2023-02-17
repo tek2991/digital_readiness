@@ -17,7 +17,7 @@ class Lesson extends Model
                 4 => 'Case Study',
             ],
             2=> [
-
+                1 => 'What Happens Inside AI?',
             ],
             3=> [
 
