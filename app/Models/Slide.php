@@ -65,6 +65,9 @@ class Slide extends Model
                 5 => [
                     // Slides
                     1 => "How AI Works",
+                    2 => "How does AI make a decision?",
+                    3 => "What is a Perceptron?",
+                    4 => "Perceptron for going to the park example",
                 ],
             ],
         ];
