@@ -68,6 +68,14 @@ class Slide extends Model
                     2 => "How does AI make a decision?",
                     3 => "What is a Perceptron?",
                     4 => "Perceptron for going to the park example",
+                    5 => "Teachable Machine",
+                ],
+
+                // Lesson 6
+                6 => [
+                    1 => "Teachable Machine",
+                    2 => "Teachable Machine2",
+                    3 => "Introduction to Teachable Machine",
                 ],
             ],
         ];

@@ -18,6 +18,7 @@ class Lesson extends Model
             ],
             2=> [
                 1 => 'What Happens Inside AI?',
+                2 => 'Teachable Machine',
             ],
             3=> [
 

@@ -6,13 +6,13 @@ use App\Models\Lesson;
 use App\Models\Module;
 use Livewire\Component;
 
-class M2l1 extends Component
+class M2l2 extends Component
 {
     public $module;
     public $lesson;
     public $latest_slide_order;
     public $module_id = 2;
-    public $lesson_id = 5;
+    public $lesson_id = 6;
 
     public $next_lesson_id;
 
@@ -95,7 +95,7 @@ class M2l1 extends Component
 
     public function scroll($slide_id)
     {
-        $query = "#m2l1s{$slide_id}";
+        $query = "#m2l2s{$slide_id}";
         $this->dispatchBrowserEvent('mls:scroll-to', [
             'query' => $query,
         ]);
@@ -103,6 +103,6 @@ class M2l1 extends Component
 
     public function render()
     {
-        return view('livewire.lesson.m2l1');
+        return view('livewire.lesson.m2l2');
     }
 }

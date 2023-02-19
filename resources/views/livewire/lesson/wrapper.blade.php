@@ -9,5 +9,7 @@
         @livewire('lesson.m1l4')
     @elseif ($lesson_id == 5)
         @livewire('lesson.m2l1')
+    @elseif ($lesson_id == 6)
+        @livewire('lesson.m2l2')
     @endif
 </div>
