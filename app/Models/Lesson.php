@@ -11,14 +11,15 @@ class Lesson extends Model
     public static function defaultLessons(){
         return [
             1 => [
-                1 => 'What is Artificial Intelligence?',
-                2 => 'AI in Todays World',
-                3 => 'Quiz',
-                4 => 'Case Study',
+                1 => 'What is Artificial Intelligence?', #1
+                2 => 'AI in Todays World', #2
+                3 => 'Quiz', #3
+                4 => 'Case Study', #4
             ],
             2=> [
-                1 => 'What Happens Inside AI?',
-                2 => 'Teachable Machine',
+                1 => 'What Happens Inside AI?', #5
+                2 => 'Teachable Machine', #6
+                3 => 'Impact of AI', #7
             ],
             3=> [
 

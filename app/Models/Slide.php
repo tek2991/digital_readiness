@@ -76,6 +76,16 @@ class Slide extends Model
                     1 => "Teachable Machine",
                     2 => "Teachable Machine2",
                     3 => "Introduction to Teachable Machine",
+                    4 => "Teachable Machine 3",
+                    5 => "Teachable Machine 4",
+                ],
+
+                // Lesson 7
+                7 => [
+                    1 => "AI for Future Workforce",
+                    2 => "Impact of AI in Students",
+                    3 => "Impact of AI in Jobs",
+                    4 => "Impact of AI in Jobs 2",
                 ],
             ],
         ];
