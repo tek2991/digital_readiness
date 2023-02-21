@@ -24,6 +24,11 @@ class User extends Authenticatable
         'dob',
         'cstate_id',
         'role_id',
+        'gender',
+        'qualification_type',
+        'qualification_name',
+        'otp',
+        'otp_valid_till',
     ];
 
     /**

@@ -14,14 +14,26 @@
                 Fill out the registration form below to sign-up for
                 the platform.
             </h3>
-            <form action="" wire:submit.prevent="register">
+            @if ($error)
+                <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative my-4"
+                    role="alert">
+                    <span class="block sm:inline">{{ $error }}</span>
+                </div>
+            @endif
+            @if ($message)
+                <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative my-4"
+                    role="alert">
+                    <span class="block sm:inline">{{ $message }}</span>
+                </div>
+            @endif
+            <form action="" wire:submit.prevent="submit">
                 <div class="mt-6 grid gap-6 mb-6 md:grid-cols-2">
                     <div class="">
                         <label for="name" class="block mb-2 text-sm text-gray-700">Name</label>
                         @error('name')
                             <label for="name" class="block mb-2 text-sm text-red-700">{{ $message }}</label>
                         @enderror
-                        <input type="text" id="name" wire:model="name"
+                        <input type="text" id="name" wire:model="name" {{ $step != 1 ? 'disabled' : '' }}
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-secondary focus:border-secondary block w-full p-2.5"
                             placeholder="Jane Doe" required>
                     </div>
@@ -30,7 +42,7 @@
                         @error('email')
                             <label for="email" class="block mb-2 text-sm text-red-700">{{ $message }}</label>
                         @enderror
-                        <input type="email" id="email" wire:model="email"
+                        <input type="email" id="email" wire:model="email" {{ $step != 1 ? 'disabled' : '' }}
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-secondary focus:border-secondary block w-full p-2.5"
                             placeholder="jane@email.com" required>
                     </div>
@@ -39,7 +51,7 @@
                         @error('dob')
                             <label for="dob" class="text-xs text-red-700 block">{{ $message }}</label>
                         @enderror
-                        <input id="dob" wire:model="dob"
+                        <input id="dob" wire:model="dob" {{ $step != 1 ? 'disabled' : '' }}
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-secondary focus:border-secondary block w-full p-2.5"
                             type="date" required />
                     </div>
@@ -48,7 +60,7 @@
                         @error('cstate_id')
                             <label for="cstate" class="text-xs text-red-700 block">{{ $message }}</label>
                         @enderror
-                        <select id="dob" wire:model="cstate_id"
+                        <select id="dob" wire:model="cstate_id" {{ $step != 1 ? 'disabled' : '' }}
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-secondary focus:border-secondary block w-full p-2.5"
                             type="date" required>
                             <option value="">select</option>
@@ -57,31 +69,75 @@
                             @endforeach
                         </select>
                     </div>
+
                     <div>
-                        <label for="password" class="block mb-2 text-sm text-gray-700">Password</label>
-                        @error('password')
-                            <label for="password" class="text-xs text-red-700 block">{{ $message }}</label>
+                        <label for="gender" class="block mb-2 text-sm text-gray-700">Gender</label>
+                        @error('gender')
+                            <label for="gender" class="text-xs text-red-700 block">{{ $message }}</label>
                         @enderror
-                        <input id="password" wire:model="password"
+                        <select id="gender" wire:model="gender" {{ $step != 1 ? 'disabled' : '' }}
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-secondary focus:border-secondary block w-full p-2.5"
-                            type="password" placeholder="*******" required />
+                            type="date" required>
+                            <option value="">select</option>
+                            @foreach ($genders as $id => $gender)
+                                <option value="{{ $id }}">{{ $gender }}</option>
+                            @endforeach
+                        </select>
                     </div>
+
                     <div>
-                        <label for="password_confirmation" class="block mb-2 text-sm text-gray-700">Confirm Password</label>
-                        @error('password')
-                            <label for="password" class="text-xs text-red-700 block">{{ $message }}</label>
+                        <label for="qualification_type" class="block mb-2 text-sm text-gray-700">Qualification</label>
+                        @error('qualification_type')
+                            <label for="qualification_type" class="text-xs text-red-700 block">{{ $message }}</label>
                         @enderror
-                        <input id="password_confirmation" wire:model="password_confirmation"
+                        <select id="qualification_type" wire:model="qualification_type"
+                            {{ $step != 1 ? 'disabled' : '' }}
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-secondary focus:border-secondary block w-full p-2.5"
-                            type="password" placeholder="*******" required />
+                            type="date" required>
+                            <option value="">select</option>
+                            @foreach ($qualifications as $id => $qualification)
+                                <option value="{{ $id }}">{{ $qualification }}</option>
+                            @endforeach
+                        </select>
                     </div>
-    
+
+                    @if ($qualification_type > 0)
+                        <div class="md:col-span-2">
+                            <label for="qualification_name" class="block mb-2 text-sm text-gray-700">Degree Name</label>
+                            @error('qualification_name')
+                                <label for="qualification_name"
+                                    class="block mb-2 text-sm text-red-700">{{ $message }}</label>
+                            @enderror
+                            <input type="text" id="qualification_name" wire:model="qualification_name"
+                                {{ $step != 1 ? 'disabled' : '' }}
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-secondary focus:border-secondary block w-full p-2.5"
+                                required>
+                        </div>
+                    @endif
+
+
+                    @if ($step == 2)
+                        <div class="md:col-span-2">
+                            <label for="user_otp" class="block mb-2 text-sm text-gray-700">Email OTP</label>
+                            @error('user_otp')
+                                <label for="user_otp" class="block mb-2 text-sm text-red-700">{{ $message }}</label>
+                            @enderror
+                            <input type="text" id="user_otp" wire:model="user_otp"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-secondary focus:border-secondary block w-full p-2.5"
+                                required>
+                        </div>
+                    @endif
+
                     <div class="">
                         <button type="submit"
                             class="text-base h-11 w-44 py-2 bg-intelblue text-center border rounded-full border-intelblue">
                             <span
                                 class="hover:underline text-white hover:text-secondary font-intelmedium transition duration-300">
-                                Register
+                                @if ($step == 1)
+                                    Send Email OTP
+                                @else
+                                    Verify OTP
+                                @endif
                             </span>
                         </button>
                     </div>
