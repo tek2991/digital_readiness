@@ -5,12 +5,11 @@
             <div class="max-w-lg flex items-center">
                 <div class="flex flex-col gap-4">
                     <h1 class="text-4xl font-intelmedium md:leading-normal text-white">
-                        <span class="text-secondary">Simulated Internship</span> Platform <br>
-                        for <span class="text-secondary">Industry Readiness</span>
+                        <span class="text-secondary">AI</span> Self-Paced Course <br>
+                        for <span class="text-secondary">Workforce Readiness</span>
                     </h1>
                     <p class="text-lg text-white">
-                        Join today to work on real-world projects and kick-start
-                        your career.
+                        Complete this free self-paced course and earn a shareable badge.
                     </p>
                     <div class="block sm:hidden max-w-2xl">
                         <img src="./images/group2.png" alt="" />

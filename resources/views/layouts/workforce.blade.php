@@ -1,32 +1,25 @@
 <div>
-    <div class="p-4 bg-intelblue2 my-12">
+    <div class="p-4 my-12">
         <div class="container mx-auto">
             <section class="md:grid md:grid-cols-2 md:gap-8 py-8">
                 <div class="md:order-last mb-6">
                     <h3 class="text-intelblue font-intelmedium text-xl mb-3">AI for Future Workforce</h3>
                     <p class="text-gray-700 text-justify">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                        been
-                        the
-                        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                        of
-                        type
-                        and scrambled it to make a type specimen book. It has survived not only five centuries, but
-                        also
-                        the
-                        leap into electronic typesetting, remaining essentially unchanged.
+                        This self-paced course is a part of a larger course called the AI for Future Workforce. The
+                        course spans over 200 hours of content incorporating new AI trends. Engaging, validated,
+                        hands-on content infused with the latest use cases to bring the learner up to the pace of the
+                        latest trends quickly.
                     </p>
                 </div>
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/K9iflwQqVsA" title="YouTube video player"
-                        frameborder="0"
+                    <iframe src="https://www.youtube.com/embed/K9iflwQqVsA" title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
                 </div>
             </section>
         </div>
     </div>
-    <div class="p-4 bg-white my-12">
+    {{-- <div class="p-4 bg-white my-12">
         <div class="container mx-auto">
             <section class="grid grid-cols-1 md:grid-cols-3 my-12 gap-y-14 md:gap-x-8">
                 <div class="max-w-xs mx-auto bg-white h-full flex flex-col">
@@ -72,5 +65,5 @@
                 </div>
             </section>
         </div>
-    </div>
+    </div> --}}
 </div>

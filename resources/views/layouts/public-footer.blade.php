@@ -44,7 +44,7 @@
                 </div>
                 <hr class="border-b border-gray-300 rounded-sm">
                 <p class="pt-6 pb-2">
-                    <a href="#" class="text-gray-600 text-xs font-intellight">© 2023 Intel Simulated Internship. All rights reserved.</a>
+                    <div class="text-gray-600 text-xs font-intellight">© 2023 Intel Digital Readiness. All rights reserved.</div>
                 </p>
             </footer>
         </div>
