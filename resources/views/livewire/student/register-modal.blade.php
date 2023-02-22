@@ -141,6 +141,43 @@
                             </span>
                         </button>
                     </div>
+
+                    <div class="col-span-2 mt-3" wire:ignore>
+                        @if ($step == 2)
+                            <button id="resend-otp" wire:click="resendOtp" type="button"
+                                class="cursor-pointer text-intelblue text-sm ml-1 disabled:text-gray-500 disabled:cursor-default"
+                                disabled>
+                                Resend OTP
+                                <span id="countdown">
+                                    {{-- Countdown 2 mins --}}
+                                </span>
+                            </button>
+
+                            <script>
+                                // Countdown 2 mins for resend OTP
+                                let timeLeft = 120;
+                                let countdown = document.getElementById("countdown");
+                                let resendOtp = document.getElementById("resend-otp");
+                                let timerId = setInterval(countdownTimer, 1000);
+
+                                function countdownTimer() {
+                                    if (timeLeft == 0) {
+                                        clearTimeout(timerId);
+                                        countdown.innerHTML = "";
+                                        resendOtp.disabled = false;
+                                        resendOtp.classList.remove("disabled:text-gray-500");
+                                        resendOtp.classList.remove("disabled:cursor-default");
+                                    } else {
+                                        countdown.innerHTML = " (" + timeLeft + "s)";
+                                        resendOtp.disabled = true;
+                                        resendOtp.classList.add("disabled:text-gray-500");
+                                        resendOtp.classList.add("disabled:cursor-default");
+                                    }
+                                    timeLeft--;
+                                }
+                            </script>
+                        @endif
+                    </div>
                 </div>
             </form>
         </div>

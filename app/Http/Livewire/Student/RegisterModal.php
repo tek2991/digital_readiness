@@ -67,6 +67,13 @@ class RegisterModal extends ModalComponent
         return rand(100000, 999999);
     }
 
+    public function generateRandomPassword()
+    {
+        $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_-=+;:,.?";
+        $password = substr(str_shuffle($chars), 0, 8);
+        return $password;
+    }
+
 
     public function rules()
     {
@@ -111,7 +118,7 @@ class RegisterModal extends ModalComponent
             $this->message = 'OTP sent to your email.';
 
             // Increment step
-            $this->step++;
+            $this->step = 2;
         }
     }
 
@@ -129,13 +136,13 @@ class RegisterModal extends ModalComponent
                 'name' => $this->name,
                 'dob' => $this->dob,
                 'cstate_id' => $this->cstate_id,
-                'password' => Hash::make($this->otp),
+                'password' => Hash::make($this->generateRandomPassword()),
                 'role_id' => 2,
                 'gender' => $gender,
                 'qualification_type' => $qualification_type,
                 'qualification_name' => $this->qualification_name,
                 'otp' => Hash::make($this->otp),
-                'otp_valid_till' => now()->addMinutes(30),
+                'otp_valid_till' => now()->addMinutes(10),
             ]
         );
     }
@@ -149,7 +156,10 @@ class RegisterModal extends ModalComponent
             $this->error = 'OTP has expired.';
         } else {
             // Check if OTP is correct
-            if (Auth::attempt(['email' => $this->email, 'password' => $this->user_otp])) {
+            if (Hash::check($this->user_otp, $this->user->otp)) {
+
+                // Login user
+                Auth::login($this->user);
 
                 // Update email_verified_at
                 $user->email_verified_at = now();
@@ -162,11 +172,17 @@ class RegisterModal extends ModalComponent
                 // Sync lessons
                 $this->syncLessons();
 
+                // Delete OTP
+                $user->update([
+                    'otp' => null,
+                    'otp_valid_till' => null,
+                ]);
+
                 // Redirect to the dashboard
                 return redirect()->route('course');
             } else {
                 // OTP is incorrect
-                $this->error = 'OTP is incorrect.' . $this->user_otp . ' - ' . $this->otp;
+                $this->error = 'OTP is incorrect.';
             }
         }
     }
@@ -181,6 +197,26 @@ class RegisterModal extends ModalComponent
         } else if ($this->step == 2) {
             $this->validateOtp();
         }
+    }
+
+    public function resend(){
+        $this->error = false;
+        $this->message = '';
+
+        // Generate OTP
+        $this->otp = $this->generateOtp();
+
+        // Update OTP
+        $this->user->update([
+            'otp' => Hash::make($this->otp),
+            'otp_valid_till' => now()->addMinutes(10),
+        ]);
+
+        // Send mail OTP
+        Mail::to($this->user)->send(new SendOtp($this->otp));
+
+        // Add message
+        $this->message = 'OTP resend to your email.';
     }
 
     public function render()
