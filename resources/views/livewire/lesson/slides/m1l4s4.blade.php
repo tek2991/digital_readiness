@@ -18,15 +18,18 @@
                     class="question h-full w-full object-contain object-center">
             </div>
             <div id="answer1"
-                class="answer order-2 md:order-4 w-full h-full flex justify-between items-center bg-intellight rounded-lg text-md p-3 md:text-xl">
+                class="answer order-2 md:order-4 w-full h-full flex justify-between items-center bg-intellight rounded-lg text-md p-3 md:text-xl 
+                {{ $qa_states['answer1'] ? 'border-3 border-green-600 shadow-lg shadow-green-500' : '' }}">
                 <p class="text-center">Recommendation System –YouTube video suggestions</p>
             </div>
             <div id="answer2"
-                class="answer order-4 md:order-5 w-full h-full flex justify-between items-center bg-intellight rounded-lg text-md p-3 md:text-xl">
+                class="answer order-4 md:order-5 w-full h-full flex justify-between items-center bg-intellight rounded-lg text-md p-3 md:text-xl
+                {{ $qa_states['answer3'] ? 'border-3 border-green-600 shadow-lg shadow-green-500' : '' }}">
                 <p class="text-center">Digital Assistants – Alexa, Siri, etc.</p>
             </div>
             <div id="answer3"
-                class="answer order-6 md:order-6 w-full h-full flex justify-between items-center bg-intellight rounded-lg text-md p-3 md:text-xl">
+                class="answer order-6 md:order-6 w-full h-full flex justify-between items-center bg-intellight rounded-lg text-md p-3 md:text-xl 
+                {{ $qa_states['answer3'] ? 'border-3 border-green-600 shadow-lg shadow-green-500' : '' }}">
                 <p class="text-center">Navigation – Google Maps </p>
             </div>
         </div>
@@ -35,7 +38,7 @@
         @if ($allow_next && $show_next)
             <button wire:click="nextSlide" {{ $complete == true ? '' : 'disabled' }}
                 class="{{ $complete == true ? 'bg-intelblue animate-bounce' : 'bg-gray-400' }} text-white font-intelmedium text-xl p-4 rounded-lg lg:mt-6 w-full">
-                {{ $complete == true ? 'Next Module...' : 'Please complete the avtivity above' }}
+                {{ $complete == true ? 'Get your first badge...' : 'Please complete the avtivity above' }}
             </button>
         @else
         @endif
@@ -73,14 +76,15 @@
                     // Check if the dropped question matches the answer
                     if (correctMatches[currentQuestion.id] === answer.id) {
                         // If the answer is correct, update the display to reflect that
-                        answer.classList.add('border-3', 'border-green-600', 'shadow-lg', 'shadow-green-500');
+                        answer.classList.add('border-3', 'border-green-600', 'shadow-lg',
+                            'shadow-green-500');
                         // currentQuestion.classList.add('');
 
                         // get the id of the question after the word question
                         let q = currentQuestion.id.slice(8);
                         // call the correct method
                         document.getElementById('qb' + q).click();
-                    }else{
+                    } else {
                         // currentQuestion.classList.add('shadow-lg', 'shadow-red-500');
                     }
                 });

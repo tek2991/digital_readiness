@@ -56,6 +56,8 @@ class Slide extends Model
                     1 => "Video",
                     2 => "Road Safety Facts",
                     3 => "Road Safety Facts 2",
+                    4 => "Match the following",
+                    5 => "Badge Module 1",
                 ],
             ],
 

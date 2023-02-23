@@ -54,12 +54,10 @@ class M1l4s4 extends Component
             $this->qa_states['answer1'] = true;
             $this->qa_states['answer2'] = true;
             $this->qa_states['answer3'] = true;
+
+            $this->complete = true;
         }
     }
-
-    protected $listeners = [
-        'correct' => 'correct',
-    ];
 
     public function correct($questionId, $answerId){
         $this->qa_states[$questionId] = true;
@@ -76,13 +74,10 @@ class M1l4s4 extends Component
 
     public function nextSlide()
     {
-        $this->nextLesson();
-    }
-
-
-    public function nextLesson()
-    {
-        $this->emitTo('lesson.m1l4', 'nextLesson');
+        $this->latest_slide_order = $this->slide_id + 1;
+        $this->show_next = false;
+        $this->current_slide = false;
+        $this->emitTo('lesson.m1l4', 'nextSlide', $this->slide_id + 1);
     }
 
     public function render()
