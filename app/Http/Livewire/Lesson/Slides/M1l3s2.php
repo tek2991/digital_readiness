@@ -29,6 +29,8 @@ class M1l3s2 extends Component
 
         if($this->latest_slide_order > $this->slide_id) {
             $this->show_next = false;
+
+            $this->selectedAnswer = $this->answer;
         }
 
         if($this->latest_slide_order == $this->slide_id) {

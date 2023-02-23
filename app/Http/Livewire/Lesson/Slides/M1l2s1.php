@@ -23,6 +23,15 @@ class M1l2s1 extends Component
         6 => false,
     ];
 
+    public $fliped = [
+        1 => false,
+        2 => false,
+        3 => false,
+        4 => false,
+        5 => false,
+        6 => false,
+    ];
+
     public function mount($latest_slide_order)
     {
         $this->latest_slide_order = $latest_slide_order;
@@ -30,8 +39,6 @@ class M1l2s1 extends Component
         if($this->latest_slide_order >= $this->slide_id) {
             $this->allow_next = true;
         }
-
-        $this->complete = true;
 
         if($this->latest_slide_order > $this->slide_id) {
             $this->show_next = false;
@@ -45,6 +52,14 @@ class M1l2s1 extends Component
     public function flipCard($card)
     {
         $this->flipCards[$card] = !$this->flipCards[$card];
+
+        if($this->flipCards[$card]) {
+            $this->fliped[$card] = true;
+        }
+
+        if($this->fliped[1] && $this->fliped[2] && $this->fliped[3] && $this->fliped[4] && $this->fliped[5] && $this->fliped[6]) {
+            $this->complete = true;
+        }
     }
 
     public function nextSlide()

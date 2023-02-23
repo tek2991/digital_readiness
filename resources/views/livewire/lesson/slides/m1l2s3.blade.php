@@ -29,7 +29,7 @@
         @if ($allow_next && $show_next)
             <button wire:click="nextSlide"
                 class="animate-bounce bg-intelblue text-white font-intelmedium text-xl p-4 rounded-lg lg:mt-6 w-full">
-                Lets look at an example...
+                Lets look at some more example...
             </button>
         @else
         @endif

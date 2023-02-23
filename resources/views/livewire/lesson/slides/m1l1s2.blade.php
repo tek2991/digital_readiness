@@ -39,10 +39,9 @@
                         </div>
                         <div
                             class="flip-card-back w-full h-full absolute flex items-center p-4 px-6 bg-intelblue2 rounded-lg shadow-lg">
-                            <p class="text-gray-700">Understand what is inside Artificial
-                                Intelligence and learn about AI tools - Teachable Machine/ Intel DevCloud/ Intel
-                                OpenVINO
-                                Examine and discuss the impacts of AI in present and in the future
+                            <p class="text-gray-700">Understand what artificial intelligence is and learn about AI using
+                                a no-code AI tool Teachable Machine. Examine and discuss the impacts of AI in the
+                                present and the future.
                             </p>
                         </div>
                     </div>
@@ -71,9 +70,9 @@
         </div>
         <div>
             @if ($allow_next && $show_next)
-                <button wire:click="nextSlide"
-                    class="animate-bounce bg-intelblue text-white font-intelmedium text-xl p-4 rounded-lg lg:mt-6 w-full">
-                    Introduction to Module 1
+                <button wire:click="nextSlide" {{ $complete == true ? '' : 'disabled' }}
+                    class="{{ $complete == true ? 'bg-intelblue animate-bounce' : 'bg-gray-400' }} text-white font-intelmedium text-xl p-4 rounded-lg lg:mt-6 w-full">
+                    {{ $complete == true ? 'Introduction to Module 1' : 'Please complete the slide above' }}
                 </button>
             @else
             @endif

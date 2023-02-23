@@ -22,9 +22,9 @@ class CourseAside extends Component
         $this->current_lesson = Lesson::find(1);
 
         $last_completed_lesson = auth()->user()->lessons->where('pivot.completed', 1)->last();
-        if($last_completed_lesson) {
+        if ($last_completed_lesson) {
             $this->current_lesson = $last_completed_lesson;
-        } 
+        }
     }
 
     public function syncCompletedLessons()
@@ -54,6 +54,17 @@ class CourseAside extends Component
 
     public function changeLesson($lesson_id)
     {
+        $user = auth()->user();
+        $user_lessons = $user->lessons;
+        $lesson = Lesson::find($lesson_id);
+
+        // CHeck if previous lessons are completed
+        $previous_lessons = $user_lessons->where('pivot.completed', 0)->where('id', '<', $lesson->id);
+        if ($previous_lessons->count() > 0) {
+            return;
+        }
+
+
         $this->current_lesson = Lesson::find($lesson_id);
         $this->syncCompletedLessons();
         $this->loadLesson($lesson_id);

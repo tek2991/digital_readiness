@@ -39,6 +39,22 @@ class M1l4s4 extends Component
         if($this->latest_slide_order == $this->slide_id) {
             $this->current_slide = true;
         }
+
+        $user = auth()->user();
+        $lesson_id = 4;
+
+        // Check if user has completed this lesson
+        $completed = $user->lessons()->where('lesson_id', $lesson_id)->where('completed', 1)->first();
+
+        if($completed) {
+            $this->qa_states['question1'] = true;
+            $this->qa_states['question2'] = true;
+            $this->qa_states['question3'] = true;
+
+            $this->qa_states['answer1'] = true;
+            $this->qa_states['answer2'] = true;
+            $this->qa_states['answer3'] = true;
+        }
     }
 
     protected $listeners = [

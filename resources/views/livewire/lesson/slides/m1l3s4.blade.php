@@ -33,20 +33,20 @@
             @if ($selectedAnswer)
                 <div class="cursor-pointer rounded {{ $answer == 1 ? $right : $wrong }}" wire:click="checkAnswer(1)">
                     <img src="{{ asset('images/course/door.gif') }}" alt=""
-                        class="w-full h-full object-cover rounded">
+                        class="w-full h-full max-h-96 object-scale-down rounded">
                 </div>
                 <div class="cursor-pointer rounded {{ $answer == 2 ? $right : $wrong }}" wire:click="checkAnswer(2)">
                     <img src="{{ asset('images/course/map.gif') }}" alt=""
-                        class="w-full h-full object-cover rounded">
+                        class="w-full h-full max-h-96 object-scale-down rounded">
                 </div>
             @else
                 <div class="cursor-pointer rounded" wire:click="checkAnswer(1)">
                     <img src="{{ asset('images/course/door.gif') }}" alt=""
-                        class="w-full h-full object-cover rounded">
+                        class="w-full h-full max-h-96 object-scale-down rounded">
                 </div>
                 <div class="cursor-pointer rounded" wire:click="checkAnswer(2)">
                     <img src="{{ asset('images/course/map.gif') }}" alt=""
-                        class="w-full h-full object-cover rounded">
+                        class="w-full h-full max-h-96 object-scale-down rounded">
                 </div>
             @endif
         </div>
