@@ -15,11 +15,12 @@ class Lesson extends Model
                 2 => 'AI in Todays World', #2
                 3 => 'Quiz', #3
                 4 => 'Case Study', #4
+                5 => 'Badge', #5
             ],
             2=> [
-                1 => 'What Happens Inside AI?', #5
-                2 => 'Teachable Machine', #6
-                3 => 'Impact of AI', #7
+                1 => 'What Happens Inside AI?', #6
+                2 => 'Teachable Machine', #7
+                3 => 'Impact of AI', #8
             ],
             3=> [
 

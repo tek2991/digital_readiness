@@ -17,12 +17,12 @@
                     <div class="flex justify-between md:justify-start py-4">
                         <div
                             class="text-base h-11 w-44 py-2 bg-white text-intelblue text-center border rounded-full border-white">
-                            <a href="#"
-                                class="hover:underline hover:text-secondary font-intelmedium transition duration-300">
+                            <button type="button" onclick="Livewire.emit('openModal', 'student.register-modal')"
+                                class="hover:underline hover:text-secondary font-intelmedium transition duration-300 cursor-pointer">
                                 Get Started
-                            </a>
+                            </button>
                         </div>
-                        <div
+                        {{-- <div
                             class="md:ml-6 text-base block h-11 w-44 bg-intelblue text-center text-white border rounded-full border-white">
                             <a href="#" class="hover:underline">
                                 <div class="flex justify-center px-4 items-center">
@@ -39,7 +39,7 @@
                                     </div>
                                 </div>
                             </a>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>

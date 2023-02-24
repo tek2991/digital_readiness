@@ -11,7 +11,4 @@
     @if ($latest_slide_order >= 4)
         @livewire('lesson.slides.m1l4s4', ['latest_slide_order' => $latest_slide_order])
     @endif
-    @if ($latest_slide_order >= 5)
-        @livewire('lesson.slides.m1l4s5', ['latest_slide_order' => $latest_slide_order])
-    @endif
 </div>

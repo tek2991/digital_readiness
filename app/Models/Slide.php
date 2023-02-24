@@ -59,12 +59,18 @@ class Slide extends Model
                     4 => "Match the following",
                     5 => "Badge Module 1",
                 ],
+
+                // Lesson 5
+                5 => [
+                    // Slides
+                    1 => "Badge Module 1",
+                ],
             ],
 
             // Module 2
             2=>[
                 // Lesson 5
-                5 => [
+                6 => [
                     // Slides
                     1 => "How AI Works",
                     2 => "How does AI make a decision?",
@@ -74,7 +80,7 @@ class Slide extends Model
                 ],
 
                 // Lesson 6
-                6 => [
+                7 => [
                     1 => "Teachable Machine",
                     2 => "Teachable Machine2",
                     3 => "Introduction to Teachable Machine",
@@ -83,7 +89,7 @@ class Slide extends Model
                 ],
 
                 // Lesson 7
-                7 => [
+                8 => [
                     1 => "AI for Future Workforce",
                     2 => "Impact of AI in Students",
                     3 => "Impact of AI in Jobs",

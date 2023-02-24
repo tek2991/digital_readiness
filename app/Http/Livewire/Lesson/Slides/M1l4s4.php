@@ -74,10 +74,13 @@ class M1l4s4 extends Component
 
     public function nextSlide()
     {
-        $this->latest_slide_order = $this->slide_id + 1;
-        $this->show_next = false;
-        $this->current_slide = false;
-        $this->emitTo('lesson.m1l4', 'nextSlide', $this->slide_id + 1);
+        $this->nextLesson();
+    }
+
+
+    public function nextLesson()
+    {
+        $this->emitTo('lesson.m1l4', 'nextLesson');
     }
 
     public function render()
