@@ -12,7 +12,7 @@ class M2l3 extends Component
     public $lesson;
     public $latest_slide_order;
     public $module_id = 2;
-    public $lesson_id = 7;
+    public $lesson_id = 8;
 
     public $next_lesson_id;
 
