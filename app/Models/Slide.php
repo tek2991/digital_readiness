@@ -127,7 +127,12 @@ class Slide extends Model
 
                 // Lesson 12
                 12 => [
-                    1 => "AI Ethics",
+                    1 => "Human Rights",
+                    2 => "Bias",
+                    3 => "Inclusion",
+                    4 => "Privacy",
+                    5 => "Explainable use of AI",
+                    6 => "Level of Autonomy",
                 ]
             ]
         ];
