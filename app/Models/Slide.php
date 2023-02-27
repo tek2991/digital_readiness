@@ -8,10 +8,11 @@ class Slide extends Model
 {
     public $timestamps = false;
 
-    public static function defaultSlides(){
+    public static function defaultSlides()
+    {
         return [
             // Module 1
-            1=>[
+            1 => [
                 // Lesson 1
                 1 => [
                     // Slides
@@ -68,7 +69,7 @@ class Slide extends Model
             ],
 
             // Module 2
-            2=>[
+            2 => [
                 // Lesson 6
                 6 => [
                     // Slides
@@ -119,7 +120,14 @@ class Slide extends Model
 
                 // Lesson 11
                 11 => [
-                    1 => "Ai Ethics",
+                    1 => "What is Ethics?",
+                    2 => "What do you mean by AI Ethics?",
+                    3 => "Is AI Ethics really important?",
+                ],
+
+                // Lesson 12
+                12 => [
+                    1 => "AI Ethics",
                 ]
             ]
         ];

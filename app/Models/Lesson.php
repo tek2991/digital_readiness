@@ -26,7 +26,8 @@ class Lesson extends Model
             ],
             3 => [
                 1 => 'AI for Good', #10
-                2 => 'AI Applications', #11
+                2 => 'AI Ethics', #11
+                3 => 'AI Ethicss Canvas', #12
             ],
         ];
     }

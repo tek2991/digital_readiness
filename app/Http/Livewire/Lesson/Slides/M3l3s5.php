@@ -4,7 +4,7 @@ namespace App\Http\Livewire\Lesson\Slides;
 
 use Livewire\Component;
 
-class M3l2s3 extends Component
+class M3l3s5 extends Component
 {
     public $latest_slide_order;
     public $allow_next = false;
@@ -12,7 +12,7 @@ class M3l2s3 extends Component
     public $complete = false;
     public $current_slide = false;
 
-    public $slide_id = 3;
+    public $slide_id = 5;
 
 
     public function mount($latest_slide_order)
@@ -44,16 +44,14 @@ class M3l2s3 extends Component
 
     public function nextSlide()
     {
-        $this->nextLesson();
-    }
-
-    public function nextLesson()
-    {
-        $this->emitTo('lesson.m3l2', 'nextLesson');
+        $this->latest_slide_order = $this->slide_id + 1;
+        $this->show_next = false;
+        $this->current_slide = false;
+        $this->emitTo('lesson.m3l3', 'nextSlide', $this->slide_id + 1);
     }
 
     public function render()
     {
-        return view('livewire.lesson.slides.m3l2s3');
+        return view('livewire.lesson.slides.m3l3s5');
     }
 }
