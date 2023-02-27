@@ -8,7 +8,8 @@ class Lesson extends Model
 {
     public $timestamps = false;
 
-    public static function defaultLessons(){
+    public static function defaultLessons()
+    {
         return [
             1 => [
                 1 => 'What is Artificial Intelligence?', #1
@@ -17,13 +18,15 @@ class Lesson extends Model
                 4 => 'Case Study', #4
                 5 => 'Badge', #5
             ],
-            2=> [
+            2 => [
                 1 => 'What Happens Inside AI?', #6
                 2 => 'Teachable Machine', #7
                 3 => 'Impact of AI', #8
+                4 => 'Badge', #9
             ],
-            3=> [
-
+            3 => [
+                1 => 'AI for Good', #10
+                2 => 'AI Applications', #11
             ],
         ];
     }

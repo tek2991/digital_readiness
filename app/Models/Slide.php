@@ -69,7 +69,7 @@ class Slide extends Model
 
             // Module 2
             2=>[
-                // Lesson 5
+                // Lesson 6
                 6 => [
                     // Slides
                     1 => "How AI Works",
@@ -79,7 +79,7 @@ class Slide extends Model
                     5 => "Teachable Machine",
                 ],
 
-                // Lesson 6
+                // Lesson 7
                 7 => [
                     1 => "Teachable Machine",
                     2 => "Teachable Machine2",
@@ -88,14 +88,40 @@ class Slide extends Model
                     5 => "Teachable Machine 4",
                 ],
 
-                // Lesson 7
+                // Lesson 8
                 8 => [
                     1 => "AI for Future Workforce",
                     2 => "Impact of AI in Students",
                     3 => "Impact of AI in Jobs",
                     4 => "Impact of AI in Jobs 2",
                 ],
+
+                // Lesson 9
+                9 => [
+                    1 => "Badge Module 2",
+                ],
             ],
+
+            // Module 3
+            3 => [
+                // Lesson 10
+                10 => [
+                    1 => 'Plan AI',
+                    2 => 'AI for Good',
+                    3 => 'Cancer Screening',
+                    4 => 'AI for Social Good',
+                    5 => 'Monitoring Marine Life',
+                    6 => 'AI for Agriculture',
+                    7 => 'AI for Agriculture 2',
+                    8 => 'AI in Art and Music',
+                    9 => 'AI at Work',
+                ],
+
+                // Lesson 11
+                11 => [
+                    1 => "Ai Ethics",
+                ]
+            ]
         ];
     }
 

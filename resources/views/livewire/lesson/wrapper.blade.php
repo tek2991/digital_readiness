@@ -15,5 +15,11 @@
         @livewire('lesson.m2l2')
     @elseif ($lesson_id == 8)
         @livewire('lesson.m2l3')
+    @elseif ($lesson_id == 9)
+        @livewire('lesson.m2l4')
+    @elseif ($lesson_id == 10)
+        @livewire('lesson.m3l1')
+    @elseif ($lesson_id == 11)
+        @livewire('lesson.m3l2')
     @endif
 </div>
