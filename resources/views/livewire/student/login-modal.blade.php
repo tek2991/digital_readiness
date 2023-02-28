@@ -3,8 +3,7 @@
         <div class="bg-intelblue md:col-span-3 p-4 md:p-6 md:flex md:flex-col md:justify-center">
             <h2 class="text-white font-intelmedium text-2xl my-4 w-full">Get Started</h2>
             <p class="text-white font-intelregular text-lg my-4 leading-tight">
-                Get started with Intel Simulated InternshipProgram. You need to enrol in 3 projects for your internship.
-            </p>
+                Get started with the self paced AI course.
             <div class="mx-auto hidden md:block">
                 <img src="{{ asset('images/start.png') }}" alt="">
             </div>
@@ -42,7 +41,7 @@
                             @error('user_otp')
                                 <label for="user_otp" class="block mb-2 text-sm text-red-700">{{ $message }}</label>
                             @enderror
-                            <input type="text" id="user_otp" wire:model="user_otp"
+                            <input type="number" min="100000" max="999999" id="user_otp" wire:model="user_otp"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-secondary focus:border-secondary block w-full p-2.5"
                                 required>
                         </div>

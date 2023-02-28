@@ -5,10 +5,11 @@
                 <div class="md:order-last mb-6">
                     <h3 class="text-intelblue font-intelmedium text-xl mb-3">AI for Future Workforce</h3>
                     <p class="text-gray-700 text-justify">
-                        This self-paced course is a part of a larger course called the AI for Future Workforce. The
-                        course spans over 200 hours of content incorporating new AI trends. Engaging, validated,
-                        hands-on content infused with the latest use cases to bring the learner up to the pace of the
-                        latest trends quickly.
+                        Intel® AI For Workforce is a global AI skilling program for vocational students for building an
+                        AI-ready workforce. The program aims to address the AI skill crisis to cater to growing job
+                        demands related to AI/ML by empowering the future workforce with the necessary skills for
+                        employability in the digital economy. The program offers comprehensive, modular, experiential,
+                        and flexible AI content delivered through engaging learning experiences.
                     </p>
                 </div>
                 <div class="video-container">

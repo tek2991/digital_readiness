@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProfileController;
 
 /*
@@ -24,6 +25,9 @@ Route::get('/', function () {
     }
     return view('welcome');
 })->name('home');
+
+
+Route::resource('contact', ContactController::class)->only(['index', 'create', 'store']);
 
 Route::get('/dashboard', function () {
     if (auth()->user()->isStudent()) {

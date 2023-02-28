@@ -25,15 +25,15 @@
                     <div class="md:col-span-2 mt-8 md:mt-0">
                         <div class="flex justify-between md:justify-around">
                             <div class="flex flex-col gap-y-4">
-                                <a href="#" class="text-intelblue text-sm hover:underline">For Industry
+                                {{-- <a href="#" class="text-intelblue text-sm hover:underline">For Industry
                                     Partners</a>
                                 <a href="#" class="text-intelblue text-sm hover:underline">For Institutions</a>
-                                <a href="#" class="text-intelblue text-sm hover:underline">For Students</a>
+                                <a href="#" class="text-intelblue text-sm hover:underline">For Students</a> --}}
                             </div>
                             <div class="flex flex-col gap-y-4">
-                                <a href="#" class="text-intelblue text-sm hover:underline">About Us</a>
+                                {{-- <a href="#" class="text-intelblue text-sm hover:underline">About Us</a> --}}
                                 <a href="#" class="text-intelblue text-sm hover:underline">FAQs</a>
-                                <a href="#" class="text-intelblue text-sm hover:underline">Contact Us</a>
+                                <a href="{{ route('contact.create') }}" class="text-intelblue text-sm hover:underline">Contact Us</a>
                             </div>
                             <div class="flex flex-col gap-y-4">
                                 <a href="#" class="text-intelblue text-sm hover:underline">Terms & Conditions</a>
