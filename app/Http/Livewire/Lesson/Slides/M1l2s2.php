@@ -38,7 +38,7 @@ class M1l2s2 extends Component
         ]
     ];
 
-    public $opened = [
+    public $opened = [ 
         1 => false,
         2 => false,
         3 => false,

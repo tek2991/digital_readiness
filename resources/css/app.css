@@ -92,32 +92,44 @@
     /* Normal versions */
     .animate-fading{animation:fading 10s infinite}@keyframes fading{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
     .animate-opacity{animation:opac 3s}@keyframes opac{from{opacity:0} to{opacity:1}}
-    .animate-top{position:relative;animation:animatetop 0.8s}@keyframes animatetop{from{top:-300px;opacity:0} to{top:0;opacity:1}}
-    .animate-left{position:relative;animation:animateleft 0.8s}@keyframes animateleft{from{left:-300px;opacity:0} to{left:0;opacity:1}}
-    .animate-right{position:relative;animation:animateright 0.8s}@keyframes animateright{from{right:-300px;opacity:0} to{right:0;opacity:1}}
-    .animate-bottom{position:relative;animation:animatebottom 0.8s}@keyframes animatebottom{from{bottom:-300px;opacity:0} to{bottom:0;opacity:1}}
-    .animate-zoom {animation:animatezoom 0.6s}@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}
-    .animate-input{transition:width 0.4s ease-in-out}.animate-input:focus{width:100%!important}
+    .animate-top{position:relative;animation:animatetop 1.2s}@keyframes animatetop{from{top:-300px;opacity:0} to{top:0;opacity:1}}
+    .animate-left{position:relative;animation:animateleft 1.2s}@keyframes animateleft{from{left:-300px;opacity:0} to{left:0;opacity:1}}
+    .animate-right{position:relative;animation:animateright 1.2s}@keyframes animateright{from{right:-300px;opacity:0} to{right:0;opacity:1}}
+    .animate-bottom{position:relative;animation:animatebottom 1.2s}@keyframes animatebottom{from{bottom:-300px;opacity:0} to{bottom:0;opacity:1}}
+    .animate-zoom {animation:animatezoom 1s}@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}
+    .animate-input{transition:width 0.7s ease-in-out}.animate-input:focus{width:100%!important}
 
     /* Fast versions */
-    .animate-fading-fast{animation:fading-fast 7s infinite}@keyframes fading-fast{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+    .animate-fading-fast{animation:fading-fast 8s infinite}@keyframes fading-fast{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
     .animate-opacity-fast{animation:opac-fast 2s}@keyframes opac-fast{from{opacity:0} to{opacity:1}}
-    .animate-top-fast{position:relative;animation:animatetop-fast 0.6s}@keyframes animatetop-fast{from{top:-300px;opacity:0} to{top:0;opacity:1}}
-    .animate-left-fast{position:relative;animation:animateleft-fast 0.6s}@keyframes animateleft-fast{from{left:-300px;opacity:0} to{left:0;opacity:1}}
-    .animate-right-fast{position:relative;animation:animateright-fast 0.6s}@keyframes animateright-fast{from{right:-300px;opacity:0} to{right:0;opacity:1}}
-    .animate-bottom-fast{position:relative;animation:animatebottom-fast 0.6s}@keyframes animatebottom-fast{from{bottom:-300px;opacity:0} to{bottom:0;opacity:1}}
-    .animate-zoom-fast {animation:animatezoom-fast 0.4s}@keyframes animatezoom-fast{from{transform:scale(0)} to{transform:scale(1)}}
-    .animate-input-fast{transition:width 0.2s ease-in-out}.animate-input-fast:focus{width:100%!important}
+    .animate-top-fast{position:relative;animation:animatetop-fast 1s}@keyframes animatetop-fast{from{top:-300px;opacity:0} to{top:0;opacity:1}}
+    .animate-left-fast{position:relative;animation:animateleft-fast 1s}@keyframes animateleft-fast{from{left:-300px;opacity:0} to{left:0;opacity:1}}
+    .animate-right-fast{position:relative;animation:animateright-fast 1s}@keyframes animateright-fast{from{right:-300px;opacity:0} to{right:0;opacity:1}}
+    .animate-bottom-fast{position:relative;animation:animatebottom-fast 1s}@keyframes animatebottom-fast{from{bottom:-300px;opacity:0} to{bottom:0;opacity:1}}
+    .animate-zoom-fast {animation:animatezoom-fast 0.7s}@keyframes animatezoom-fast{from{transform:scale(0)} to{transform:scale(1)}}
+    .animate-input-fast{transition:width 0.5s ease-in-out}.animate-input-fast:focus{width:100%!important}
 
     /* Slow versions */
-    .animate-fading-slow{animation:fading-slow 13s infinite}@keyframes fading-slow{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+    .animate-fading-slow{animation:fading-slow 12s infinite}@keyframes fading-slow{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
     .animate-opacity-slow{animation:opac-slow 4s}@keyframes opac-slow{from{opacity:0} to{opacity:1}}
-    .animate-top-slow{position:relative;animation:animatetop-slow 1s}@keyframes animatetop-slow{from{top:-300px;opacity:0} to{top:0;opacity:1}}
-    .animate-left-slow{position:relative;animation:animateleft-slow 1s}@keyframes animateleft-slow{from{left:-300px;opacity:0} to{left:0;opacity:1}}
-    .animate-right-slow{position:relative;animation:animateright-slow 1s}@keyframes animateright-slow{from{right:-300px;opacity:0} to{right:0;opacity:1}}
-    .animate-bottom-slow{position:relative;animation:animatebottom-slow 1s}@keyframes animatebottom-slow{from{bottom:-300px;opacity:0} to{bottom:0;opacity:1}}
-    .animate-zoom-slow {animation:animatezoom-slow 0.8s}@keyframes animatezoom-slow{from{transform:scale(0)} to{transform:scale(1)}}
-    .animate-input-slow{transition:width 0.6s ease-in-out}.animate-input-slow:focus{width:100%!important}
+    .animate-top-slow{position:relative;animation:animatetop-slow 1.5s}@keyframes animatetop-slow{from{top:-300px;opacity:0} to{top:0;opacity:1}}
+    .animate-left-slow{position:relative;animation:animateleft-slow 1.5s}@keyframes animateleft-slow{from{left:-300px;opacity:0} to{left:0;opacity:1}}
+    .animate-right-slow{position:relative;animation:animateright-slow 1.5s}@keyframes animateright-slow{from{right:-300px;opacity:0} to{right:0;opacity:1}}
+    .animate-bottom-slow{position:relative;animation:animatebottom-slow 1.5s}@keyframes animatebottom-slow{from{bottom:-300px;opacity:0} to{bottom:0;opacity:1}}
+    .animate-zoom-slow {animation:animatezoom-slow 1.3s}@keyframes animatezoom-slow{from{transform:scale(0)} to{transform:scale(1)}}
+    .animate-input-slow{transition:width 0.9s ease-in-out}.animate-input-slow:focus{width:100%!important}
+
+    /* Extra slow versions */
+    .animate-fading-slow-2{animation:fading-extra-slow 14s infinite}@keyframes fading-extra-slow{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+    .animate-opacity-slow-2{animation:opac-extra-slow 5s}@keyframes opac-extra-slow{from{opacity:0} to{opacity:1}}
+    .animate-top-slow-2{position:relative;animation:animatetop-extra-slow 1.8s}@keyframes animatetop-extra-slow{from{top:-300px;opacity:0} to{top:0;opacity:1}}
+    .animate-left-slow-2{position:relative;animation:animateleft-extra-slow 1.8s}@keyframes animateleft-extra-slow{from{left:-300px;opacity:0} to{left:0;opacity:1}}
+    .animate-right-slow-2{position:relative;animation:animateright-extra-slow 1.8s}@keyframes animateright-extra-slow{from{right:-300px;opacity:0} to{right:0;opacity:1}}
+    .animate-bottom-slow-2{position:relative;animation:animatebottom-extra-slow 1.8s}@keyframes animatebottom-extra-slow{from{bottom:-300px;opacity:0} to{bottom:0;opacity:1}}
+    .animate-zoom-slow-2 {animation:animatezoom-extra-slow 1.6s}@keyframes animatezoom-extra-slow{from{transform:scale(0)} to{transform:scale(1)}}
+    .animate-input-slow-2{transition:width 1.2s ease-in-out}.animate-input-slow-2:focus{width:100%!important}
+    
+
     
     /* min heights vh */
     .min-h-100vh { min-height: 100vh; }

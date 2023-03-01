@@ -51,7 +51,7 @@
             <h3 class="font-intelmedium text-intelblue text-xl py-4">Examples</h3>
 
             <div class="grid grid-cols-3 gap-3">
-                <div class="relative animate-top-fast">
+                <div class="relative animate-left-slow">
                     <img src="{{ asset('images/course/washing.jpg') }}" alt=""
                         class="w-full h-full max-h-72 object-cover">
                     <div
@@ -59,7 +59,7 @@
                         <p class="text-white font-intelmedium text-lg pb-2">Washing Machine</p>
                     </div>
                 </div>
-                <div class="relative animate-top">
+                <div class="relative animate-top-slow">
                     <img src="{{ asset('images/course/door.jpg') }}" alt=""
                         class="w-full h-full max-h-72 object-cover">
                     <div
@@ -67,7 +67,7 @@
                         <p class="text-white font-intelmedium text-lg pb-2">Automatic doors</p>
                     </div>
                 </div>
-                <div class="relative animate-top-slow">
+                <div class="relative animate-right-slow">
                     <img src="{{ asset('images/course/escalator.png') }}" alt=""
                         class="w-full h-full max-h-72 object-cover">
                     <div
