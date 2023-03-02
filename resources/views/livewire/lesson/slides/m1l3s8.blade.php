@@ -5,16 +5,17 @@
         </h1>
     </div>
     <div class="text-gray-700 mt-14">
-        <div class="max-w-xs mx-auto mb-12">
-            <div class="flex justify-center items-center bg-secondary min-h-24 w-full rounded-lg text-3xl font-intelmedium p-4">
-                <p class="text-intelblue text-center my-2">Detecting cancer from MRI scans</p>
-            </div>
+        <div class="max-w-lg mx-auto mb-12">
+            <img src="{{ asset('images/course/mri.jpg') }}" alt="object-scale-down">
+            <p class="text-center font-intelmedium py-3">
+                Detecting MRI scans
+            </p>
         </div>
 
         <div class="h-20">
             @if ($selectedAnswer)
                 @if ($answer == $selectedAnswer)
-                    <div class="w-full h-full flex justify-between items-center">
+                    <div class="w-full h-full">
                         <p class="text-lg font-intelmedium text-intelblue text-center">
                             Yes. Detecting cancer requires advanced computer vision which is an example of AI.
                         </p>

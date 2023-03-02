@@ -7,13 +7,16 @@
         @if ($selectedAnswer)
             @if ($answer == $selectedAnswer)
                 <div
-                    class="text-green-400 font-intelmedium text-2xl p-4 rounded-lg my-6 w-full flex justify-center items-center">
+                    class="text-green-400 font-intelmedium text-2xl p-4 pb-0 rounded-lg mt-6 w-full flex justify-center items-center">
                     <span>Correct!</span>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-6 h-6 ml-2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                     </svg>
                 </div>
+                <p class="text-center font-intelmedium py-3 mb-3 text-sm">
+                    Both the applications use computer vision and AI algorithms. Pose detection is done through estimation of poses after images or videos are fed into the app. Objects are detected by identifying the objects in the image or video.
+                </p>
             @else
                 <div
                     class="text-red-400 font-intelmedium text-2xl p-4 rounded-lg my-6 w-full flex justify-center items-center">
@@ -34,19 +37,31 @@
                 <div class="cursor-pointer rounded {{ $answer == 1 ? $right : $wrong }}" wire:click="checkAnswer(1)">
                     <img src="{{ asset('images/course/exercise.gif') }}" alt=""
                         class="w-full h-full object-cover rounded">
+                        <p class="text-center font-intelmedium py-3">
+                            Pose detection application
+                        </p>
                 </div>
                 <div class="cursor-pointer rounded {{ $answer == 2 ? $right : $wrong }}" wire:click="checkAnswer(2)">
                     <img src="{{ asset('images/course/traffic.gif') }}" alt=""
                         class="w-full h-full object-cover rounded">
+                        <p class="text-center font-intelmedium py-3">
+                            Object detection application
+                        </p>
                 </div>
             @else
                 <div class="cursor-pointer rounded" wire:click="checkAnswer(1)">
                     <img src="{{ asset('images/course/exercise.gif') }}" alt=""
                         class="w-full h-full object-cover rounded">
+                        <p class="text-center font-intelmedium py-3">
+                            Pose detection application
+                        </p>
                 </div>
                 <div class="cursor-pointer rounded" wire:click="checkAnswer(2)">
                     <img src="{{ asset('images/course/traffic.gif') }}" alt=""
                         class="w-full h-full object-cover rounded">
+                        <p class="text-center font-intelmedium py-3">
+                            Object detection application
+                        </p>
                 </div>
             @endif
         </div>

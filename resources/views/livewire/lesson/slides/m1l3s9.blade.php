@@ -5,17 +5,17 @@
         </h1>
     </div>
     <div class="text-gray-700 mt-14">
-        <div class="max-w-xs mx-auto mb-12">
-            <div
-                class="flex justify-center items-center bg-secondary min-h-24 w-full rounded-lg text-3xl font-intelmedium p-4">
-                <p class="text-intelblue text-center my-2">Instrument tuning application</p>
-            </div>
+        <div class="max-w-lg mx-auto mb-12">
+            <img src="{{ asset('images/course/tuning.jpg') }}" alt="object-scale-down">
+            <p class="text-center font-intelmedium py-3">
+                Instrument tuning application
+            </p>
         </div>
 
         <div class="h-20">
             @if ($selectedAnswer)
                 @if ($answer == $selectedAnswer)
-                    <div class="w-full h-full flex justify-between items-center">
+                    <div class="w-full h-full">
                         <p class="text-lg font-intelmedium text-intelblue text-center">
                             No. Instrument tuning does not require AI since it just matches frequencies.
                         </p>
@@ -76,7 +76,7 @@
         @if ($allow_next && $show_next)
             <button wire:click="nextSlide" {{ $complete == true ? '' : 'disabled' }}
                 class="{{ $complete == true ? 'bg-intelblue animate-bounce' : 'bg-gray-400' }} text-white font-intelmedium text-xl p-4 rounded-lg lg:mt-6 w-full">
-                {{ $complete == true ? 'Lets so a case study...' : 'Please complete the slide above' }}
+                {{ $complete == true ? 'Let’s examine an AI case study..' : 'Please complete the slide above' }}
             </button>
         @else
         @endif
