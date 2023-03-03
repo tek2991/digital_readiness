@@ -18,20 +18,6 @@ class M2l1s4 extends Component
 
     public $classes = 'hidden';
 
-    public $input1;
-    public $input2;
-    public $input3;
-    public $input4;
-
-    public $weight1;
-    public $weight2;
-    public $weight3;
-    public $weight4;
-
-    public $bias;
-
-    public $output;
-
 
     public function mount($latest_slide_order)
     {
