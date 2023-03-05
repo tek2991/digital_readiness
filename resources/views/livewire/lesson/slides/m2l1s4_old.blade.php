@@ -89,7 +89,7 @@
                         <li>
                             <div class="px-4 py-2 flex justify-between">
                                 <p class="">
-                                    Now we will fill in the importance. But the importance is not very useful in mathematical calculations.
+                                    Now we will fill in the importance. But the importance is not very useful in mathematical calculations. 
                                 </p>
                             </div>
                         </li>

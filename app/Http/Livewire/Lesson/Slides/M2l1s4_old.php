@@ -70,6 +70,6 @@ class M2l1s4 extends Component
 
     public function render()
     {
-        return view('livewire.lesson.slides.m2l1s4');
+        return view('livewire.lesson.slides.m2l1s4_old');
     }
 }
