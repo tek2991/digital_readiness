@@ -4,7 +4,7 @@ namespace App\Http\Livewire\Lesson\Slides;
 
 use Livewire\Component;
 
-class M2l1s4 extends Component
+class M2l1s4OLD extends Component
 {
     public $latest_slide_order;
     public $allow_next = false;
