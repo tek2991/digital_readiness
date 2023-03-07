@@ -1,14 +1,14 @@
-<div id="m1l3s8" class="pt-36 {{ $current_slide ? 'min-h-screen' : '' }}">
-    <h3 class="font-intelmedium text-gray-500 text-lg pb-4">Question 7</h3>
+<div id="m1l3s9" class="pt-36 {{ $current_slide ? 'min-h-screen' : '' }}">
+    <h3 class="font-intelmedium text-gray-500 text-lg pb-4">Question 8</h3>
     <div class="border-b-2 border-secondary w-fit">
         <h1 class="font-intelbold text-intelblue text-3xl pb-2">Does this example use AI? If so, why? If not, why not?
         </h1>
     </div>
     <div class="text-gray-700 mt-14">
         <div class="max-w-lg mx-auto mb-12">
-            <img src="{{ asset('images/course/mri.jpg') }}" alt="object-scale-down">
+            <img src="{{ asset('images/course/tuning.jpg') }}" alt="object-scale-down">
             <p class="text-center font-intelmedium py-3">
-                Detecting MRI scans
+                Instrument tuning application
             </p>
         </div>
 
@@ -17,7 +17,7 @@
                 @if ($answer == $selectedAnswer)
                     <div class="w-full h-full">
                         <p class="text-lg font-intelmedium text-intelblue text-center">
-                            Yes. Detecting cancer requires advanced computer vision which is an example of AI.
+                            No. Instrument tuning does not require AI since it just matches frequencies.
                         </p>
                     </div>
                 @endif
@@ -76,7 +76,7 @@
         @if ($allow_next && $show_next)
             <button wire:click="nextSlide" {{ $complete == true ? '' : 'disabled' }}
                 class="{{ $complete == true ? 'bg-intelblue animate-bounce' : 'bg-gray-400' }} text-white font-intelmedium text-xl p-4 rounded-lg lg:mt-6 w-full">
-                {{ $complete == true ? 'Continue...' : 'Please complete the slide above' }}
+                {{ $complete == true ? 'Let’s examine an AI case study..' : 'Please complete the slide above' }}
             </button>
         @else
         @endif

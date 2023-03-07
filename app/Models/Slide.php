@@ -48,7 +48,7 @@ class Slide extends Model
                     6 => "Question 5",
                     7 => "Question 6",
                     8 => "Question 7",
-                    9 => "Question 8",
+                    // 9 => "Question 8",
                 ],
 
                 // Lesson 4

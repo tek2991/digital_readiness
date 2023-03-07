@@ -14,8 +14,13 @@ class M1l3s6 extends Component
 
     public $slide_id = 6;
 
-    public $answer = 1;
-    public $selectedAnswer;
+    public $qa_states = [
+        'question1' => false,
+        'question2' => false,
+
+        'answer1' => false,
+        'answer2' => false,
+    ];
 
     public function mount($latest_slide_order)
     {
@@ -25,24 +30,42 @@ class M1l3s6 extends Component
             $this->allow_next = true;
         }
 
-        // $this->complete = true;
-
         if($this->latest_slide_order > $this->slide_id) {
             $this->show_next = false;
-            $this->selectedAnswer = $this->answer;
         }
 
         if($this->latest_slide_order == $this->slide_id) {
             $this->current_slide = true;
         }
-    }
 
-    public function checkAnswer($ans){
-        $this->selectedAnswer = $ans;
+        $user = auth()->user();
+        $lesson_id = 4;
 
-        if($this->selectedAnswer == $this->answer){
+        // Check if user has completed this lesson
+        $completed = $user->lessons()->where('lesson_id', $lesson_id)->where('completed', 1)->first();
+
+        if($completed) {
+            $this->qa_states['question1'] = true;
+            $this->qa_states['question2'] = true;
+
+            $this->qa_states['answer1'] = true;
+            $this->qa_states['answer2'] = true;
+
             $this->complete = true;
         }
+    }
+
+    public function correct($questionId, $answerId){
+        $this->qa_states[$questionId] = true;
+        $this->qa_states[$answerId] = true;
+
+        if($this->qa_states['question1'] && $this->qa_states['question2']){
+            $this->completeSlide();
+        }
+    }
+
+    public function completeSlide(){
+        $this->complete = true;
     }
 
     public function nextSlide()

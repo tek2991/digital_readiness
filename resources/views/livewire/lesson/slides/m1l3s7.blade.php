@@ -1,22 +1,23 @@
-<div id="m1l3s7" class="pt-36 {{ $current_slide ? 'min-h-screen' : '' }}">
-    <h3 class="font-intelmedium text-gray-500 text-lg pb-4">Question 6</h3>
+<div id="m1l3s8" class="pt-36 {{ $current_slide ? 'min-h-screen' : '' }}">
+    <h3 class="font-intelmedium text-gray-500 text-lg pb-4">Question 7</h3>
     <div class="border-b-2 border-secondary w-fit">
         <h1 class="font-intelbold text-intelblue text-3xl pb-2">Does this example use AI? If so, why? If not, why not?
         </h1>
     </div>
     <div class="text-gray-700 mt-14">
-        <div class="max-w-xs mx-auto mb-12">
-            <div class="flex justify-center items-center bg-secondary min-h-24 w-full rounded-lg text-3xl font-intelmedium p-4">
-                <p class="text-intelblue text-center my-2">Translating one word from one language to another</p>
-            </div>
+        <div class="max-w-lg mx-auto mb-12">
+            <img src="{{ asset('images/course/mri.jpg') }}" alt="object-scale-down">
+            <p class="text-center font-intelmedium py-3">
+                Detecting MRI scans
+            </p>
         </div>
 
         <div class="h-20">
             @if ($selectedAnswer)
                 @if ($answer == $selectedAnswer)
-                    <div class="w-full h-full flex justify-between items-center">
+                    <div class="w-full h-full">
                         <p class="text-lg font-intelmedium text-intelblue text-center">
-                            No. Translating words through a table is not an example of AI. But making a translator that is able to understand context and verbs to a certain degree can be considered AI.
+                            Yes. Detecting cancer requires advanced computer vision which is an example of AI.
                         </p>
                     </div>
                 @endif

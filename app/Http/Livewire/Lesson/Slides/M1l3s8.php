@@ -14,7 +14,7 @@ class M1l3s8  extends Component
 
     public $slide_id = 8;
 
-    public $answer = 1;
+    public $answer = 2;
     public $selectedAnswer;
 
     public function mount($latest_slide_order)
@@ -35,6 +35,17 @@ class M1l3s8  extends Component
         if($this->latest_slide_order == $this->slide_id) {
             $this->current_slide = true;
         }
+
+        $user = auth()->user();
+        $lesson_id = 3;
+
+        // Check if user has completed this lesson
+        $completed = $user->lessons()->where('lesson_id', $lesson_id)->where('completed', 1)->first();
+
+        if($completed) {
+            $this->complete = true;
+            $this->selectedAnswer = $this->answer;
+        }
     }
 
     public function checkAnswer($ans){
@@ -47,10 +58,13 @@ class M1l3s8  extends Component
 
     public function nextSlide()
     {
-        $this->latest_slide_order = $this->slide_id + 1;
-        $this->show_next = false;
-        $this->current_slide = false;
-        $this->emitTo('lesson.m1l3', 'nextSlide', $this->slide_id + 1);
+        $this->nextLesson();
+    }
+
+
+    public function nextLesson()
+    {
+        $this->emitTo('lesson.m1l3', 'nextLesson');
     }
 
     public function render()

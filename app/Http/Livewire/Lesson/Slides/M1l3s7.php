@@ -14,7 +14,7 @@ class M1l3s7  extends Component
 
     public $slide_id = 7;
 
-    public $answer = 2;
+    public $answer = 1;
     public $selectedAnswer;
 
     public function mount($latest_slide_order)

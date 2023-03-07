@@ -1,23 +1,22 @@
-<div id="m1l3s9" class="pt-36 {{ $current_slide ? 'min-h-screen' : '' }}">
-    <h3 class="font-intelmedium text-gray-500 text-lg pb-4">Question 8</h3>
+<div id="m1l3s7" class="pt-36 {{ $current_slide ? 'min-h-screen' : '' }}">
+    <h3 class="font-intelmedium text-gray-500 text-lg pb-4">Question 6</h3>
     <div class="border-b-2 border-secondary w-fit">
         <h1 class="font-intelbold text-intelblue text-3xl pb-2">Does this example use AI? If so, why? If not, why not?
         </h1>
     </div>
     <div class="text-gray-700 mt-14">
-        <div class="max-w-lg mx-auto mb-12">
-            <img src="{{ asset('images/course/tuning.jpg') }}" alt="object-scale-down">
-            <p class="text-center font-intelmedium py-3">
-                Instrument tuning application
-            </p>
+        <div class="max-w-xs mx-auto mb-12">
+            <div class="flex justify-center items-center bg-secondary min-h-24 w-full rounded-lg text-3xl font-intelmedium p-4">
+                <p class="text-intelblue text-center my-2">Translating one word from one language to another</p>
+            </div>
         </div>
 
         <div class="h-20">
             @if ($selectedAnswer)
                 @if ($answer == $selectedAnswer)
-                    <div class="w-full h-full">
+                    <div class="w-full h-full flex justify-between items-center">
                         <p class="text-lg font-intelmedium text-intelblue text-center">
-                            No. Instrument tuning does not require AI since it just matches frequencies.
+                            No. Translating words through a table is not an example of AI. But making a translator that is able to understand context and verbs to a certain degree can be considered AI.
                         </p>
                     </div>
                 @endif
@@ -76,7 +75,7 @@
         @if ($allow_next && $show_next)
             <button wire:click="nextSlide" {{ $complete == true ? '' : 'disabled' }}
                 class="{{ $complete == true ? 'bg-intelblue animate-bounce' : 'bg-gray-400' }} text-white font-intelmedium text-xl p-4 rounded-lg lg:mt-6 w-full">
-                {{ $complete == true ? 'Let’s examine an AI case study..' : 'Please complete the slide above' }}
+                {{ $complete == true ? 'Continue...' : 'Please complete the slide above' }}
             </button>
         @else
         @endif

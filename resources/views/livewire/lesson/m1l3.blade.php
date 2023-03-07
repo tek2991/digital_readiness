@@ -23,7 +23,7 @@
     @if ($latest_slide_order >= 8)
         @livewire('lesson.slides.m1l3s8', ['latest_slide_order' => $latest_slide_order])
     @endif
-    @if ($latest_slide_order >= 9)
+    {{-- @if ($latest_slide_order >= 9)
         @livewire('lesson.slides.m1l3s9', ['latest_slide_order' => $latest_slide_order])
-    @endif
+    @endif --}}
 </div>
