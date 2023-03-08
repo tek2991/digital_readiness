@@ -3,31 +3,61 @@
     <div class="border-b-2 border-secondary w-fit">
         <h1 class="font-intelbold text-intelblue text-3xl pb-2">Which is an example of AI and which one is not?</h1>
     </div>
-    <div class="text-gray-700 mt-14" wire:ignore>
+    <div class="text-gray-700 mt-14">
         <div class="grid grid-cols-2 gap-3">
-            <div class="order-1 md:order-1 w-full h-full cursor-move p-1 flex flex-col justify-between">
+            <div class="w-full h-full cursor-move p-1 flex flex-col justify-between border-4 rounded-lg bg-gray-200">
                 <img id="question1" src="{{ asset('images/course/prediction.png') }}" alt=""
-                    class="question h-full w-full object-contain object-center">
-                <p>
+                    class="question h-full w-full object-contain object-center rounded-lg {{ $qa_states['answer2'] ? 'opacity-0' : '' }}">
+                <p class="text-center {{ $qa_states['question1'] == 1 ? 'opacity-0' : '' }}">
                     Word suggestions while typing
                 </p>
             </div>
-            <div class="order-3 md:order-2 w-full h-full cursor-move p-1 flex flex-col justify-between">
+            <div class="w-full h-full cursor-move p-1 flex flex-col justify-between border-4 rounded-lg bg-gray-200">
                 <img id="question2" src="{{ asset('images/course/translate.png') }}" alt=""
-                    class="question h-full max-h-64 w-full object-contain object-center">
-                <p>
+                    class="question h-full max-h-64 w-full object-contain object-center rounded-lg {{ $qa_states['answer1'] ? 'opacity-0' : '' }}">
+                <p class="text-center {{ $qa_states['question2'] == 1 ? 'opacity-0' : '' }}">
                     Translating words from one language to another
                 </p>
             </div>
             <div id="answer1"
-                class="answer order-2 md:order-4 w-full h-full flex justify-between items-center bg-intellight rounded-lg text-md p-3 md:text-xl 
-                {{ $qa_states['answer1'] ? 'border-3 border-green-600 shadow-lg shadow-green-500' : '' }}">
-                <p class="text-center">Not an AI application</p>
+                class="answer bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 {{ $qa_states['answer1'] == 1 ? 'flex flex-col justify-between' : 'flex flex-col justify-center' }}" style="min-height: 20rem">
+                <div>
+                    @if ($qa_states['answer1'] == 1)
+                        <img class="rounded-t-lg mx-auto" src="{{ asset('images/course/translate.png') }}" alt="" />
+                    @endif
+                </div>
+                <div class="p-5">
+                    <h5
+                        class="mb-2 text-xl font-intelsemibold tracking-tight text-gray-900 dark:text-white {{ $qa_states['answer1'] == 1 ? '' : 'text-center' }}">
+                        {{ $qa_states['answer1'] == true ? 'Translating words from one language to another' : 'Not an AI application' }}
+                    </h5>
+                    @if ($qa_states['answer1'] == true)
+                        <p class="mb-3 font-sm text-gray-700 dark:text-gray-400">
+                            Translating words through a table is not an example of AI. But making a translator that is
+                            able to understand context and verbs to a certain degree can be considered AI.
+                        </p>
+                    @endif
+                </div>
             </div>
             <div id="answer2"
-                class="answer order-4 md:order-5 w-full h-full flex justify-between items-center bg-intellight rounded-lg text-md p-3 md:text-xl
-                {{ $qa_states['answer2'] ? 'border-3 border-green-600 shadow-lg shadow-green-500' : '' }}">
-                <p class="text-center">AI Application</p>
+                class="answer bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 {{ $qa_states['answer2'] == 1 ? 'flex flex-col justify-between' : 'flex flex-col justify-center' }}" style="min-height: 20rem">
+                <div>
+                    @if ($qa_states['answer2'] == 1)
+                        <img class="rounded-t-lg mx-auto" src="{{ asset('images/course/prediction.png') }}" alt="" />
+                    @endif
+                </div>
+                <div class="p-5">
+                    <h5
+                        class="mb-2 text-xl font-intelsemibold tracking-tight text-gray-900 dark:text-white {{ $qa_states['answer2'] == 1 ? '' : 'text-center' }}">
+                        {{ $qa_states['answer2'] == true ? 'Word suggestions while typing' : 'An AI application' }}
+                    </h5>
+                    @if ($qa_states['answer2'] == true)
+                        <p class="mb-3 font-sm text-gray-700 dark:text-gray-400">
+                            Yes. This is an example of AI, because it is using data from the past and from the sentence
+                            to understand the ideal words to suggest.
+                        </p>
+                    @endif
+                </div>
             </div>
         </div>
     </div>
@@ -41,9 +71,11 @@
         @endif
     </div>
 
+    {{ 'q1: ' . $qa_states['question1'] . ' q2: ' . $qa_states['question2'] . ' a1: ' . $qa_states['answer1'] . ' a2: ' . $qa_states['answer2'] }}
+
     <div class="hidden">
         <button wire:click="correct('question1', 'answer2')" id="qb1"></button>
-        <button wire:click="correct('question2', 'answer3')" id="qb2"></button>
+        <button wire:click="correct('question2', 'answer1')" id="qb2"></button>
     </div>
 
     <script>
@@ -55,7 +87,7 @@
             questions.forEach(question => {
                 question.addEventListener('dragstart', (event) => {
                     currentQuestion = event.target;
-                    console.log(event.target)
+                    // console.log(currentQuestion.id)
                 });
             });
 
@@ -63,6 +95,7 @@
             answers.forEach(answer => {
                 answer.addEventListener('dragover', (event) => {
                     event.preventDefault();
+                    console.log(currentQuestion.id, answer.id)
                 });
 
                 // Set up drop event listener for each answer element
