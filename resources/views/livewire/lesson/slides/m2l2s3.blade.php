@@ -5,33 +5,33 @@
     </div>
     <div class="text-gray-700 mt-14">
         <section class="grid grid-cols-1 md:grid-cols-3 my-12 gap-y-8 md:gap-x-8">
-            <div class="max-w-sm mx-auto bg-white border border-gray-200 rounded-lg shadow-md h-full flex flex-col">
+            <div class="max-w-sm mx-auto bg-white border border-gray-200 rounded-lg shadow-md h-full flex flex-col justify-between animate-right">
                 <img class="rounded-t-lg" src="{{ asset('images/course/tree.jpg') }}" alt="" />
-                <div class="p-5 h-full flex flex-col justify-between">
-                    <h5 class="mb-2 text-2xl font-intelmedium tracking-tight text-gray-900">
+                {{-- <div class="p-5 h-full flex flex-col justify-between"> --}}
+                    <h5 class="mb-2 text-2xl font-intelmedium tracking-tight text-gray-900 text-center">
                         Image
                     </h5>
-                </div>
+                {{-- </div> --}}
             </div>
-            <div class="max-w-sm mx-auto bg-white border border-gray-200 rounded-lg shadow-md h-full flex flex-col">
+            <div class="max-w-sm mx-auto bg-white border border-gray-200 rounded-lg shadow-md h-full flex flex-col justify-between animate-right-slow">
                 <img class="rounded-t-lg" src="{{ asset('images/course/recording.jpg') }}" alt="" />
-                <div class="p-5 h-full flex flex-col justify-between">
-                    <h5 class="mb-2 text-2xl font-intelmedium tracking-tight text-gray-900">
+                {{-- <div class="p-5 h-full flex flex-col justify-between"> --}}
+                    <h5 class="mb-2 text-2xl font-intelmedium tracking-tight text-gray-900 text-center">
                         Audio
                     </h5>
-                </div>
+                {{-- </div> --}}
             </div>
-            <div class="max-w-sm mx-auto bg-white border border-gray-200 rounded-lg shadow-md h-full flex flex-col">
+            <div class="max-w-sm mx-auto bg-white border border-gray-200 rounded-lg shadow-md h-full flex flex-col justify-between animate-right-slow-2">
                 <img class="rounded-t-lg" src="{{ asset('images/course/yoga.jpg') }}" alt="" />
-                <div class="p-5 h-full flex flex-col justify-between">
-                    <h5 class="mb-2 text-2xl font-intelmedium tracking-tight text-gray-900">
+                {{-- <div class="p-5 h-full flex flex-col justify-between"> --}}
+                    <h5 class="mb-2 text-2xl font-intelmedium tracking-tight text-gray-900 text-center">
                         Pose
                     </h5>
-                </div>
+                {{-- </div> --}}
             </div>
         </section>
         <div class="w-fit">
-            <h1 class="font-intelbold text-intelblue text-xl pb-2">Any of the three Data forms  can be classified in a teachable machine</h1>
+            <h1 class="font-intelbold text-intelblue text-xl pb-2 animate-opacity-slow">Any of the three Data forms  can be classified in a teachable machine</h1>
         </div>
     </div>
     <div class="mt-14">

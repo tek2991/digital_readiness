@@ -5,7 +5,7 @@
                 <ul class="">
                     <li>
                         <div class="px-4 py-2 flex justify-between">
-                            <p class="">
+                            <p class="font-intelmedium text-xl animate-opacity-slow">
                                 No specific expertise or coding is required to use this tool.
                             </p>
                         </div>
@@ -14,7 +14,7 @@
             </div>
             {{-- import pic --}}
             <div class="w-full flex flex-col justify-center mt-8 xl:mt-0 p-6 xl:p-0 lg:col-span-3">
-                <img src="{{ asset('images/course/teachable2.jpg') }}" alt="ai" class="object-cover">
+                <img src="{{ asset('images/course/teachable2.jpg') }}" alt="ai" class="object-cover animate-zoom-slow">
             </div>
         </div>
     </div>

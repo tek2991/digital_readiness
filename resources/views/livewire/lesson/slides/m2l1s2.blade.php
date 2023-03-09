@@ -8,7 +8,7 @@
         <div class="my-12 w-full grid grid-cols-1 xl:grid-cols-9 gap-4">
             <section class="xl:col-span-6 grid grid-cols-2 gap-6">
                 <div
-                    class="max-w-xs w-full mx-auto bg-white border border-gray-200 rounded-lg shadow-md h-full flex flex-col relative">
+                    class="max-w-xs w-full mx-auto bg-white border border-gray-200 rounded-lg shadow-md h-full flex flex-col relative animate-left-slow">
                     <img class="rounded-t-lg object-scale-down mx-auto w-full max-h-56"
                         src="{{ asset('images/course/man_in_raincoat.png') }}" alt="" />
                     <div class="px-5 py-2 h-full w-full flex justify-center items-center">
@@ -25,7 +25,7 @@
                     @endif
                 </div>
                 <div
-                    class="max-w-xs w-full mx-auto bg-white border border-gray-200 rounded-lg shadow-md h-full flex flex-col relative">
+                    class="max-w-xs w-full mx-auto bg-white border border-gray-200 rounded-lg shadow-md h-full flex flex-col relative animate-left">
                     <img class="rounded-t-lg object-scale-down mx-auto w-full max-h-56"
                         src="{{ asset('images/course/umbrella.png') }}" alt="" />
                     <div class="px-5 py-2 h-full w-full flex justify-center items-center">
@@ -41,7 +41,7 @@
                     @endif
                 </div>
                 <div
-                    class="max-w-xs w-full mx-auto bg-white border border-gray-200 rounded-lg shadow-md h-full flex flex-col relative">
+                    class="max-w-xs w-full mx-auto bg-white border border-gray-200 rounded-lg shadow-md h-full flex flex-col relative animate-left-slow-2">
                     <img class="rounded-t-lg object-scale-down mx-auto w-full max-h-56"
                         src="{{ asset('images/course/sunny_park.png') }}" alt="" />
                     <div class="px-5 py-2 h-full w-full flex justify-center items-center">
@@ -59,7 +59,7 @@
 
                 </div>
                 <div
-                    class="max-w-xs w-full mx-auto bg-white border border-gray-200 rounded-lg shadow-md h-full flex flex-col relative">
+                    class="max-w-xs w-full mx-auto bg-white border border-gray-200 rounded-lg shadow-md h-full flex flex-col relative animate-left-slow">
                     <img class="rounded-t-lg object-scale-down mx-auto w-full max-h-56"
                         src="{{ asset('images/course/park.png') }}" alt="" />
                     <div class="px-5 py-2 h-full w-full flex justify-center items-center">
@@ -78,7 +78,7 @@
             </section>
             <div class="xl:col-span-3 grid grid-cols-2 xl:grid-cols-1">
                 <ul class="">
-                    <li class="mb-2.5">
+                    <li class="mb-2.5 animate-right-fast">
                         <span class="inline-flex">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-intelblue mr-2">
@@ -88,7 +88,7 @@
                             Most of us would want to avoid getting soaked in the rain.
                         </span>
                     </li>
-                    <li class="mb-2.5">
+                    <li class="mb-2.5 animate-right">
                         <span class="inline-flex">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-intelblue mr-2">
@@ -98,7 +98,7 @@
                             The first question you may ask is, “Should I bring a rain jacket?”
                         </span>
                     </li>
-                    <li class="mb-2.5">
+                    <li class="mb-2.5 animate-right">
                         <span class="inline-flex">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-intelblue mr-2">
@@ -108,7 +108,7 @@
                             Then, you may also ask, “Should I bring an umbrella?”
                         </span>
                     </li>
-                    <li class="mb-2.5">
+                    <li class="mb-2.5 animate-right-slow">
                         <span class="inline-flex">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-intelblue mr-2">
@@ -118,7 +118,7 @@
                             Or you may also ask, “What is the weather now?”
                         </span>
                     </li>
-                    <li class="mb-2.5">
+                    <li class="mb-2.5 animate-right-slow-2">
                         <span class="inline-flex">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-intelblue mr-2">

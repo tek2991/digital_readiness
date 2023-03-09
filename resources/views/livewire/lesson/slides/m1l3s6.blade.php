@@ -71,8 +71,6 @@
         @endif
     </div>
 
-    {{ 'q1: ' . $qa_states['question1'] . ' q2: ' . $qa_states['question2'] . ' a1: ' . $qa_states['answer1'] . ' a2: ' . $qa_states['answer2'] }}
-
     <div class="hidden">
         <button wire:click="correct('question1', 'answer2')" id="qb1"></button>
         <button wire:click="correct('question2', 'answer1')" id="qb2"></button>

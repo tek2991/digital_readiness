@@ -8,9 +8,9 @@
     <div class="text-gray-700 mt-14">
         <div class="xl:flex my-3 justify-around items-center">
             <div>
-                <p class="text-justify text-lg mb-4">How is AI used in Education:</p>
+                <p class="text-justify font-intelmedium text-intelblue text-xl mb-4 animate-opacity">How is AI used in Education:</p>
                 <ul class="pl-5">
-                    <li class="mb-4">
+                    <li class="mb-4 animate-left-fast">
                         <span class="inline-flex">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-intelblue mr-2">
@@ -20,7 +20,7 @@
                             Creating Courses
                         </span>
                     </li>
-                    <li class="mb-4">
+                    <li class="mb-4 animate-left">
                         <span class="inline-flex">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-intelblue mr-2">
@@ -30,7 +30,7 @@
                             Offering a Personalized Environment
                         </span>
                     </li>
-                    <li class="mb-4">
+                    <li class="mb-4 animate-left">
                         <span class="inline-flex">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-intelblue mr-2">
@@ -41,7 +41,7 @@
                         </span>
                     </li>
                     <li class="mb-4">
-                        <span class="inline-flex">
+                        <span class="inline-flex animate-left-slow">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-intelblue mr-2">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -51,7 +51,7 @@
                         </span>
                     </li>
                     <li class="mb-4">
-                        <span class="inline-flex">
+                        <span class="inline-flex animate-left-slow-2">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-intelblue mr-2">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -64,7 +64,7 @@
             </div>
             {{-- import svg --}}
             <div class="w-full lg:max-w-sm lg:mx-auto xl:w-1/3 xl:max-w-none xl:mx-auto">
-                <img src="{{ asset('images/course/student.png') }}" alt="ai" class="mx-auto">
+                <img src="{{ asset('images/course/student.png') }}" alt="ai" class="mx-auto animate-opacity-slow">
             </div>
         </div>
     </div>

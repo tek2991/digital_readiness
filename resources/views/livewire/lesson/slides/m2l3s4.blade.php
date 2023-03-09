@@ -9,7 +9,7 @@
         <div class="xl:flex my-3 justify-around items-center">
             <div>
                 <ul class="pl-2">
-                    <li class="mb-4">
+                    <li class="mb-4 animate-left-slow-2">
                         <span class="inline-flex">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-intelblue mr-2">
@@ -23,7 +23,7 @@
             </div>
             {{-- import svg --}}
             <div class="w-full lg:max-w-sm lg:mx-auto xl:w-2/5 max-w-lg xl:mx-auto">
-                <img src="{{ asset('images/course/robot_arm2.png') }}" alt="ai" class="w-full h-full object-scale-down rounded shadow-sm">
+                <img src="{{ asset('images/course/robot_arm2.png') }}" alt="ai" class="w-full h-full object-scale-down rounded shadow-sm animate-zoom-slow">
             </div>
         </div>
     </div>

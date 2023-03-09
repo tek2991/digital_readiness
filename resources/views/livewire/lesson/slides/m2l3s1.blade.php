@@ -9,11 +9,11 @@
         <div class="grid grid-cols-2 gap-6">
             <div class="w-full h-full flex justify-between items-center">
                 <img src="{{ asset('images/course/robot_arm.png') }}" alt="" 
-                    class="w-full h-full object-contain rounded shadow-sm">
+                    class="w-full h-full object-contain rounded shadow-sm animate-top">
             </div>
             <div class="w-full h-full flex justify-between items-center">
                 <img src="{{ asset('images/course/forklift.jpg') }}" alt=""
-                    class="w-full h-full object-contain rounded shadow-sm">
+                    class="w-full h-full object-contain rounded shadow-sm animate-top-slow-2">
             </div>
         </div>
     </div>

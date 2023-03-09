@@ -8,7 +8,7 @@
                 <ul class="">
                     <li>
                         <div class="px-4 py-2 flex justify-between">
-                            <p class="text-2xl tect-center font-intelmedium text-intelblue">
+                            <p class="text-2xl tect-center font-intelmedium text-intelblue animate-opacity-slow">
                                 It allows the training of a model based on different images, audio, or poses given as
                                 input through a webcam or pictures.
                             </p>

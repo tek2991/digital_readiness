@@ -15,7 +15,7 @@
                         </div>
                     </div>
                     <div
-                        class="flip-card-back w-full h-full absolute flex flex-col justify-center p-4 px-6 bg-intelblue rounded-lg shadow-lg">
+                        class="flip-card-back w-full h-full absolute flex flex-col justify-center p-4 px-6 bg-intellight rounded-lg shadow-lg">
                         <p class="text-gray-50 font-intelmedium text-center">In supervised learning, labeled data is used to train AI models. So, AI
                             models acquire training knowledge from labels that the data has already been assigned
                         </p>
@@ -37,7 +37,7 @@
                         </div>
                     </div>
                     <div
-                        class="flip-card-back w-full h-full absolute flex flex-col justify-center p-4 px-6 bg-intelblue rounded-lg shadow-lg">
+                        class="flip-card-back w-full h-full absolute flex flex-col justify-center p-4 px-6 bg-intellight rounded-lg shadow-lg">
                         <p class="text-gray-50 font-intelmedium text-center">In unsupervised learning, unlabeled data is used to train AI models. So, AI models identify patterns and similarities in data using different processing techniques
                         </p>
 

@@ -10,38 +10,38 @@
             <div class="grid grid-cols-2 gap-2">
                 <div class="col-span-2 p-2 mb-2">
                     <div class="rounded p-3 max-w-xs mx-auto" style="background-color: #70ad47">
-                        <p class="text-white font-intelmedium font-xl text-center">Old Jobs</p>
+                        <p class="text-white font-intelmedium font-xl text-center animate-opacity">Old Jobs</p>
                     </div>
                 </div>
                 <div class="col-span-2">
-                    <img src="{{ asset('images/course/job-a1.png') }}" alt="">
+                    <img src="{{ asset('images/course/job-a1.png') }}" alt="" class="animate-left">
                 </div>
                 <div class="w-full h-full flex items-center">
-                    <img src="{{ asset('images/course/job-a2.jpg') }}" alt="">
+                    <img src="{{ asset('images/course/job-a2.jpg') }}" alt="" class="animate-top-slow">
                 </div>
                 <div class="pl-2">
-                    <img src="{{ asset('images/course/job-a3.jpg') }}" alt="">
+                    <img src="{{ asset('images/course/job-a3.jpg') }}" alt="" class="animate-top-slow">
                 </div>
             </div>
             <div class="grid grid-cols-2 gap-2">
                 <div class="col-span-2 p-2">
                     <div class="rounded p-3 max-w-xs mx-auto" style="background-color: #70ad47">
-                        <p class="text-white font-intelmedium font-xl text-center">New Jobs</p>
+                        <p class="text-white font-intelmedium font-xl text-center animate-opacity">New Jobs</p>
                     </div>
                 </div>
                 <div class="w-full h-full flex items-center pr-2">
-                    <img src="{{ asset('images/course/job-b1.jpg') }}" alt="">
+                    <img src="{{ asset('images/course/job-b1.jpg') }}" alt="" class="animate-right">
                 </div>
                 <div>
-                    <img src="{{ asset('images/course/job-b2.png') }}" alt="">
+                    <img src="{{ asset('images/course/job-b2.png') }}" alt="" class="animate-right-slow">
                 </div>
                 <div class="col-span-2 mt-2">
-                    <img src="{{ asset('images/course/job-b3.jpg') }}" alt="" class="w-full object-cover">
+                    <img src="{{ asset('images/course/job-b3.jpg') }}" alt="" class="w-full object-cover animate-top-slow-2">
                 </div>
             </div>
         </div>
         <div class="max-w-xl mx-auto w-full mt-6">
-            <p class="text-lg font-intelmedium text-center p-4">
+            <p class="text-lg font-intelmedium text-center p-4 animate-zoom-slow">
                 Gartner acknowledged in its report that AI will eliminate
                 “millions of middle- and low-level positions.” But it emphasized
                 that more new jobs will be created, including highly-skilled,

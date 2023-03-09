@@ -9,16 +9,16 @@
                 <div class="grid grid-cols-9">
                     <div class="col-span-7 w-full h-full rounded flex justify-center items-center"
                         style="background-color: #70ad47;">
-                        <p class="text-white font-xl font-intelmedium">Gathering Data</p>
+                        <p class="text-white font-xl font-intelmedium animate-left-slow">Gathering Data</p>
                     </div>
                     <div class="col-span-2">
                         <img src="{{ asset('images/course/green_arrow.png') }}" alt=""
-                            class="w-3/4 mx-auto h-full object-cover">
+                            class="w-3/4 mx-auto h-full object-cover animate-left-slow-2">
                     </div>
                 </div>
             </div>
 
-            <div class="mt-12">
+            <div class="mt-12 animate-top-slow">
                 <p class="text-lg font-intelmedium text-center">
                     Gather and group your examples into classes, or categories, that you want the computer to learn
                 </p>
@@ -29,7 +29,7 @@
 
             <div class="h-64 w-full mx-auto mt-12">
                 <img src="{{ asset('images/course/teachable_dog_1.png') }}" alt=""
-                    class="w-full h-full object-scale-down">
+                    class="w-full h-full object-scale-down animate-top-right-2">
             </div>
         @endif
         @if ($part_no == 2)
@@ -47,17 +47,17 @@
                 <div class="grid grid-cols-9">
                     <div class="col-span-7 w-full h-full rounded flex justify-center items-center"
                         style="background-color: #70ad47;">
-                        <p class="text-white font-xl font-intelmedium">Training the Model</p>
+                        <p class="text-white font-xl font-intelmedium animate-left-slow">Training the Model</p>
                     </div>
                     <div class="col-span-2">
                         <img src="{{ asset('images/course/green_arrow.png') }}" alt=""
-                            class="w-3/4 mx-auto h-full object-cover">
+                            class="w-3/4 mx-auto h-full object-cover animate-left-slow-2">
                     </div>
                 </div>
             </div>
 
             <div class="mt-12">
-                <p class="text-lg font-intelmedium text-center">
+                <p class="text-lg font-intelmedium text-center animate-top-slow">
                     Click on- train model, and tensorflow.js starts training a neural network in your browser
                 </p>
                 <p class="text-lg font-intelmedium text-center">
@@ -67,7 +67,7 @@
 
             <div class="h-64 w-full mx-auto mt-12">
                 <img src="{{ asset('images/course/teachable_dog_2.png') }}" alt=""
-                    class="w-full h-full object-scale-down">
+                    class="w-full h-full object-scale-down animate-top-right-2">
             </div>
         @endif
         @if ($part_no == 3)
@@ -95,17 +95,17 @@
                 <div class="grid grid-cols-9">
                     <div class="col-span-7 w-full h-full rounded flex justify-center items-center"
                         style="background-color: #70ad47;">
-                        <p class="text-white font-xl font-intelmedium">Deploying Model</p>
+                        <p class="text-white font-xl font-intelmedium animate-left-slow">Deploying Model</p>
                     </div>
                     <div class="col-span-2">
                         <img src="{{ asset('images/course/green_arrow.png') }}" alt=""
-                            class="w-3/4 mx-auto h-full object-cover">
+                            class="w-3/4 mx-auto h-full object-cover animate-left-slow-2">
                     </div>
                 </div>
             </div>
 
             <div class="mt-12">
-                <p class="text-lg font-intelmedium text-center">
+                <p class="text-lg font-intelmedium text-center animate-top-slow">
                     In the output, you can see the model classification with percentage and export the model with a
                     sharable link
                 <p class="text-lg font-intelmedium text-center">
@@ -113,9 +113,9 @@
                 </p>
             </div>
 
-            <div class="h-64 w-full mx-auto mt-12">
+            <div class="h-64 w-full mx-auto mt-12 ">
                 <img src="{{ asset('images/course/teachable_dog_3.png') }}" alt=""
-                    class="w-full h-full object-scale-down">
+                    class="w-full h-full object-scale-down animate-top-right-2">
             </div>
         @endif
     </div>

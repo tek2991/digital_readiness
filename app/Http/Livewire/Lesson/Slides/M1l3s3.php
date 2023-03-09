@@ -14,8 +14,9 @@ class M1l3s3 extends Component
 
     public $slide_id = 3;
 
-    public $answer = 2;
-    public $selectedAnswer;
+    public $answer = [1, 2];
+
+    public $selectedAnswers = [];
 
     public function mount($latest_slide_order)
     {
@@ -29,7 +30,7 @@ class M1l3s3 extends Component
 
         if($this->latest_slide_order > $this->slide_id) {
             $this->show_next = false;
-            $this->selectedAnswer = $this->answer;
+            $this->selectedAnswers = $this->answer;
         }
 
         if($this->latest_slide_order == $this->slide_id) {
@@ -37,10 +38,13 @@ class M1l3s3 extends Component
         }
     }
 
-    public function checkAnswer($ans){
-        $this->selectedAnswer = $ans;
+    public function addToAnswer($ans){
+        // $this->selectedAnswer = $ans;
+        if(!in_array($ans, $this->selectedAnswers)){
+            array_push($this->selectedAnswers, $ans);
+        }
 
-        if($this->selectedAnswer == $this->answer){
+        if(count($this->selectedAnswers) == count($this->answer)){
             $this->complete = true;
         }
     }

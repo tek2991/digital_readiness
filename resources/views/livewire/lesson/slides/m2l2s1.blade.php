@@ -9,7 +9,7 @@
                 <ul class="">
                     <li>
                         <div class="px-4 py-2 flex justify-between">
-                            <p class="">
+                            <p class="font-intelmedium text-xl animate-opacity-slow">
                                 Teachable Machine is a web-based tool that makes creating machine learning models fast,
                                 easy, and accessible to everyone.
                             </p>
@@ -19,7 +19,7 @@
             </div>
             {{-- import pic --}}
             <div class="w-full flex flex-col justify-center mt-8 xl:mt-0 p-6 xl:p-0 lg:col-span-3">
-                <img src="{{ asset('images/course/teachable.png') }}" alt="ai" class="object-cover">
+                <img src="{{ asset('images/course/teachable.png') }}" alt="ai" class="object-cover animate-zoom-slow">
             </div>
         </div>
     </div>
