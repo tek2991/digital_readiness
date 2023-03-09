@@ -6,7 +6,7 @@
         <div class="xl:flex my-3 justify-around items-center">
             <div>
                 <ul class="pl-5">
-                    <li class="mb-4">
+                    <li class="mb-4 animate-top">
                         <span class="inline-flex">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor"
@@ -17,7 +17,7 @@
                             AI Ethics is a system of moral principles intended to inform the responsible development and use of AI.
                         </span>
                     </li>
-                    <li class="mb-4">
+                    <li class="mb-4 animate-top-slow">
                         <span class="inline-flex">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor"
@@ -28,7 +28,7 @@
                             There are multiple advantages of AI, but these technologies can also have a downside to it, creating risks, inequalities, and divides.
                         </span>
                     </li>
-                    <li class="mb-4">
+                    <li class="mb-4 animate-top-slow-2">
                         <span class="inline-flex">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor"
@@ -44,7 +44,7 @@
             {{-- import svg --}}
             <div class="w-full lg:max-w-md lg:mx-auto xl:mx-auto">
                 <div class="w-full lg:max-w-md lg:mx-auto xl:mx-auto">
-                    <img src="{{ asset('images/course/ethics2.png') }}" alt="ai" class="mx-auto lg:max-w-md lg:pl-6">
+                    <img src="{{ asset('images/course/ethics2.png') }}" alt="ai" class="mx-auto lg:max-w-md lg:pl-6 animate-opacity-slow">
                 </div>
             </div>
         </div>

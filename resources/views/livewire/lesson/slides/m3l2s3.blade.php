@@ -4,7 +4,7 @@
     </div>
     <div class="text-gray-700 my-14">
         <div>
-            <p class="text-justify text-lg leading-tight">
+            <p class="text-justify text-lg leading-tight animate-opacity-slow">
                 The answer is YES!, There are instances of AI technology that show racial, gender or socio-economic
                 bias. Integrating ethics in AI will ensure that it is:
             </p>
@@ -12,7 +12,7 @@
         <div class="xl:flex my-3 justify-around items-center">
             <div>
                 <ul class="pl-5">
-                    <li class="mb-4">
+                    <li class="mb-4 animate-left">
                         <span class="inline-flex">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-intelblue mr-2">
@@ -22,7 +22,7 @@
                             Human centric.
                         </span>
                     </li>
-                    <li class="mb-4">
+                    <li class="mb-4 animate-left-slow">
                         <span class="inline-flex">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-intelblue mr-2">
@@ -32,7 +32,7 @@
                             Unbiased
                         </span>
                     </li>
-                    <li class="mb-4">
+                    <li class="mb-4 animate-left-slow">
                         <span class="inline-flex">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-intelblue mr-2">
@@ -42,7 +42,7 @@
                             Data Protective
                         </span>
                     </li>
-                    <li class="mb-4">
+                    <li class="mb-4 animate-left-slow-2">
                         <span class="inline-flex">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-intelblue mr-2">
@@ -58,7 +58,7 @@
             <div class="w-full lg:max-w-md lg:mx-auto xl:mx-auto">
                 <div class="w-full lg:max-w-md lg:mx-auto xl:mx-auto">
                     <img src="{{ asset('images/course/ethics3.png') }}" alt="ai"
-                        class="mx-auto lg:max-w-md lg:pl-6">
+                        class="mx-auto lg:max-w-md lg:pl-6 animate-zoom-slow">
                 </div>
             </div>
         </div>
