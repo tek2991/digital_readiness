@@ -6,7 +6,7 @@
         <div class="xl:flex my-3 justify-around items-center">
             <div>
                 <ul class="pl-5">
-                    <li class="mb-4">
+                    <li class="mb-4 animate-left">
                         <span class="inline-flex">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-intelblue mr-2">
@@ -16,7 +16,7 @@
                             AI can quickly understand how cancer cells become resistant to anticancer drugs, which can help improve drug development
                         </span>
                     </li>
-                    <li class="mb-4">
+                    <li class="mb-4 animate-left-slow">
                         <span class="inline-flex">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-intelblue mr-2">
@@ -26,7 +26,7 @@
                             AI can help radiologists map target areas or plan radiation treatment programs automatically.
                         </span>
                     </li>
-                    <li class="mb-4">
+                    <li class="mb-4 animate-left-slow">
                         <span class="inline-flex">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-intelblue mr-2">
@@ -36,7 +36,7 @@
                             AI can manage the use of chemotherapy drugs and predict the tolerance of chemotherapy drugs to optimize the chemotherapy regimen.
                         </span>
                     </li>
-                    <li class="mb-4">
+                    <li class="mb-4 animate-left-slow-2">
                         <span class="inline-flex">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-intelblue mr-2">
@@ -50,7 +50,7 @@
             </div>
             {{-- import svg --}}
             <div class="w-full lg:max-w-sm lg:mx-auto xl:max-w-none xl:mx-auto">
-                <img src="{{ asset('images/course/cancer.png') }}" alt="ai" class="mx-auto">
+                <img src="{{ asset('images/course/cancer.png') }}" alt="ai" class="mx-auto animate-opacity-slow">
             </div>
         </div>
     </div>

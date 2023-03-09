@@ -8,7 +8,7 @@
                 <div class="col-span-2 lg:col-span-1 animate-left-fast flex items-center">
                     <img src="{{ asset('images/course/disease_diagnosis.png') }}" alt="" class="max-h-16 lg:max-h-24 object-cover">
                 </div>
-                <div class="col-span-5 lg:col-span-2 flex items-center justify-center text-xl font-intelbold animate-opacity-fast" style="color:#2468b5">
+                <div class="col-span-5 lg:col-span-2 flex items-center justify-center text-xl font-intelbold animate-opacity-slow" style="color:#2468b5">
                     <h3>Disease Diagnosis </h3>
                 </div>
                 <div style="background-color: #2468b5" class="col-span-7 mt-3 lg:mt-0 lg:col-span-4 lg:ml-3 flex items-center justify-center rounded-xl text-white font-intelmedium text-lg animate-right-fast">
@@ -18,52 +18,52 @@
                 </div>
             </div>  
             <div class="grid grid-cols-7 my-8 lg:mb-5">
-                <div class="col-span-2 lg:col-span-1 animate-left-fast flex items-center">
+                <div class="col-span-2 lg:col-span-1 animate-left flex items-center">
                     <img src="{{ asset('images/course/intelligent_spraying.png') }}" alt="" class="max-h-16 lg:max-h-24 object-cover">
                 </div>
-                <div class="col-span-5 lg:col-span-2 flex items-center justify-center text-xl font-intelbold animate-opacity-fast" style="color:#47c7fd">
+                <div class="col-span-5 lg:col-span-2 flex items-center justify-center text-xl font-intelbold animate-opacity-slow" style="color:#47c7fd">
                     <h3>Intelligent Spraying</h3>
                 </div>
-                <div style="background-color: #47c7fd" class="col-span-7 mt-3 lg:mt-0 lg:col-span-4 lg:ml-3 flex items-center justify-center rounded-xl text-white font-intelmedium text-lg animate-right-fast">
+                <div style="background-color: #47c7fd" class="col-span-7 mt-3 lg:mt-0 lg:col-span-4 lg:ml-3 flex items-center justify-center rounded-xl text-white font-intelmedium text-lg animate-right">
                     <p class="p-3">
                         AI sensors can detect weed-affected areas and precisely spray herbicides
                     </p>
                 </div>
             </div>  
             <div class="grid grid-cols-7 my-8 lg:mb-5">
-                <div class="col-span-2 lg:col-span-1 animate-left-fast flex items-center">
+                <div class="col-span-2 lg:col-span-1 animate-left-slow flex items-center">
                     <img src="{{ asset('images/course/agricultural_robots.png') }}" alt="" class="max-h-16 lg:max-h-24 object-cover">
                 </div>
-                <div class="col-span-5 lg:col-span-2 flex items-center justify-center text-xl font-intelbold animate-opacity-fast" style="color:#f9c91c">
+                <div class="col-span-5 lg:col-span-2 flex items-center justify-center text-xl font-intelbold animate-opacity-slow" style="color:#f9c91c">
                     <h3>Agricultural Robots</h3>
                 </div>
-                <div style="background-color: #f9c91c" class="col-span-7 mt-3 lg:mt-0 lg:col-span-4 lg:ml-3 flex items-center justify-center rounded-xl text-white font-intelmedium text-lg animate-right-fast">
+                <div style="background-color: #f9c91c" class="col-span-7 mt-3 lg:mt-0 lg:col-span-4 lg:ml-3 flex items-center justify-center rounded-xl text-white font-intelmedium text-lg animate-right-slow">
                     <p class="p-3">
                         AI robots are also trained in checking the quality of crops, detect and controlling weeds, and harvesting the crop with faster speed compared to a human.
                     </p>
                 </div>
             </div>  
             <div class="grid grid-cols-7 my-8 lg:mb-5">
-                <div class="col-span-2 lg:col-span-1 animate-left-fast flex items-center">
+                <div class="col-span-2 lg:col-span-1 animate-left-slow flex items-center">
                     <img src="{{ asset('images/course/crop_yield.png') }}" alt="" class="max-h-16 lg:max-h-24 object-cover">
                 </div>
-                <div class="col-span-5 lg:col-span-2 flex items-center justify-center text-xl font-intelbold animate-opacity-fast" style="color:#e96116">
+                <div class="col-span-5 lg:col-span-2 flex items-center justify-center text-xl font-intelbold animate-opacity-slow" style="color:#e96116">
                     <h3>Crop Yield / Price Prediction </h3>
                 </div>
-                <div style="background-color: #e96116" class="col-span-7 mt-3 lg:mt-0 lg:col-span-4 lg:ml-3 flex items-center justify-center rounded-xl text-white font-intelmedium text-lg animate-right-fast">
+                <div style="background-color: #e96116" class="col-span-7 mt-3 lg:mt-0 lg:col-span-4 lg:ml-3 flex items-center justify-center rounded-xl text-white font-intelmedium text-lg animate-right-slow">
                     <p class="p-3">
                         With price forecasting, farmers can get a better idea about the price of crops for the next few weeks, which can help them to get maximum profit.
                     </p>
                 </div>
             </div>  
             <div class="grid grid-cols-7 my-8 lg:mb-5">
-                <div class="col-span-2 lg:col-span-1 animate-left-fast flex items-center">
+                <div class="col-span-2 lg:col-span-1 animate-left-slow-2 flex items-center">
                     <img src="{{ asset('images/course/crop_soil_monitoring.png') }}" alt="" class="max-h-16 lg:max-h-24 object-cover">
                 </div>
-                <div class="col-span-5 lg:col-span-2 flex items-center justify-center text-xl font-intelbold animate-opacity-fast" style="color:#8f5da2">
+                <div class="col-span-5 lg:col-span-2 flex items-center justify-center text-xl font-intelbold animate-opacity-slow" style="color:#8f5da2">
                     <h3>Crop / Soil Monitoring</h3>
                 </div>
-                <div style="background-color: #8f5da2" class="col-span-7 mt-3 lg:mt-0 lg:col-span-4 lg:ml-3 flex items-center justify-center rounded-xl text-white font-intelmedium text-lg animate-right-fast">
+                <div style="background-color: #8f5da2" class="col-span-7 mt-3 lg:mt-0 lg:col-span-4 lg:ml-3 flex items-center justify-center rounded-xl text-white font-intelmedium text-lg animate-right-slow-2">
                     <p class="p-3">
                         Diagnosing the soil defects, nutrients, and deficiencies in soil.
                     </p>

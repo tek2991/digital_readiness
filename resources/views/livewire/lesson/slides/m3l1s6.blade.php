@@ -4,7 +4,7 @@
     </div>
     <div class="text-gray-700 my-14">
         <div>
-            <p class="text-justify text-lg leading-tight">
+            <p class="text-justify text-lg leading-tight animate-top">
                 AI for Agriculture involves the use of Artificial Intelligence to optimize farming practices, increase
                 crop yields, and promote sustainable agriculture. AI can assist in decision-making processes related to
                 crop management, irrigation, and fertilization, as well as help monitor and prevent crop diseases and
@@ -14,7 +14,7 @@
         <div class="xl:flex my-3 justify-around items-center">
             <div>
                 <ul class="pl-5">
-                    <li class="mb-4">
+                    <li class="mb-4 animate-left-fast">
                         <span class="inline-flex">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-intelblue mr-2">
@@ -24,7 +24,7 @@
                             Crop and soil monitoring
                         </span>
                     </li>
-                    <li class="mb-4">
+                    <li class="mb-4 animate-left-fast">
                         <span class="inline-flex">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-intelblue mr-2">
@@ -34,7 +34,7 @@
                             plant disease detection
                         </span>
                     </li>
-                    <li class="mb-4">
+                    <li class="mb-4 animate-left">
                         <span class="inline-flex">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-intelblue mr-2">
@@ -44,7 +44,7 @@
                             Livestock health monitoring
                         </span>
                     </li>
-                    <li class="mb-4">
+                    <li class="mb-4 animate-left">
                         <span class="inline-flex">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-intelblue mr-2">
@@ -54,7 +54,7 @@
                             Intelligent spraying
                         </span>
                     </li>
-                    <li class="mb-4">
+                    <li class="mb-4 animate-left-slow">
                         <span class="inline-flex">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-intelblue mr-2">
@@ -64,7 +64,7 @@
                             Automatic weeding
                         </span>
                     </li>
-                    <li class="mb-4">
+                    <li class="mb-4 animate-left-slow-2">
                         <span class="inline-flex">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-intelblue mr-2">
@@ -78,7 +78,7 @@
             </div>
             {{-- import svg --}}
             <div class="w-full lg:max-w-md lg:mx-auto xl:mx-auto">
-                <img src="{{ asset('images/course/agriculture2.jpg') }}" alt="ai" class="mx-auto lg:max-w-md lg:pl-6">
+                <img src="{{ asset('images/course/agriculture2.jpg') }}" alt="ai" class="mx-auto lg:max-w-md lg:pl-6 animate-opacity-slow">
             </div>
         </div>
     </div>

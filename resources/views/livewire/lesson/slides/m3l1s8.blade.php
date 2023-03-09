@@ -4,7 +4,7 @@
     </div>
     <div class="text-gray-700 my-14">
         <div>
-            <p class="text-justify text-lg leading-tight">
+            <p class="text-justify text-lg leading-tight animate-opacity-slow">
                 AI in Art and Music involves the use of Artificial Intelligence to create and enhance artistic
                 expressions, such as music, painting, and sculpture. AI can assist in the creative process by generating
                 new ideas, styles, and compositions. It can also analyze existing artworks to identify patterns and
@@ -15,7 +15,7 @@
             <div>
                 <ul class="pl-5">
                     <li class="mb-4">
-                        <span class="inline-flex">
+                        <span class="inline-flex animate-left">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-intelblue mr-2">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -25,7 +25,7 @@
                         </span>
                     </li>
                     <li class="mb-4">
-                        <span class="inline-flex">
+                        <span class="inline-flex animate-left-slow">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-intelblue mr-2">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -35,7 +35,7 @@
                         </span>
                     </li>
                     <li class="mb-4">
-                        <span class="inline-flex">
+                        <span class="inline-flex animate-left-slow-2">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-intelblue mr-2">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -48,7 +48,7 @@
             </div>
             {{-- import svg --}}
             <div class="w-full lg:max-w-md lg:mx-auto xl:mx-auto">
-                <img src="{{ asset('images/course/ai_in_art.png') }}" alt="ai" class="mx-auto lg:max-w-md lg:pl-6">
+                <img src="{{ asset('images/course/ai_in_art.png') }}" alt="ai" class="mx-auto lg:max-w-md lg:pl-6 animate-opacity-slow">
             </div>
         </div>
     </div>

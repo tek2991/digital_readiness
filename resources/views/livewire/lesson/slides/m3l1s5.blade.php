@@ -6,7 +6,7 @@
         <div class="xl:flex my-3 justify-around items-center">
             <div>
                 <ul class="pl-5">
-                    <li class="mb-4">
+                    <li class="mb-4 animate-left-slow">
                         <span class="inline-flex">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-intelblue mr-2">
@@ -17,7 +17,7 @@
                         </span>
                     </li>
                     <li class="mb-4">
-                        <span class="inline-flex">
+                        <span class="inline-flex animate-left-slow-2">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-intelblue mr-2">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -30,7 +30,7 @@
             </div>
             {{-- import svg --}}
             <div class="w-full lg:max-w-md lg:mx-auto xl:mx-auto">
-                <img src="{{ asset('images/course/marine.png') }}" alt="ai" class="mx-auto lg:max-w-md lg:pl-6">
+                <img src="{{ asset('images/course/marine.png') }}" alt="ai" class="mx-auto lg:max-w-md lg:pl-6 animate-opacity-slow">
             </div>
         </div>
     </div>
