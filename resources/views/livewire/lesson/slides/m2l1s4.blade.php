@@ -235,7 +235,8 @@
                     {{-- Output --}}
                     <div class="flex flex-col justify-center items-center">
                         <p class="font-intelmedium text-md text-intelblue pb-1">Output</p>
-                        <div class="w-14 h-14 {{ $output > 0 ? 'bg-green-400' : 'bg-red-400' }}  rounded-full flex items-center justify-center">
+                        <div
+                            class="w-14 h-14 {{ $output > 0 ? 'bg-green-400' : 'bg-red-400' }}  rounded-full flex items-center justify-center">
                             <br class="block sm:hidden">
                             <p id="sum" class="font-intelmedium text-3xl text-intelblue">
                                 {{ $output ? $output : 'Y' }}
@@ -351,10 +352,12 @@
     </div>
     <div class="mt-8">
         @if ($allow_next && $show_next)
-            <button wire:click="nextSlide" {{ $complete == true ? '' : 'disabled' }}
-                class="{{ $complete == true ? 'bg-intelblue animate-bounce' : 'bg-gray-400' }} text-white font-intelmedium text-xl p-4 rounded-lg lg:mt-6 w-full">
-                {{ $complete == true ? 'Continue...' : 'Please complete the slide above' }}
-            </button>
+            <div class="fixed bottom-0 mx-auto" id="next-btn">
+                <button wire:click="nextSlide" {{ $complete == true ? '' : 'disabled' }}
+                    class="{{ $complete == true ? 'bg-intelblue animate-bounce' : 'bg-gray-400' }} text-white font-intelmedium text-xl p-4 rounded-lg lg:mt-6 w-full">
+                    {{ $complete == true ? 'Continue...' : 'Please complete the slide above' }}
+                </button>
+            </div>
         @else
         @endif
     </div>

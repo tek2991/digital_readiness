@@ -68,14 +68,16 @@
                         <li>
                             <div class="p-4 flex justify-between">
                                 <p class="">
-                                    Deciding on the values is based on experience, preference, and relevance to the situation.
+                                    Deciding on the values is based on experience, preference, and relevance to the
+                                    situation.
                                 </p>
                             </div>
                         </li>
                         <li>
                             <div class="p-4 flex justify-between">
                                 <p class="">
-                                    That is why we introduce the weights here. A factor that is more important will have a larger weight. They are denoted with the symbol W.
+                                    That is why we introduce the weights here. A factor that is more important will have
+                                    a larger weight. They are denoted with the symbol W.
                                 </p>
                             </div>
                         </li>
@@ -89,7 +91,8 @@
                         <li>
                             <div class="p-4 flex justify-between">
                                 <p class="">
-                                    Weighted input means the input multiplied with its own weights, just like in the formula
+                                    Weighted input means the input multiplied with its own weights, just like in the
+                                    formula
                                 </p>
                             </div>
                         </li>
@@ -108,7 +111,7 @@
                         <li>
                             <div class="p-4 flex justify-between">
                                 <p class="">
-                                    if we add all the inputs and the weights, the sum will always be a positive value. 
+                                    if we add all the inputs and the weights, the sum will always be a positive value.
                                 </p>
                             </div>
                         </li>
@@ -145,14 +148,17 @@
                         <li>
                             <div class="p-4 flex justify-between">
                                 <p class="">
-                                    Determine the outcome based on the summation of both the weighted input and weighted bias. If it is a positive number, then it is a Yes. If it is a negative number, it is a No.
+                                    Determine the outcome based on the summation of both the weighted input and weighted
+                                    bias. If it is a positive number, then it is a Yes. If it is a negative number, it
+                                    is a No.
                                 </p>
                             </div>
                         </li>
                         <li>
                             <div class="p-4 flex justify-between">
                                 <p class="">
-                                    So, we are using zero (0) as a threshold. This is a step function. Any values below the threshold will be assigned low, which corresponds to No. 
+                                    So, we are using zero (0) as a threshold. This is a step function. Any values below
+                                    the threshold will be assigned low, which corresponds to No.
                                 </p>
                             </div>
                         </li>
@@ -184,10 +190,12 @@
     </div>
     <div class="mt-14">
         @if ($allow_next && $show_next)
-            <button wire:click="nextSlide" {{ $complete == true ? '' : 'disabled' }}
-                class="{{ $complete == true ? 'bg-intelblue animate-bounce' : 'bg-gray-400' }} text-white font-intelmedium text-xl p-4 rounded-lg lg:mt-6 w-full">
-                {{ $complete == true ? 'Continue...' : 'Please complete the slide above' }}
-            </button>
+            <div class="fixed bottom-0 mx-auto" id="next-btn">
+                <button wire:click="nextSlide" {{ $complete == true ? '' : 'disabled' }}
+                    class="{{ $complete == true ? 'bg-intelblue animate-bounce' : 'bg-gray-400' }} text-white font-intelmedium text-xl p-4 rounded-lg lg:mt-6 w-full">
+                    {{ $complete == true ? 'Continue...' : 'Please complete the slide above' }}
+                </button>
+            </div>
         @else
         @endif
     </div>

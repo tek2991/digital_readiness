@@ -14,16 +14,19 @@
             </div>
             {{-- import pic --}}
             <div class="w-full flex flex-col justify-center mt-8 xl:mt-0 p-6 xl:p-0 lg:col-span-3">
-                <img src="{{ asset('images/course/teachable2.jpg') }}" alt="ai" class="object-cover animate-zoom-slow">
+                <img src="{{ asset('images/course/teachable2.jpg') }}" alt="ai"
+                    class="object-cover animate-zoom-slow">
             </div>
         </div>
     </div>
     <div class="mt-14">
         @if ($allow_next && $show_next)
-            <button wire:click="nextSlide" {{ $complete == true ? '' : 'disabled' }}
-                class="{{ $complete == true ? 'bg-intelblue animate-bounce' : 'bg-gray-400' }} text-white font-intelmedium text-xl p-4 rounded-lg lg:mt-6 w-full">
-                {{ $complete == true ? 'Continue...' : 'Please complete the slide above' }}
-            </button>
+            <div class="fixed bottom-0 mx-auto" id="next-btn">
+                <button wire:click="nextSlide" {{ $complete == true ? '' : 'disabled' }}
+                    class="{{ $complete == true ? 'bg-intelblue animate-bounce' : 'bg-gray-400' }} text-white font-intelmedium text-xl p-4 rounded-lg lg:mt-6 w-full">
+                    {{ $complete == true ? 'Continue...' : 'Please complete the slide above' }}
+                </button>
+            </div>
         @else
         @endif
     </div>

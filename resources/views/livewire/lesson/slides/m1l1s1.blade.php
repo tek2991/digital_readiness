@@ -1,4 +1,4 @@
-<div id="m1l1s1" class="{{ $current_slide ? 'min-h-screen' : '' }}">
+<div id="m1l1s1" class="pt-6 {{ $current_slide ? 'min-h-screen' : '' }}">
     <h3 class="font-intelmedium text-gray-500 text-lg pb-4">Lesson 1 of 6</h3>
     <div class="border-b-2 border-secondary w-fit">
         <h1 class="font-intelbold text-intelblue text-3xl pb-2">Introduction</h1>
@@ -66,13 +66,14 @@
                 <img src="{{ asset('svgs/ai.svg') }}" alt="ai" class="mx-auto xl:-mb-10">
             </div>
         </div>
-        <div>
-            @if ($allow_next && $show_next)
-                <button wire:click="nextSlide" class="animate-bounce bg-intelblue text-white font-intelmedium text-xl p-4 rounded-lg lg:mt-6 w-full">
+        @if ($allow_next && $show_next)
+            <div class="fixed bottom-0 mx-auto" id="next-btn">
+                <button wire:click="nextSlide"
+                    class="animate-bounce bg-intelblue text-white font-intelmedium text-xl p-4 rounded-lg lg:mt-6 w-full">
                     Learn more about the modules
                 </button>
-                @else
-            @endif
-        </div>
+            </div>
+        @else
+        @endif
     </div>
 </div>

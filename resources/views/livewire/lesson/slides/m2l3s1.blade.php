@@ -8,7 +8,7 @@
     <div class="text-gray-700 mt-14">
         <div class="grid grid-cols-2 gap-6">
             <div class="w-full h-full flex justify-between items-center">
-                <img src="{{ asset('images/course/robot_arm.png') }}" alt="" 
+                <img src="{{ asset('images/course/robot_arm.png') }}" alt=""
                     class="w-full h-full object-contain rounded shadow-sm animate-top">
             </div>
             <div class="w-full h-full flex justify-between items-center">
@@ -19,10 +19,12 @@
     </div>
     <div class="mt-14">
         @if ($allow_next && $show_next)
-            <button wire:click="nextSlide" {{ $complete == true ? '' : 'disabled' }}
-                class="{{ $complete == true ? 'bg-intelblue animate-bounce' : 'bg-gray-400' }} text-white font-intelmedium text-xl p-4 rounded-lg lg:mt-6 w-full">
-                {{ $complete == true ? 'Continue...' : 'Please complete the slide above' }}
-            </button>
+            <div class="fixed bottom-0 mx-auto" id="next-btn">
+                <button wire:click="nextSlide" {{ $complete == true ? '' : 'disabled' }}
+                    class="{{ $complete == true ? 'bg-intelblue animate-bounce' : 'bg-gray-400' }} text-white font-intelmedium text-xl p-4 rounded-lg lg:mt-6 w-full">
+                    {{ $complete == true ? 'Continue...' : 'Please complete the slide above' }}
+                </button>
+            </div>
         @else
         @endif
     </div>

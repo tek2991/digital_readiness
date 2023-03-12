@@ -109,6 +109,7 @@
                             @enderror
                             <input type="text" id="qualification_name" wire:model="qualification_name"
                                 {{ $step != 1 ? 'disabled' : '' }}
+                                placeholder="B.E. - Computer Science, B.Tech - Information Technology "
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-secondary focus:border-secondary block w-full p-2.5"
                                 required>
                         </div>

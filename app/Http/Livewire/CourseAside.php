@@ -20,6 +20,7 @@ class CourseAside extends Component
         $this->modules = Module::with('lessons')->orderBy('order')->get();
         $this->syncCompletedLessons();
         $this->current_lesson = Lesson::find(1);
+        $this->current_module = $this->current_lesson->module;
 
         $last_completed_lesson = auth()->user()->lessons->where('pivot.completed', 1)->last();
         if ($last_completed_lesson) {
@@ -43,6 +44,11 @@ class CourseAside extends Component
 
     public function loadLesson($lesson_id)
     {
+        if($this->current_lesson->module_id != $this->current_module->id){
+            $this->current_module = $this->current_lesson->module;
+            $this->dispatchBrowserEvent('changeModule', ['module_id' => $this->current_module->id]);
+        }
+
         $this->emitTo('lesson.wrapper', 'loadLesson', $lesson_id);
     }
 

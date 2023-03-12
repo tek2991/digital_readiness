@@ -23,16 +23,19 @@
             </div>
             {{-- import svg --}}
             <div class="w-full lg:max-w-sm lg:mx-auto xl:w-2/5 max-w-lg xl:mx-auto">
-                <img src="{{ asset('images/course/robot_arm2.png') }}" alt="ai" class="w-full h-full object-scale-down rounded shadow-sm animate-zoom-slow">
+                <img src="{{ asset('images/course/robot_arm2.png') }}" alt="ai"
+                    class="w-full h-full object-scale-down rounded shadow-sm animate-zoom-slow">
             </div>
         </div>
     </div>
     <div class="mt-14">
         @if ($allow_next && $show_next)
-            <button wire:click="nextSlide" {{ $complete == true ? '' : 'disabled' }}
-                class="{{ $complete == true ? 'bg-intelblue animate-bounce' : 'bg-gray-400' }} text-white font-intelmedium text-xl p-4 rounded-lg lg:mt-6 w-full">
-                {{ $complete == true ? 'Continue...' : 'Please complete the slide above' }}
-            </button>
+            <div class="fixed bottom-0 mx-auto" id="next-btn">
+                <button wire:click="nextSlide" {{ $complete == true ? '' : 'disabled' }}
+                    class="{{ $complete == true ? 'bg-intelblue animate-bounce' : 'bg-gray-400' }} text-white font-intelmedium text-xl p-4 rounded-lg lg:mt-6 w-full">
+                    {{ $complete == true ? 'Continue...' : 'Please complete the slide above' }}
+                </button>
+            </div>
         @else
         @endif
     </div>

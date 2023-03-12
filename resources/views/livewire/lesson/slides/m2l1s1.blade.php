@@ -16,7 +16,8 @@
                     </div>
                     <div
                         class="flip-card-back w-full h-full absolute flex flex-col justify-center p-4 px-6 bg-intellight rounded-lg shadow-lg">
-                        <p class="text-gray-50 font-intelmedium text-center">In supervised learning, labeled data is used to train AI models. So, AI
+                        <p class="text-gray-50 font-intelmedium text-center">In supervised learning, labeled data is
+                            used to train AI models. So, AI
                             models acquire training knowledge from labels that the data has already been assigned
                         </p>
 
@@ -38,11 +39,14 @@
                     </div>
                     <div
                         class="flip-card-back w-full h-full absolute flex flex-col justify-center p-4 px-6 bg-intellight rounded-lg shadow-lg">
-                        <p class="text-gray-50 font-intelmedium text-center">In unsupervised learning, unlabeled data is used to train AI models. So, AI models identify patterns and similarities in data using different processing techniques
+                        <p class="text-gray-50 font-intelmedium text-center">In unsupervised learning, unlabeled data is
+                            used to train AI models. So, AI models identify patterns and similarities in data using
+                            different processing techniques
                         </p>
 
                         <p class="text-gray-50 font-intelmedium text-center mt-3">
-                            For example, in the example shown here, the fruits are not labeled, and hence similar looking fruits will be grouped in one cluster. This is called clustering.
+                            For example, in the example shown here, the fruits are not labeled, and hence similar
+                            looking fruits will be grouped in one cluster. This is called clustering.
                         </p>
                     </div>
                 </div>
@@ -51,10 +55,12 @@
     </div>
     <div class="mt-14">
         @if ($allow_next && $show_next)
-            <button wire:click="nextSlide" {{ $complete == true ? '' : 'disabled' }}
-                class="{{ $complete == true ? 'bg-intelblue animate-bounce' : 'bg-gray-400' }} text-white font-intelmedium text-xl p-4 rounded-lg lg:mt-6 w-full">
-                {{ $complete == true ? 'Continue...' : 'Please complete the slide above' }}
-            </button>
+            <div class="fixed bottom-0 mx-auto" id="next-btn">
+                <button wire:click="nextSlide" {{ $complete == true ? '' : 'disabled' }}
+                    class="{{ $complete == true ? 'bg-intelblue animate-bounce' : 'bg-gray-400' }} text-white font-intelmedium text-xl p-4 rounded-lg lg:mt-6 w-full">
+                    {{ $complete == true ? 'Continue...' : 'Please complete the slide above' }}
+                </button>
+            </div>
         @else
         @endif
     </div>

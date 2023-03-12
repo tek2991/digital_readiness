@@ -45,10 +45,12 @@
         </div>
         <div class="mt-8">
             @if ($allow_next && $show_next)
+            <div class="fixed bottom-0 mx-auto" id="next-btn">
                 <button wire:click="nextSlide"
                     class="animate-bounce bg-intelblue text-white font-intelmedium text-xl p-4 rounded-lg lg:mt-6 w-full">
                     Learn more about Aitificial Intelligence
                 </button>
+            </div>
             @else
             @endif
         </div>

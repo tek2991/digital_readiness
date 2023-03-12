@@ -45,7 +45,8 @@
             @endif
             @if ($part_no == 2)
                 <div class="flex flex-col justify-center">
-                    <p class="text-justify text-lg mb-4">Now we will fill in the four inputs with the factors that we have listed out.</p>
+                    <p class="text-justify text-lg mb-4">Now we will fill in the four inputs with the factors that we
+                        have listed out.</p>
                     <ul class="">
                         <li>
                             <div class="px-4 py-2 flex justify-between">
@@ -71,7 +72,7 @@
                         <li>
                             <div class="px-4 py-2 flex justify-between">
                                 <p class="">
-                                    What is the weather forecast for later? 
+                                    What is the weather forecast for later?
                                 </p>
                             </div>
                         </li>
@@ -79,7 +80,8 @@
                 </div>
                 {{-- import pic --}}
                 <div class="w-full flex flex-col justify-center mt-8 xl:mt-0 p-6 xl:p-0">
-                    <img src="{{ asset('images/course/perception_park_input.png') }}" alt="ai" class="object-cover">
+                    <img src="{{ asset('images/course/perception_park_input.png') }}" alt="ai"
+                        class="object-cover">
                 </div>
             @endif
             @if ($part_no == 3)
@@ -89,7 +91,8 @@
                         <li>
                             <div class="px-4 py-2 flex justify-between">
                                 <p class="">
-                                    Now we will fill in the importance. But the importance is not very useful in mathematical calculations. 
+                                    Now we will fill in the importance. But the importance is not very useful in
+                                    mathematical calculations.
                                 </p>
                             </div>
                         </li>
@@ -97,7 +100,8 @@
                 </div>
                 {{-- import pic --}}
                 <div class="w-full flex flex-col justify-center mt-8 xl:mt-0 p-6 xl:p-0">
-                    <img src="{{ asset('images/course/perception_park_weights.png') }}" alt="ai" class="object-cover">
+                    <img src="{{ asset('images/course/perception_park_weights.png') }}" alt="ai"
+                        class="object-cover">
                 </div>
             @endif
             @if ($part_no == 4)
@@ -107,7 +111,8 @@
                         <li>
                             <div class="px-4 py-2 flex justify-between">
                                 <p class="">
-                                    Next, let us assign some numbers to them. At the same time, we will also assign a number for the bias weight (WB).
+                                    Next, let us assign some numbers to them. At the same time, we will also assign a
+                                    number for the bias weight (WB).
                                 </p>
                             </div>
                         </li>
@@ -115,7 +120,8 @@
                 </div>
                 {{-- import pic --}}
                 <div class="w-full flex flex-col justify-center mt-8 xl:mt-0 p-6 xl:p-0">
-                    <img src="{{ asset('images/course/perception_park_weights2.png') }}" alt="ai" class="object-cover">
+                    <img src="{{ asset('images/course/perception_park_weights2.png') }}" alt="ai"
+                        class="object-cover">
                 </div>
             @endif
             @if ($part_no == 5)
@@ -125,7 +131,8 @@
                         <li>
                             <div class="px-4 py-2 flex justify-between">
                                 <p class="">
-                                    I have a jacket, I don’t have an umbrella, it is sunny now, and the weather forecast is going to rain.
+                                    I have a jacket, I don’t have an umbrella, it is sunny now, and the weather forecast
+                                    is going to rain.
                                 </p>
                             </div>
                         </li>
@@ -140,7 +147,8 @@
                 </div>
                 {{-- import pic --}}
                 <div class="w-full flex flex-col justify-center mt-8 xl:mt-0 p-6 xl:p-0">
-                    <img src="{{ asset('images/course/perception_park_scenario.png') }}" alt="ai" class="object-cover">
+                    <img src="{{ asset('images/course/perception_park_scenario.png') }}" alt="ai"
+                        class="object-cover">
                 </div>
             @endif
             @if ($part_no == 6)
@@ -149,7 +157,8 @@
                         <li>
                             <div class="px-4 py-2 flex justify-between">
                                 <p class="">
-                                    Since this is higher than the threshold (which is zero), the result is that I will go out to the park.
+                                    Since this is higher than the threshold (which is zero), the result is that I will
+                                    go out to the park.
                                 </p>
                             </div>
                         </li>
@@ -157,8 +166,10 @@
                 </div>
                 {{-- import pic --}}
                 <div class="w-full flex flex-col justify-center mt-8 xl:mt-0 p-6 xl:p-0">
-                    <img src="{{ asset('images/course/perception_park_scenario.png') }}" alt="ai" class="object-cover">
-                    <img src="{{ asset('images/course/perception_park_result.png') }}" alt="ai" class="object-cover pt-6">
+                    <img src="{{ asset('images/course/perception_park_scenario.png') }}" alt="ai"
+                        class="object-cover">
+                    <img src="{{ asset('images/course/perception_park_result.png') }}" alt="ai"
+                        class="object-cover pt-6">
                 </div>
             @endif
         </div>
@@ -175,10 +186,12 @@
     </div>
     <div class="mt-14">
         @if ($allow_next && $show_next)
-            <button wire:click="nextSlide" {{ $complete == true ? '' : 'disabled' }}
-                class="{{ $complete == true ? 'bg-intelblue animate-bounce' : 'bg-gray-400' }} text-white font-intelmedium text-xl p-4 rounded-lg lg:mt-6 w-full">
-                {{ $complete == true ? 'Continue...' : 'Please complete the slide above' }}
-            </button>
+            <div class="fixed bottom-0 mx-auto" id="next-btn">
+                <button wire:click="nextSlide" {{ $complete == true ? '' : 'disabled' }}
+                    class="{{ $complete == true ? 'bg-intelblue animate-bounce' : 'bg-gray-400' }} text-white font-intelmedium text-xl p-4 rounded-lg lg:mt-6 w-full">
+                    {{ $complete == true ? 'Continue...' : 'Please complete the slide above' }}
+                </button>
+            </div>
         @else
         @endif
     </div>

@@ -17,7 +17,8 @@
                         <div class="bg-green-200 p-3 rounded-xl mt-7 animate-opacity">
                             <p>Machine Learning</p>
                         </div>
-                        <div class="bg-green-400 rounded-full w-2/3 dynamic-height-m1l1s4 flex justify-center items-center">
+                        <div
+                            class="bg-green-400 rounded-full w-2/3 dynamic-height-m1l1s4 flex justify-center items-center">
                             <div class="bg-green-200 p-3 rounded-xl animate-opacity">
                                 <p>Deep Learning</p>
                             </div>
@@ -55,10 +56,12 @@
     </div>
     <div class="mt-14">
         @if ($allow_next && $show_next)
-            <button wire:click="nextSlide"
-                class="animate-bounce bg-intelblue text-white font-intelmedium text-xl p-4 rounded-lg lg:mt-6 w-full">
-                Lets see some examples
-            </button>
+            <div class="fixed bottom-0 mx-auto" id="next-btn">
+                <button wire:click="nextSlide"
+                    class="animate-bounce bg-intelblue text-white font-intelmedium text-xl p-4 rounded-lg lg:mt-6 w-full">
+                    Lets see some examples
+                </button>
+            </div>
         @else
         @endif
     </div>

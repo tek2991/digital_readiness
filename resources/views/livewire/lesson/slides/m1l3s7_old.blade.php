@@ -6,7 +6,8 @@
     </div>
     <div class="text-gray-700 mt-14">
         <div class="max-w-xs mx-auto mb-12">
-            <div class="flex justify-center items-center bg-secondary min-h-24 w-full rounded-lg text-3xl font-intelmedium p-4">
+            <div
+                class="flex justify-center items-center bg-secondary min-h-24 w-full rounded-lg text-3xl font-intelmedium p-4">
                 <p class="text-intelblue text-center my-2">Translating one word from one language to another</p>
             </div>
         </div>
@@ -16,7 +17,8 @@
                 @if ($answer == $selectedAnswer)
                     <div class="w-full h-full flex justify-between items-center">
                         <p class="text-lg font-intelmedium text-intelblue text-center">
-                            No. Translating words through a table is not an example of AI. But making a translator that is able to understand context and verbs to a certain degree can be considered AI.
+                            No. Translating words through a table is not an example of AI. But making a translator that
+                            is able to understand context and verbs to a certain degree can be considered AI.
                         </p>
                     </div>
                 @endif
@@ -73,10 +75,12 @@
     </div>
     <div class="mt-14">
         @if ($allow_next && $show_next)
-            <button wire:click="nextSlide" {{ $complete == true ? '' : 'disabled' }}
-                class="{{ $complete == true ? 'bg-intelblue animate-bounce' : 'bg-gray-400' }} text-white font-intelmedium text-xl p-4 rounded-lg lg:mt-6 w-full">
-                {{ $complete == true ? 'Continue...' : 'Please complete the slide above' }}
-            </button>
+            <div class="fixed bottom-0 mx-auto" id="next-btn">
+                <button wire:click="nextSlide" {{ $complete == true ? '' : 'disabled' }}
+                    class="{{ $complete == true ? 'bg-intelblue animate-bounce' : 'bg-gray-400' }} text-white font-intelmedium text-xl p-4 rounded-lg lg:mt-6 w-full">
+                    {{ $complete == true ? 'Continue...' : 'Please complete the slide above' }}
+                </button>
+            </div>
         @else
         @endif
     </div>

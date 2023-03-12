@@ -20,10 +20,12 @@
                 </p>
             </div>
             <div id="answer1"
-                class="answer bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 {{ $qa_states['answer1'] == 1 ? 'flex flex-col justify-between' : 'flex flex-col justify-center' }}" style="min-height: 20rem">
+                class="answer bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 {{ $qa_states['answer1'] == 1 ? 'flex flex-col justify-between' : 'flex flex-col justify-center' }}"
+                style="min-height: 20rem">
                 <div>
                     @if ($qa_states['answer1'] == 1)
-                        <img class="rounded-t-lg mx-auto" src="{{ asset('images/course/translate.png') }}" alt="" />
+                        <img class="rounded-t-lg mx-auto" src="{{ asset('images/course/translate.png') }}"
+                            alt="" />
                     @endif
                 </div>
                 <div class="p-5">
@@ -40,10 +42,12 @@
                 </div>
             </div>
             <div id="answer2"
-                class="answer bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 {{ $qa_states['answer2'] == 1 ? 'flex flex-col justify-between' : 'flex flex-col justify-center' }}" style="min-height: 20rem">
+                class="answer bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 {{ $qa_states['answer2'] == 1 ? 'flex flex-col justify-between' : 'flex flex-col justify-center' }}"
+                style="min-height: 20rem">
                 <div>
                     @if ($qa_states['answer2'] == 1)
-                        <img class="rounded-t-lg mx-auto" src="{{ asset('images/course/prediction.png') }}" alt="" />
+                        <img class="rounded-t-lg mx-auto" src="{{ asset('images/course/prediction.png') }}"
+                            alt="" />
                     @endif
                 </div>
                 <div class="p-5">
@@ -63,10 +67,12 @@
     </div>
     <div class="mt-14">
         @if ($allow_next && $show_next)
-            <button wire:click="nextSlide" {{ $complete == true ? '' : 'disabled' }}
-                class="{{ $complete == true ? 'bg-intelblue animate-bounce' : 'bg-gray-400' }} text-white font-intelmedium text-xl p-4 rounded-lg lg:mt-6 w-full">
-                {{ $complete == true ? 'Get your first badge...' : 'Please complete the avtivity above' }}
-            </button>
+            <div class="fixed bottom-0 mx-auto" id="next-btn">
+                <button wire:click="nextSlide" {{ $complete == true ? '' : 'disabled' }}
+                    class="{{ $complete == true ? 'bg-intelblue animate-bounce' : 'bg-gray-400' }} text-white font-intelmedium text-xl p-4 rounded-lg lg:mt-6 w-full">
+                    {{ $complete == true ? 'Get your first badge...' : 'Please complete the avtivity above' }}
+                </button>
+            </div>
         @else
         @endif
     </div>

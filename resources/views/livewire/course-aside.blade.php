@@ -20,12 +20,11 @@
                 </div>
             </div>
             <div>
-                <div id="accordion-flush" data-accordion="collapse" wire:ignore.self
-                    data-active-classes="bg-white"
+                <div id="accordion-flush" data-accordion="collapse" wire:ignore.self data-active-classes="bg-white"
                     data-inactive-classes="bg-white">
                     @foreach ($modules as $module)
                         <h2 id="accordion-{{ $module->id }}" wire:ignore>
-                            <button type="button"
+                            <button type="button" id="module-{{ $module->id }}"
                                 class="flex items-center justify-between w-full py-5 font-medium text-left border-b border-gray-200"
                                 data-accordion-target="#accordion-flush-body-{{ $module->id }}" aria-expanded="true"
                                 aria-controls="accordion-flush-body-{{ $module->id }}">
@@ -43,7 +42,9 @@
                             <div class="py-1 font-light border-b border-gray-200 dark:border-gray-700" wire:ignore.self>
                                 <ul class="pl-3 text-sm" wire:ignore.self>
                                     @foreach ($module->lessons as $lesson)
-                                        <button class="cursor-pointer text-left w-full" wire:click="changeLesson({{ $lesson->id }})">
+                                        <button class="cursor-pointer text-left w-full"
+                                            wire:click="changeLesson({{ $lesson->id }})"
+                                            id="lesson-{{ $lesson->id }}">
                                             <li
                                                 class="flex items-center justify-between w-full hover:bg-intelblue2 {{ $current_lesson->id == $lesson->id ? 'bg-intelblue2' : '' }} rounded-md p-2 my-1">
                                                 <span
@@ -71,4 +72,11 @@
             </div>
         </div>
     </div>
+
+    <script>
+        // Listen for changeModule event
+        window.addEventListener('changeModule', event => {
+            document.getElementById('module-' + event.detail.module_id).click();
+        })
+    </script>
 </aside>

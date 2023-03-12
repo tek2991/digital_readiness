@@ -4,17 +4,20 @@
     </div>
     <div class="text-gray-700 my-14" wire:ignore>
         <div class="grid grid-cols-6">
-            <div class="bg-green-400 cursor-pointer hover:animate-pulse rounded-full flex justify-center items-center dynamic-height-m3l3s7" wire:click="openModal(1)">
+            <div class="bg-green-400 cursor-pointer hover:animate-pulse rounded-full flex justify-center items-center dynamic-height-m3l3s7"
+                wire:click="openModal(1)">
                 <p class="text-xs text-center leading-3 md:text-sm xl:text-xl text-white font-intelmedium">
                     Problem Scoping
                 </p>
             </div>
-            <div class="bg-green-400 cursor-pointer hover:animate-pulse rounded-full flex justify-center items-center dynamic-height-m3l3s7 col-start-3" wire:click="openModal(2)">
+            <div class="bg-green-400 cursor-pointer hover:animate-pulse rounded-full flex justify-center items-center dynamic-height-m3l3s7 col-start-3"
+                wire:click="openModal(2)">
                 <p class="text-xs text-center leading-3 md:text-sm xl:text-xl text-white font-intelmedium">
                     Data Aquisition
                 </p>
             </div>
-            <div class="bg-green-400 cursor-pointer hover:animate-pulse rounded-full flex justify-center items-center dynamic-height-m3l3s7 col-start-5" wire:click="openModal(3)">
+            <div class="bg-green-400 cursor-pointer hover:animate-pulse rounded-full flex justify-center items-center dynamic-height-m3l3s7 col-start-5"
+                wire:click="openModal(3)">
                 <p class="text-xs text-center leading-3 md:text-sm xl:text-xl text-white font-intelmedium">
                     Evaluate
                 </p>
@@ -38,17 +41,20 @@
             </div>
         </div>
         <div class="grid grid-cols-6 -translate-y-2 lg:-translate-y-4 xl:-translate-y-8">
-            <div class="bg-green-400 cursor-pointer hover:animate-pulse rounded-full flex justify-center items-center dynamic-height-m3l3s7 col-start-2" wire:click="openModal(4)">
+            <div class="bg-green-400 cursor-pointer hover:animate-pulse rounded-full flex justify-center items-center dynamic-height-m3l3s7 col-start-2"
+                wire:click="openModal(4)">
                 <p class="text-xs text-center leading-3 md:text-sm xl:text-xl text-white font-intelmedium">
                     Problem Scoping
                 </p>
             </div>
-            <div class="bg-green-400 cursor-pointer hover:animate-pulse rounded-full flex justify-center items-center dynamic-height-m3l3s7 col-start-4" wire:click="openModal(5)">
+            <div class="bg-green-400 cursor-pointer hover:animate-pulse rounded-full flex justify-center items-center dynamic-height-m3l3s7 col-start-4"
+                wire:click="openModal(5)">
                 <p class="text-xs text-center leading-3 md:text-sm xl:text-xl text-white font-intelmedium">
                     Data Aquisition
                 </p>
             </div>
-            <div class="bg-green-400 cursor-pointer hover:animate-pulse rounded-full flex justify-center items-center dynamic-height-m3l3s7 col-start-6" wire:click="openModal(6)">
+            <div class="bg-green-400 cursor-pointer hover:animate-pulse rounded-full flex justify-center items-center dynamic-height-m3l3s7 col-start-6"
+                wire:click="openModal(6)">
                 <p class="text-xs text-center leading-3 md:text-sm xl:text-xl text-white font-intelmedium">
                     Evaluate
                 </p>
@@ -57,10 +63,12 @@
     </div>
     <div class="mt-14">
         @if ($allow_next && $show_next)
-            <button wire:click="nextSlide" {{ $complete == true ? '' : 'disabled' }}
-                class="{{ $complete == true ? 'bg-intelblue animate-bounce' : 'bg-gray-400' }} text-white font-intelmedium text-xl p-4 rounded-lg lg:mt-6 w-full">
-                {{ $complete == true ? 'Continue...' : 'Please complete the slide above' }}
-            </button>
+            <div class="fixed bottom-0 mx-auto" id="next-btn">
+                <button wire:click="nextSlide" {{ $complete == true ? '' : 'disabled' }}
+                    class="{{ $complete == true ? 'bg-intelblue animate-bounce' : 'bg-gray-400' }} text-white font-intelmedium text-xl p-4 rounded-lg lg:mt-6 w-full">
+                    {{ $complete == true ? 'Continue...' : 'Please complete the slide above' }}
+                </button>
+            </div>
         @else
         @endif
     </div>

@@ -8,7 +8,8 @@
     <div class="text-gray-700 mt-14">
         <div class="xl:flex my-3 justify-around items-center">
             <div>
-                <p class="text-justify font-intelmedium text-intelblue text-xl mb-4 animate-opacity">How is AI used in Education:</p>
+                <p class="text-justify font-intelmedium text-intelblue text-xl mb-4 animate-opacity">How is AI used in
+                    Education:</p>
                 <ul class="pl-5">
                     <li class="mb-4 animate-left-fast">
                         <span class="inline-flex">
@@ -70,10 +71,12 @@
     </div>
     <div class="mt-14">
         @if ($allow_next && $show_next)
-            <button wire:click="nextSlide" {{ $complete == true ? '' : 'disabled' }}
-                class="{{ $complete == true ? 'bg-intelblue animate-bounce' : 'bg-gray-400' }} text-white font-intelmedium text-xl p-4 rounded-lg lg:mt-6 w-full">
-                {{ $complete == true ? 'Continue...' : 'Please complete the slide above' }}
-            </button>
+            <div class="fixed bottom-0 mx-auto" id="next-btn">
+                <button wire:click="nextSlide" {{ $complete == true ? '' : 'disabled' }}
+                    class="{{ $complete == true ? 'bg-intelblue animate-bounce' : 'bg-gray-400' }} text-white font-intelmedium text-xl p-4 rounded-lg lg:mt-6 w-full">
+                    {{ $complete == true ? 'Continue...' : 'Please complete the slide above' }}
+                </button>
+            </div>
         @else
         @endif
     </div>

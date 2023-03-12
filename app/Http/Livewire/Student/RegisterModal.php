@@ -54,11 +54,9 @@ class RegisterModal extends ModalComponent
         ];
 
         $this->qualifications = [
-            'High School',
             'Under Graduate',
-            'Graduate',
             'Post Graduate',
-            'Other'
+            'Other',
         ];
     }
 
@@ -83,7 +81,7 @@ class RegisterModal extends ModalComponent
             'dob' => 'required|date',
             'cstate_id' => 'required|integer|exists:cstates,id',
             'gender' => 'required|integer|in:0,1,2,3',
-            'qualification_type' => 'required|integer|in:0,1,2,3,4',
+            'qualification_type' => 'required|integer|in:0,1,2',
             'qualification_name' => 'required|string|max:255',
         ];
     }
