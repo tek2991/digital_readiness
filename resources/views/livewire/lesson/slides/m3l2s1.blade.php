@@ -4,7 +4,7 @@
     </div>
     <div class="text-gray-700 my-14">
         <div>
-            <p class="text-justify text-lg leading-tight">
+            <p class="text-justify text-lg leading-tight animate-opacity-slow">
                 Ethics deals with the questions of what is good or bad and fair or unfair. Ethics is the moral compass
                 that guides us in daily life, it attempt to answer questions like:
             </p>
@@ -12,7 +12,7 @@
         <div class="xl:flex my-3 justify-around items-center">
             <div>
                 <ul class="pl-5">
-                    <li class="mb-4">
+                    <li class="mb-4 animate-left">
                         <span class="inline-flex">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-intelblue mr-2">
@@ -22,7 +22,7 @@
                             What is the difference between good and evil?
                         </span>
                     </li>
-                    <li class="mb-4">
+                    <li class="mb-4 animate-left-slow">
                         <span class="inline-flex">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-intelblue mr-2">
@@ -32,7 +32,7 @@
                             Is good and evil the same for everyone?
                         </span>
                     </li>
-                    <li class="mb-4">
+                    <li class="mb-4 animate-left-slow">
                         <span class="inline-flex">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-intelblue mr-2">
@@ -42,7 +42,7 @@
                             How do we make decisions that might have an impact on others?
                         </span>
                     </li>
-                    <li class="mb-4">
+                    <li class="mb-4 animate-left-slow-2">
                         <span class="inline-flex">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-intelblue mr-2">
@@ -58,7 +58,7 @@
             <div class="w-full lg:max-w-md lg:mx-auto xl:mx-auto">
                 <div class="w-full lg:max-w-md lg:mx-auto xl:mx-auto">
                     <img src="{{ asset('images/course/ethics.png') }}" alt="ai"
-                        class="mx-auto lg:max-w-md lg:pl-6">
+                        class="mx-auto lg:max-w-md lg:pl-6 animate-right-slow">
                 </div>
             </div>
         </div>
