@@ -34,18 +34,18 @@
         @endif
         <div class="w-full grid grid-cols-2 gap-4">
             @php
-                $right = 'ring-2 ring-green-400 shadow-lg shadow-green-400';
-                $wrong = 'ring-2 ring-red-400 shadow-lg shadow-red-400';
+                $right = 'ring-2 ring-intellight border-2 border-intellight';
+                $wrong = 'ring-2 ring-gray-400 border-2 border-gray-400 grayscale';
             @endphp
             @if ($selectedAnswer)
-                <div class="cursor-pointer rounded {{ $answer == 1 ? $right : $wrong }}" wire:click="checkAnswer(1)">
+                <div class="cursor-pointer rounded-lg {{ $answer == 1 ? $right : $wrong }}" wire:click="checkAnswer(1)">
                     <img src="{{ asset('images/course/door.gif') }}" alt=""
                         class="w-full h-full max-h-96 object-scale-down rounded">
                     <p class="text-center font-intelmedium py-3">
                         Automatic sliding door
                     </p>
                 </div>
-                <div class="cursor-pointer rounded {{ $answer == 2 ? $right : $wrong }}" wire:click="checkAnswer(2)">
+                <div class="cursor-pointer rounded-lg {{ $answer == 2 ? $right : $wrong }}" wire:click="checkAnswer(2)">
                     <img src="{{ asset('images/course/map.gif') }}" alt=""
                         class="w-full h-full max-h-96 object-scale-down rounded">
                     <p class="text-center font-intelmedium py-3">

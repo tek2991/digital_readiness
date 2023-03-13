@@ -21,9 +21,9 @@
                 </p>
             @else
                 <div
-                    class="text-red-400 font-intelmedium text-2xl p-4 rounded-lg my-6 w-full flex justify-center items-center">
+                    class="text-red-500 font-intelmedium text-2xl p-4 rounded-lg my-6 w-full flex justify-center items-center">
                     <span>Incorrect!</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                         stroke="currentColor" class="w-6 h-6 ml-2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
@@ -32,18 +32,18 @@
         @endif
         <div class="w-full grid grid-cols-2 gap-4">
             @php
-                $right = 'ring-2 ring-green-400 shadow-lg shadow-green-400';
-                $wrong = 'ring-2 ring-red-400 shadow-lg shadow-red-400';
+                $right = 'ring-2 ring-intellight border-2 border-intellight';
+                $wrong = 'ring-2 ring-gray-400 border-2 border-gray-400 grayscale';
             @endphp
             @if ($selectedAnswer)
-                <div class="cursor-pointer rounded {{ $answer == 1 ? $right : $wrong }}" wire:click="checkAnswer(1)">
+                <div class="cursor-pointer rounded-lg {{ $answer == 1 ? $right : $wrong }}" wire:click="checkAnswer(1)">
                     <img src="{{ asset('images/course/potato.gif') }}" alt=""
                         class="w-full object-cover rounded">
                     <p class="text-center font-intelmedium py-3">
                         Automatic potato peeler
                     </p>
                 </div>
-                <div class="cursor-pointer rounded {{ $answer == 2 ? $right : $wrong }}" wire:click="checkAnswer(2)">
+                <div class="cursor-pointer rounded-lg {{ $answer == 2 ? $right : $wrong }}" wire:click="checkAnswer(2)">
                     <img src="{{ asset('images/course/robot_vacuum.gif') }}" alt=""
                         class="w-full object-cover rounded">
                     <p class="text-center font-intelmedium py-3">

@@ -48,8 +48,8 @@
         </div>
         <div class="w-full grid grid-cols-2 gap-4">
             @php
-                $right = 'bg-green-400 shadow-lg shadow-green-400';
-                $wrong = 'bg-red-400 shadow-lg shadow-red-400';
+                $right = 'ring-2 ring-intellight border-2 border-intellight';
+                $wrong = 'ring-2 ring-gray-400 border-2 border-gray-400 grayscale';
             @endphp
             @if ($selectedAnswer)
                 <button class="cursor-pointer rounded p-4 {{ $answer == 1 ? $right : $wrong }}"

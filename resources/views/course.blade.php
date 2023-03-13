@@ -30,7 +30,8 @@
             const sourceElem = document.getElementById('lesson');
             const destElem = document.getElementById('next-btn');
             const sourceWidth = sourceElem.offsetWidth;
-            destElem.style.width = `${sourceWidth}px`;
+            const targetWidth = sourceWidth * 0.9
+            destElem.style.width = `${targetWidth}px`;
         }
 
         document.addEventListener("DOMContentLoaded", copyWidth);

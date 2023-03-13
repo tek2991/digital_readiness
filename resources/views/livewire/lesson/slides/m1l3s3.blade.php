@@ -22,7 +22,7 @@
 
         <div class="w-full grid grid-cols-2 gap-4">
             @if (in_array(1, $selectedAnswers))
-                <div class="cursor-pointer rounded ring-2 ring-green-400 shadow-lg shadow-green-400"
+                <div class="cursor-pointer rounded ring-2 ring-intellight border-2 border-intellight"
                     wire:click="addToAnswer(1)">
                     <img src="{{ asset('images/course/exercise.gif') }}" alt=""
                         class="w-full h-full object-cover rounded">
@@ -40,7 +40,7 @@
                 </div>
             @endif
             @if (in_array(2, $selectedAnswers))
-                <div class="cursor-pointer rounded ring-2 ring-green-400 shadow-lg shadow-green-400"
+                <div class="cursor-pointer rounded ring-2 ring-intellight border-2 border-intellight"
                     wire:click="addToAnswer(2)">
                     <img src="{{ asset('images/course/traffic.gif') }}" alt=""
                         class="w-full h-full object-cover rounded">
