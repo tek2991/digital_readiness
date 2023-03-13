@@ -14,7 +14,7 @@
                     class="question h-full max-h-64 w-full object-contain object-center rounded-lg {{ $qa_states['answer1'] ? 'opacity-0' : '' }}">
             </div>
             <div class="w-full h-full cursor-move p-1 flex flex-col justify-between border-4 rounded-lg bg-gray-200">
-                <img id="question2" src="{{ asset('images/course/youtube.png') }}" alt=""
+                <img id="question3" src="{{ asset('images/course/youtube.png') }}" alt=""
                     class="question h-full max-h-64 w-full object-contain object-center rounded-lg {{ $qa_states['answer1'] ? 'opacity-0' : '' }}">
             </div>
             <div id="answer1"
@@ -82,7 +82,7 @@
     <div class="hidden">
         <button wire:click="correct('question1', 'answer2')" id="qb1"></button>
         <button wire:click="correct('question2', 'answer3')" id="qb2"></button>
-        <button wire:click="correct('question1', 'answer1')" id="qb2"></button>
+        <button wire:click="correct('question3', 'answer1')" id="qb3"></button>
     </div>
 
     <script>
