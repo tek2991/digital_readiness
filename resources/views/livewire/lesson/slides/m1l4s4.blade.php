@@ -1,36 +1,69 @@
 <div id="m1l4s4" class="pt-36 {{ $current_slide ? 'min-h-screen' : '' }}">
     <h3 class="font-intelmedium text-gray-500 text-lg pb-4">Activity: Match the following</h3>
     <div class="border-b-2 border-secondary w-fit">
-        <h1 class="font-intelbold text-intelblue text-3xl pb-2">Match the everyday uses of AI with its correct name</h1>
+        <h1 class="font-intelbold text-intelblue text-3xl pb-2">Which is an example of AI and which one is not?</h1>
     </div>
-    <div class="text-gray-700 mt-14" wire:ignore>
-        <div class="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-y-8">
-            <div class="order-1 md:order-1 w-full h-full cursor-move p-1">
+    <div class="text-gray-700 mt-14">
+        <div class="grid grid-cols-3 gap-3">
+            <div class="w-full h-full cursor-move p-1 flex flex-col justify-between border-4 rounded-lg bg-gray-200">
                 <img id="question1" src="{{ asset('images/course/baby.jpg') }}" alt=""
-                    class="question h-full w-full object-contain object-center">
+                    class="question h-full w-full object-contain object-center rounded-lg {{ $qa_states['answer2'] ? 'opacity-0' : '' }}">
             </div>
-            <div class="order-3 md:order-2 w-full h-full cursor-move p-1">
+            <div class="w-full h-full cursor-move p-1 flex flex-col justify-between border-4 rounded-lg bg-gray-200">
                 <img id="question2" src="{{ asset('images/course/map.gif') }}" alt=""
-                    class="question h-full max-h-64 w-full object-contain object-center">
+                    class="question h-full max-h-64 w-full object-contain object-center rounded-lg {{ $qa_states['answer1'] ? 'opacity-0' : '' }}">
             </div>
-            <div class="order-5 md:order-3 w-full h-full cursor-move p-1">
-                <img id="question3" src="{{ asset('images/course/youtube.png') }}" alt=""
-                    class="question h-full w-full object-contain object-center">
+            <div class="w-full h-full cursor-move p-1 flex flex-col justify-between border-4 rounded-lg bg-gray-200">
+                <img id="question2" src="{{ asset('images/course/youtube.png') }}" alt=""
+                    class="question h-full max-h-64 w-full object-contain object-center rounded-lg {{ $qa_states['answer1'] ? 'opacity-0' : '' }}">
             </div>
             <div id="answer1"
-                class="answer order-2 md:order-4 w-full h-full flex justify-between items-center bg-intellight rounded-lg text-md p-3 md:text-xl 
-                {{ $qa_states['answer1'] ? 'border-3 border-green-600 shadow-lg shadow-green-500' : '' }}">
-                <p class="text-center">Recommendation System –YouTube video suggestions</p>
+                class="answer bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 {{ $qa_states['answer3'] == 1 ? 'flex flex-col justify-between' : 'flex flex-col justify-center' }}"
+                style="min-height: 20rem">
+                <div>
+                    @if ($qa_states['answer3'] == 1)
+                        <img class="rounded-t-lg mx-auto" src="{{ asset('images/course/youtube.png') }}"
+                            alt="" />
+                    @endif
+                </div>
+                <div class="p-5">
+                    <h5
+                        class="mb-2 text-xl font-intelsemibold tracking-tight text-gray-900 dark:text-white {{ $qa_states['answer3'] == 1 ? '' : 'text-center' }}">
+                        Recommendation System –YouTube video suggestions
+                    </h5>
+                </div>
             </div>
             <div id="answer2"
-                class="answer order-4 md:order-5 w-full h-full flex justify-between items-center bg-intellight rounded-lg text-md p-3 md:text-xl
-                {{ $qa_states['answer3'] ? 'border-3 border-green-600 shadow-lg shadow-green-500' : '' }}">
-                <p class="text-center">Digital Assistants – Alexa, Siri, etc.</p>
+                class="answer bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 {{ $qa_states['answer1'] == 1 ? 'flex flex-col justify-between' : 'flex flex-col justify-center' }}"
+                style="min-height: 20rem">
+                <div>
+                    @if ($qa_states['answer1'] == 1)
+                        <img class="rounded-t-lg mx-auto" src="{{ asset('images/course/baby.jpg') }}"
+                            alt="" />
+                    @endif
+                </div>
+                <div class="p-5">
+                    <h5
+                        class="mb-2 text-xl font-intelsemibold tracking-tight text-gray-900 dark:text-white {{ $qa_states['answer1'] == 1 ? '' : 'text-center' }}">
+                        Digital Assistants – Alexa, Siri, etc.
+                    </h5>
+                </div>
             </div>
             <div id="answer3"
-                class="answer order-6 md:order-6 w-full h-full flex justify-between items-center bg-intellight rounded-lg text-md p-3 md:text-xl 
-                {{ $qa_states['answer3'] ? 'border-3 border-green-600 shadow-lg shadow-green-500' : '' }}">
-                <p class="text-center">Navigation – Google Maps </p>
+                class="answer bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 {{ $qa_states['answer2'] == 1 ? 'flex flex-col justify-between' : 'flex flex-col justify-center' }}"
+                style="min-height: 20rem">
+                <div>
+                    @if ($qa_states['answer2'] == 1)
+                        <img class="rounded-t-lg mx-auto" src="{{ asset('images/course/map.gif') }}"
+                            alt="" />
+                    @endif
+                </div>
+                <div class="p-5">
+                    <h5
+                        class="mb-2 text-xl font-intelsemibold tracking-tight text-gray-900 dark:text-white {{ $qa_states['answer2'] == 1 ? '' : 'text-center' }}">
+                        Navigation – Google Maps
+                    </h5>
+                </div>
             </div>
         </div>
     </div>
@@ -49,7 +82,7 @@
     <div class="hidden">
         <button wire:click="correct('question1', 'answer2')" id="qb1"></button>
         <button wire:click="correct('question2', 'answer3')" id="qb2"></button>
-        <button wire:click="correct('question3', 'answer1')" id="qb3"></button>
+        <button wire:click="correct('question1', 'answer1')" id="qb2"></button>
     </div>
 
     <script>
@@ -61,7 +94,7 @@
             questions.forEach(question => {
                 question.addEventListener('dragstart', (event) => {
                     currentQuestion = event.target;
-                    console.log(event.target)
+                    // console.log(currentQuestion.id)
                 });
             });
 
@@ -69,6 +102,7 @@
             answers.forEach(answer => {
                 answer.addEventListener('dragover', (event) => {
                     event.preventDefault();
+                    console.log(currentQuestion.id, answer.id)
                 });
 
                 // Set up drop event listener for each answer element
@@ -102,7 +136,7 @@
         const correctMatches = {
             'question1': 'answer2',
             'question2': 'answer3',
-            'question3': 'answer1'
+            'question3': 'answer1',
         };
 
         // Set up the drag and drop functionality
